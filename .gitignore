@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Simulation outputs (large / regenerable)
+raw_trials/*.npz
+*.log
+
+# Optional: uncomment to exclude large plot artifacts
+# *.png
+# winfree_phase_*.npz
+# winfree_phase_*.npy
