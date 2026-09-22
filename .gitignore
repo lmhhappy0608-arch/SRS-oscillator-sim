@@ -29,3 +29,4 @@ _report_figs/
 
 # Local-only binaries / caches
 n_sensitivity_summary.npz
+cpp/compile_commands.json
