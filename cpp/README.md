@@ -1,33 +1,33 @@
-# Winfree ER 网络 C++ 仿真
+# Winfree on ER networks (C++)
 
-Ariaratnam & Strogatz (2001) Winfree 模型，在 ER 随机图上用 **RK4**（默认）或 RK45 积分，输出每个 trial 的 `omega` 与 `rotation_number`（**不含** phase 状态向量）。
+Ariaratnam & Strogatz (2001) Winfree model on ER random graphs. Integrates with **RK4** (default) or RK45 and writes `omega` and `rotation_number` for each trial (**no** phase-state vector).
 
-## 目录结构
+## Layout
 
 ```
 cpp/
-├── main.cpp                    # 主程序：参数网格 + ODE 积分 + 写 npz
-├── build.sh                    # 推荐编译方式（无需 CMake）
-├── run_test.sh                 # 4 格点小规模试跑（含 --benchmark）
-├── CMakeLists.txt              # 可选：CMake 构建
-├── Makefile                    # 可选：make 构建
-├── third_party/cnpy/           # NumPy .npz 读写库
+├── main.cpp                    # parameter grid + ODE + npz writer
+├── build.sh                    # recommended build (no CMake)
+├── run_test.sh                 # 4-cell smoke test (includes --benchmark)
+├── CMakeLists.txt              # optional CMake build
+├── Makefile                    # optional make build
+├── third_party/cnpy/           # NumPy .npz I/O
 │   ├── cnpy.h
 │   └── cnpy.cpp
 └── build/
-    └── generate_raw_grid       # 编译产物（可执行文件）
+    └── generate_raw_grid       # compiled binary
 ```
 
-## 编译方法
+## Build
 
-**推荐**（macOS / Linux）：
+**Recommended** (macOS / Linux):
 
 ```bash
-cd /Users/mohan/Desktop/SRS/Cursor/cpp
+cd cpp
 ./build.sh
 ```
 
-等价命令：
+Equivalent:
 
 ```bash
 clang++ -std=c++17 -O3 -DNDEBUG \
@@ -36,28 +36,28 @@ clang++ -std=c++17 -O3 -DNDEBUG \
   -o build/generate_raw_grid
 ```
 
-依赖：Xcode Command Line Tools（`clang++`）、系统 `zlib`（`-lz`）。
+Needs Xcode Command Line Tools (`clang++`) and system `zlib` (`-lz`).
 
-其他方式：
+Other options:
 
 ```bash
-make                    # 与 build.sh 类似
-mkdir build && cd build && cmake .. && cmake --build .   # CMake
+make
+mkdir build && cd build && cmake .. && cmake --build .
 ```
 
-> **注意**：请用 `./build.sh` 或 `make` 编译，不要单独编译 `main.cpp`（需链接 cnpy 与 zlib）。
+> Build with `./build.sh` or `make`. Do not compile `main.cpp` alone (it must link cnpy and zlib).
 
-## 运行示例
+## Examples
 
-### 快速验证（benchmark，秒级）
+### Smoke test (benchmark, seconds)
 
-`--benchmark` 自动设置 `N=100, T=1000, T0=800`，仅用于验证流程，**不可**与正式 `T=10000` 结果对比。
+`--benchmark` sets `N=100, T=1000, T0=800`. Use it only to check the pipeline, **not** against production `T=10000` results.
 
 ```bash
 ./run_test.sh
 ```
 
-或手动指定 4 个 (K, δ) 格点：
+Or four \((K,\delta)\) cells by hand:
 
 ```bash
 ./build/generate_raw_grid \
@@ -68,16 +68,16 @@ mkdir build && cd build && cmake .. && cmake --build .   # CMake
   --output-dir raw_trials_cpp
 ```
 
-格点：K ∈ {0.0, 0.4}，δ ∈ {0.10, 0.15}，共 **4** 个 npz 文件。
+Cells: \(K\in\{0.0,0.4\}\), \(\delta\in\{0.10,0.15\}\), **4** npz files.
 
-### 正式全网格（441 格点，与 Python 参数一致）
+### Full production grid (441 cells, same parameters as Python)
 
-去掉 `--benchmark` 即使用生产默认 `N=1000, T=10000, T0=8000`。  
-K∈[0,2] step 0.1 × δ∈[0,1] step 0.05 = **441** 格点；串行（无 OpenMP）每格约 **2–3 分钟**，全网格约 **15–22 小时**。  
-输出目录建议用 `raw_trials_c`，与 Python 的 `raw_trials/` 分开。
+Drop `--benchmark` to use `N=1000, T=10000, T0=8000`.
+\(K\in[0,2]\) step 0.1 \(\times\) \(\delta\in[0,1]\) step 0.05 = **441** cells. Serial (no OpenMP): about **2–3 minutes** per cell, **15–22 hours** for the grid.
+Write to `raw_trials_c` so it stays separate from Python `raw_trials/`.
 
 ```bash
-./build.sh   # 修改 main.cpp 后必须先编译
+./build.sh
 ./build/generate_raw_grid \
   --k-min 0 --k-max 2 --k-step 0.1 \
   --delta-min 0 --delta-max 1 --delta-step 0.05 \
@@ -87,11 +87,11 @@ K∈[0,2] step 0.1 × δ∈[0,1] step 0.05 = **441** 格点；串行（无 OpenM
   --skip-existing
 ```
 
-启动日志应显示 `integrator=rk4, dt=auto`；每格完成后会打印耗时，如 `(168s)`。
+Startup log should show `integrator=rk4, dt=auto`. Each finished cell prints a timing such as `(168s)`.
 
-### 正式小规模参数组（few parameter groups）
+### Small production subset
 
-去掉 `--benchmark` 即使用生产默认 `N=1000, T=10000, T0=8000`；每格约 2–3 分钟。
+Same defaults `N=1000, T=10000, T0=8000`; about 2–3 minutes per cell.
 
 ```bash
 ./build/generate_raw_grid \
@@ -101,7 +101,7 @@ K∈[0,2] step 0.1 × δ∈[0,1] step 0.05 = **441** 格点；串行（无 OpenM
   --output-dir raw_trials_cpp
 ```
 
-### 自定义规模
+### Custom size
 
 ```bash
 ./build/generate_raw_grid \
@@ -112,63 +112,64 @@ K∈[0,2] step 0.1 × δ∈[0,1] step 0.05 = **441** 格点；串行（无 OpenM
   --output-dir raw_trials
 ```
 
-## 性能说明
+## Performance
 
-默认使用 **固定步长 RK4**（`--integrator rk4`），比原 RK45 自适应积分快 **数十到数百倍**。
+Default is **fixed-step RK4** (`--integrator rk4`), tens to hundreds of times faster than the original adaptive RK45.
 
-| 积分器 | 适用场景 | 相对速度 |
-|--------|----------|----------|
-| `rk4`（默认） | 批量生成 rotation number，精度足够 | 快 |
-| `rk45` | 需与 SciPy `solve_ivp(RK45)` 严格对齐 | 慢 |
+| Integrator | Use | Speed |
+|---|---|---|
+| `rk4` (default) | Batch rotation numbers, enough accuracy | Fast |
+| `rk45` | Strict match to SciPy `solve_ivp(RK45)` | Slow |
 
-**原 RK45 慢的原因：**
-- 误差估计用了错误的 b₄ 系数（应为 SciPy 的 E 向量），导致步长控制器误判，步长持续缩小至 ~1e-12
-- 每步 7 次 RHS 求值（RK4 仅 4 次）
-- 初始步长过大（10）导致反复拒绝
-- 步长控制器在误差接近阈值时仍持续缩小步长
+**Why the original RK45 was slow:**
+- Error estimate used the wrong \(b_4\) (should be SciPy's E vector), so the step controller kept shrinking \(h\) toward ~1e-12
+- 7 RHS evaluations per step (RK4 uses 4)
+- Initial step 10 caused repeated rejections
+- The controller kept shrinking even when the error was near the tolerance
 
-**推荐用法：**
+**Suggested commands:**
+
 ```bash
-# 快速 benchmark（4 格点，约 1 秒内）
+# Fast benchmark (4 cells, about 1 s)
 ./build/generate_raw_grid --benchmark --k-min 0 --k-max 0.4 --k-step 0.4 \
   --delta-min 0.10 --delta-max 0.15 --delta-step 0.05 --p 0.8
 
-# 正式生产（N=1000, T=10000，每格约 1–3 分钟，视 N 与 dt 而定）
+# Production (N=1000, T=10000, about 1–3 min per cell)
 ./build/generate_raw_grid --integrator rk4 ...
 
-# 与 Python 对齐（慢，仅验证用）
+# Align with Python (slow, verification only)
 ./build/generate_raw_grid --integrator rk45 ...
 ```
 
-`--dt` 仅对 RK4 有效；默认按最快自然频率自动选取（约 0.1）。
+`--dt` applies to RK4 only. The default is chosen from the fastest natural frequency (about 0.1).
 
-## 并行运行（OpenMP）
+## OpenMP
 
-macOS 上 Apple clang 默认不带 OpenMP。`build.sh` 会自动检测 Homebrew 的 **libomp**（Apple Silicon：`/opt/homebrew/opt/libomp`；Intel Mac：`/usr/local/opt/libomp`；若已安装 `brew` 也会尝试 `brew --prefix libomp`）。未安装 libomp 时仍可串行编译，并打印警告。
+Apple clang on macOS does not ship OpenMP. `build.sh` looks for Homebrew **libomp** (Apple Silicon: `/opt/homebrew/opt/libomp`; Intel: `/usr/local/opt/libomp`; also `brew --prefix libomp` if `brew` exists). Without libomp it still builds serially and prints a warning.
 
-### 安装与编译
+### Install and build
 
 ```bash
 brew install libomp
-cd /Users/mohan/Desktop/SRS/Cursor/cpp
+cd cpp
 ./build.sh
 ```
 
-编译成功且启用 OpenMP 时，输出含 `OpenMP: enabled (libomp at ...)`。
+A successful OpenMP build prints `OpenMP: enabled (libomp at ...)`.
 
-### 指定线程数
+### Thread count
 
-- **`--workers N`**：运行时设置 OpenMP 线程数（仅编译时启用了 OpenMP 时有效）
-- **`OMP_NUM_THREADS`**：环境变量，未指定 `--workers` 时使用；二者同时存在时 `--workers` 优先
+- **`--workers N`**: OpenMP threads at run time (only if built with OpenMP)
+- **`OMP_NUM_THREADS`**: used when `--workers` is omitted; `--workers` wins if both are set
 
 ```bash
-# 2 线程 benchmark 验证并行
+# 2-thread benchmark
 ./build/generate_raw_grid --benchmark --workers 2 \
   --k-min 0 --k-max 0.4 --k-step 0.4 \
   --delta-min 0.10 --delta-max 0.15 --delta-step 0.05 \
   --p 0.8 --output-dir raw_trials_cpp
 
-# 正式全网格：8 线程 + 断点续跑
+# Full grid: 8 threads + resume
 OMP_NUM_THREADS=8 ./build/generate_raw_grid \
   --k-min 0 --k-max 2 --k-step 0.1 \
   --delta-min 0 --delta-max 1 --delta-step 0.05 \
@@ -178,47 +179,43 @@ OMP_NUM_THREADS=8 ./build/generate_raw_grid \
   --skip-existing
 ```
 
-441 格点全网格在 8 核并行下约 **2–3 小时**（视机器而定），串行约 15–22 小时。
+The 441-cell grid is about **2–3 hours** on 8 cores, or 15–22 hours serial.
 
-## CLI 参数
+## CLI
 
-| 参数 | 默认 | 说明 |
-|------|------|------|
-| `--k-min/max/step` | 0 / 2 / 0.1 | 耦合强度 K 网格 |
-| `--delta-min/max/step` | 0 / 1 / 0.05 | 频率展宽 δ 网格 |
-| `--p` | 0.8 | ER 连边概率 |
-| `--trials` | 1 | 每格重复次数 |
-| `--N` | 1000 | 振子数量 |
-| `--T` | 10000 | 积分终止时间 |
-| `--T0` | 8000 | 计算 rotation number 的起始时刻 |
-| `--benchmark` | off | 快速模式：N=100, T=1000, T0=800 |
-| `--integrator` | rk4 | ODE 积分器：`rk4` 或 `rk45` |
-| `--dt` | auto | RK4 固定步长（默认按 ω 自动） |
-| `--output-dir` | raw_trials | 输出目录 |
-| `--skip-existing` | off | 跳过已存在的 npz（断点续跑） |
-| `--seed` | 0 | 全局种子（混入每个 trial 的独立 seed） |
-| `--workers` | OMP 默认 | OpenMP 线程数（需编译时启用 OpenMP） |
+| Flag | Default | Meaning |
+|---|---|---|
+| `--k-min/max/step` | 0 / 2 / 0.1 | Coupling \(K\) grid |
+| `--delta-min/max/step` | 0 / 1 / 0.05 | Frequency width \(\delta\) grid |
+| `--p` | 0.8 | ER edge probability |
+| `--trials` | 1 | Repeats per cell |
+| `--N` | 1000 | Number of oscillators |
+| `--T` | 10000 | Integration end time |
+| `--T0` | 8000 | Start time for the rotation number |
+| `--benchmark` | off | Fast mode: N=100, T=1000, T0=800 |
+| `--integrator` | rk4 | `rk4` or `rk45` |
+| `--dt` | auto | Fixed RK4 step (from \(\omega\) by default) |
+| `--output-dir` | raw_trials | Output directory |
+| `--skip-existing` | off | Skip npz files that already exist |
+| `--seed` | 0 | Global seed mixed into each trial seed |
+| `--workers` | OpenMP default | OpenMP thread count |
 
-## 输出格式
-
-文件名：
+## Output
 
 ```
 {output_dir}/K_{K}_delta_{delta}_p_{p}_trial_{NN}.npz
 ```
 
-示例：`raw_trials_cpp/K_0.40_delta_0.15_p_0.80_trial_00.npz`
+Example: `raw_trials_cpp/K_0.40_delta_0.15_p_0.80_trial_00.npz`
 
-| 字段 | 形状 | 说明 |
-|------|------|------|
-| `omega` | (N,) float64 | 自然频率 linspace(1−δ, 1+δ, N) |
-| `rotation_number` | (N,) float64 | (θ(T) − θ(T₀)) / (T − T₀) |
-| `K`, `delta`, `p` | 标量 | 参数 |
-| `trial`, `N`, `T`, `T0` | 标量 int | 元数据 |
+| Field | Shape | Meaning |
+|---|---|---|
+| `omega` | (N,) float64 | Natural frequencies `linspace(1−δ, 1+δ, N)` |
+| `rotation_number` | (N,) float64 | \((\theta(T)-\theta(T_0))/(T-T_0)\) |
+| `K`, `delta`, `p` | scalar | Parameters |
+| `trial`, `N`, `T`, `T0` | scalar | Metadata |
 
-**不含** phase 分类标签；分类在 Python `code/plot_rotation_vs_frequency.py` 中完成。
-
-Python 读取示例：
+**No** phase-state label is stored. Classification is done later in Python `code/plot_rotation_vs_frequency.py`.
 
 ```python
 import numpy as np
@@ -227,26 +224,25 @@ omega = d["omega"]
 rotation = d["rotation_number"]
 ```
 
-## Simulation 流程（main.cpp）
+## Simulation flow (`main.cpp`)
 
-对每个 (K, δ, trial) 格点，并行执行：
+For each \((K,\delta,\mathrm{trial})\) cell, in parallel:
 
-1. **种子**：由 `(K, δ, p, trial, global_seed)` 哈希得到 trial 级 seed  
-2. **网络**：生成 ER 邻接表（概率 `p`）  
-3. **频率**：`ω = linspace(1−δ, 1+δ, N)`  
-4. **初值**：θ₀ ~ Uniform(0, 2π)  
-5. **积分**：RK4（默认，固定步长）或 RK45（同 SciPy `RK45`）积分 Winfree 方程  
+1. **Seed** from `(K, δ, p, trial, global_seed)`
+2. **Network**: undirected ER adjacency with probability \(p\)
+3. **Frequencies**: \(\omega=\mathrm{linspace}(1-\delta,1+\delta,N)\)
+4. **Initial data**: \(\theta_0\sim\mathrm{Uniform}(0,2\pi)\)
+5. **Integrate** the Winfree ODE with RK4 (default, fixed step) or RK45 (SciPy `RK45`)
    ```
    dθ/dt = ω − (K/N) · sin(θ) ⊙ (A @ (1 + cos(θ)))
    ```
-   固定/自适应步长，记录 T₀ 与 T 时刻的 θ  
-6. **旋转数**：`rotation_number[i] = (θᵢ(T) − θᵢ(T₀)) / (T − T₀)`  
-7. **保存**：`save_trial_npz` 写入 omega、rotation_number 及元数据（**不含** θ 轨迹）
+   Record \(\theta\) at \(T_0\) and \(T\)
+6. **Rotation number**: `rotation_number[i] = (θᵢ(T) − θᵢ(T₀)) / (T − T₀)`
+7. **Save** omega, rotation_number, and metadata (**no** \(\theta\) trajectory)
 
-## 与 Python 后处理对接
+## Python post-processing
 
 ```bash
-cd /Users/mohan/Desktop/SRS/Cursor
-# 将 plot 脚本的 RAW_DATA_DIR 指向 cpp/raw_trials_cpp，或复制 npz 到 raw_trials/
+# Point RAW_DATA_DIR at the C++ output, or copy npz files into raw_trials/
 python code/plot_rotation_vs_frequency.py --k 0.0 0.4 --delta 0.10 0.15 --p 0.8
 ```

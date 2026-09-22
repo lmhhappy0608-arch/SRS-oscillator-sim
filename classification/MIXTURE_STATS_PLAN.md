@@ -1,54 +1,54 @@
-# 三成分混合的统计细化计划
+# Statistical refinement of the three-component mixture
 
-振子级仍然只用三条几何线：停 \(\rho=0\)、一条水平锁 \(\rho=c\)、漂 \(\rho\approx\omega\)。统计要回答两件事：这三条线在哪些 \((K,\delta)\) 格子不够；系统级如何用权重把 Death / Partial / Locking 划开，而不回到 \(0.95\) 这类阈值。
+At the oscillator level there are still only three geometric lines: death \(\rho=0\), one horizontal lock \(\rho=c\), and drift \(\rho\approx\omega\). Statistics should answer two questions: where on the \((K,\delta)\) grid those three lines fail, and how to separate Death / Partial / Locking from the weights without returning to a 0.95 cutoff.
 
-混合模型在某个权重为 0 时参数不可识别，\(2(\ell_1-\ell_0)\) 不再是标准 \(\chi^2\)。比较 2 / 3 / 4 条线时用 BIC 或 bootstrap，不要写普通似然比 \(p\) 值了事。
+When a mixture weight is zero the parameters are not identifiable, so \(2(\ell_1-\ell_0)\) is not a standard \(\chi^2\). Compare 2 / 3 / 4 lines with BIC or a bootstrap. Do not report an ordinary likelihood-ratio \(p\)-value.
 
-## 建议顺序
+## Suggested order
 
-| 步 | 做什么 | 看什么 | 用来细化什么 |
+| Step | Do | Look at | Used to refine |
 | --- | --- | --- | --- |
-| 1 | 每个格子算 RMSE、最大残差、残差对 \(\omega\) 的形状 | 高残差是否连成一带 | 哪些 \((K,\delta)\) 三线不够 |
-| 2 | 权重 \((w_d,w_l,w_r)\) 画单纯形 / 熵 \(H(w)\) | 点是聚成 3 堆还是 5 堆 | Partial 是不是单独一团，还是连续带 |
-| 3 | GMM / k-means 只作用在权重上，silhouette 选簇数 | 簇中心是否落在三个顶点和两条棱上 | 宏观五态的数据驱动划分 |
-| 4 | 只对高残差格子加模型：第二条水平线，或斜率自由的斜枝 | \(\Delta\mathrm{BIC}<0\) 才保留 | slipping、双平台、弯枝 |
-| 5 | 跨 \(p=0.2,\ldots,1.0\) 比较锁定区面积、混合带宽 | 随 \(p\) 是否单调变 | 网络密度怎么改相图 |
+| 1 | Per cell: RMSE, max residual, residual shape vs \(\omega\) | Whether high residuals form a band | Where three lines are not enough |
+| 2 | Plot weights \((w_d,w_l,w_r)\) on the simplex / entropy \(H(w)\) | 3 clumps vs 5 | Whether Partial is its own cluster or a continuum |
+| 3 | GMM / k-means on the weights only; choose \(k\) by silhouette | Whether centers sit on the three vertices and two edges | Data-driven split of the five macroscopic states |
+| 4 | Add a model only on high-residual cells: a second horizontal line, or a free-slope branch | Keep if \(\Delta\mathrm{BIC}<0\) | Slipping, double plateaus, bent branches |
+| 5 | Across \(p=0.2,\ldots,1.0\), compare locked area and mixing bandwidth | Whether they change monotonically | How density reshapes the phase diagram |
 
-## 宏观态怎么从权重读出来
+## Reading macroscopic states from the weights
 
-粗相：一个权重接近 1。Death / Locking / Incoherence 对应单纯形的三个顶点。不必再设 0.95；用权重空间里的聚类，或用「最大权重明显大于另外两个」这种由数据决定的分离。
+A coarse phase has one weight near 1. Death / Locking / Incoherence are the three vertices of the simplex. There is no need to set 0.95; cluster in weight space, or require the largest weight to stand clearly above the other two.
 
-Partial：落在一条棱上。Partial Death \(\approx\) death–drift 棱（\(w_{\mathrm{lock}}\approx 0\)，另外两个都明显）。Partial Locking \(\approx\) lock–drift 棱。混合程度就是较小那个权重，不再是「至少 15 个点」。
+Partial states sit on an edge. Partial Death \(\approx\) the death–drift edge (\(w_{\mathrm{lock}}\approx 0\), the other two both visible). Partial Locking \(\approx\) the lock–drift edge. The degree of mixing is the smaller of those two weights, not “at least 15 points.”
 
-## 残差在说什么
+## What residuals say
 
-按 \(\omega\) 排序后看残差形态：
+Sort by \(\omega\) and look at the residual shape:
 
-| 残差形态 | 更像哪种漏网情况 | 下一步模型 |
+| Residual shape | Likely missed case | Next model |
 | --- | --- | --- |
-| 一条水平残差平台 | 第二条锁定转速 | 再加一条 \(\rho=c_2\) |
-| 中间一段残差系统偏离 0 和 \(\omega\) | slipping / 频率被拉弯 | 斜段斜率自由 |
-| 两端大、中间小 | 平台漏了，或 \(c\) 估偏 | 检查 `lock_center` |
-| 处处小、无结构 | 三线已够 | 不再加成分 |
+| A horizontal residual plateau | A second locked speed | Add \(\rho=c_2\) |
+| A middle stretch off both 0 and \(\omega\) | Slipping / pulled frequencies | Free-slope segment |
+| Large at the ends, small in the middle | Missed plateau, or a biased \(c\) | Check `lock_center` |
+| Small everywhere, no structure | Three lines suffice | Do not add a component |
 
-对照旧五色图时，不要把 \(\mathrm{argmax}(w)\) 当成新的五分类再做混淆矩阵。先对每个旧标签画 \((w_d,w_l,w_r)\) 的箱线图：Death 应贴 \((1,0,0)\)，Partial Death 应在 death–drift 棱上散开。若旧的 Partial Locking 在权重空间里不聚成一团，那是阈值造的色块，不是要保留的第五相。
+When comparing to the old five-color map, do not treat \(\mathrm{argmax}(w)\) as a new five-way label and then build a confusion matrix. First box-plot \((w_d,w_l,w_r)\) by old label: Death should sit at \((1,0,0)\); Partial Death should spread along the death–drift edge. If old Partial Locking does not form a clump in weight space, it is a threshold-made color block, not a fifth phase to keep.
 
-## 目录与第一步怎么跑
+## Layout and first command
 
-分类相关代码、图和表都放在 `classification/`：
+Classification code, figures, and tables live under `classification/`:
 
-- 原始数值解：仓库根目录 `raw_trials/`（不进 git）
-- 混合拟合：`classification/code/fit_rotation_mixture.py`
-- 第一步残差：`classification/code/analyze_mixture_residuals.py`
-- 混合权重图：`classification/figures/rotation_mixture/`
-- 残差图：`classification/figures/mixture_residuals/`
-- 表：`classification/tables/`
+- Raw solutions: `raw_trials/` at the repo root (not in git)
+- Mixture fit: `classification/code/fit_rotation_mixture.py`
+- Residual step: `classification/code/analyze_mixture_residuals.py`
+- Weight figures: `classification/figures/rotation_mixture/`
+- Residual figures: `classification/figures/mixture_residuals/`
+- Tables: `classification/tables/`
 
-在 `classification/` 下：
+From `classification/`:
 
 ```bash
 python3 code/analyze_mixture_residuals.py
 python3 code/analyze_mixture_residuals.py --p 0.2 0.4 0.6 0.8 1.0
 ```
 
-每个格子会写出 RMSE、最大 \(|\rho-\hat\rho|\)、残差对 \(\omega\) 的 lag-1 自相关、低/中/高 \(\omega\) 三段 RMSE、残差的倾斜和弯曲。相图看高残差是否成带；例子图看残差对 \(\omega\) 的形状。
+Each cell writes RMSE, max \(|\rho-\hat\rho|\), lag-1 autocorrelation of residuals vs \(\omega\), RMSE on low / mid / high \(\omega\), and residual tilt and curvature. Use the maps to see whether high residuals form a band; use the example plots to see residual shape vs \(\omega\).

@@ -1,20 +1,20 @@
 # Classification experiments
 
-这一层是五态分类的观察与试验，**还没有替换** `code/plot_rotation_vs_frequency.py` 里的旧 `classify_state()`。
+Observation and trial tools for the five-state classification. These scripts **do not replace** the old `classify_state()` in `code/plot_rotation_vs_frequency.py`.
 
-## 脚本
+## Scripts
 
-| 文件 | 作用 |
+| File | Role |
 |---|---|
-| `code/observe_plateaus.py` | 当前：从原始 \(\rho\) 估 \(c,\sigma,f\) |
-| `code/fit_rotation_mixture.py` | 三线混合（停 / 锁 / 漂） |
-| `code/analyze_mixture_residuals.py` | 残差诊断 |
-| `code/plot_weight_simplex.py` | 混合权重单纯形 |
+| `code/observe_plateaus.py` | Current: estimate \(c\), \(\sigma\), \(f\) from raw \(\rho\) |
+| `code/fit_rotation_mixture.py` | Three-line mixture (death / lock / drift) |
+| `code/analyze_mixture_residuals.py` | Residual diagnostics |
+| `code/plot_weight_simplex.py` | Mixture-weight simplex |
 
-在 `classification/` 下运行：
+Run from `classification/`:
 
 ```bash
 python3 code/observe_plateaus.py
 ```
 
-原始数值解仍读仓库根目录的 `raw_trials/`。
+Raw solutions are still read from `raw_trials/` at the repository root.

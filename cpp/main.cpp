@@ -1,5 +1,5 @@
 // main.cpp — Winfree ER network raw trial data (Ariaratnam & Strogatz 2001)
-// 入口文件。请用 ./build.sh 编译，不要单独编译此文件。
+// Build with ./build.sh. Do not compile this file alone.
 //
 // Dynamics (matches Ariaratnam2001.py):
 //   dθ/dt = ω - (K/N) * sin(θ) ⊙ (A @ (1 + cos(θ)))

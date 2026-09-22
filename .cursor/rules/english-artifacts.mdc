@@ -1,0 +1,13 @@
+---
+description: Chat may be Chinese; all repo artifacts must be English.
+alwaysApply: true
+---
+
+# English artifacts
+
+Discussion with the user may be in Chinese. Everything written into the repository must be English:
+
+- README files, `docs/`, comments, docstrings, CLI help, plot titles/labels/legends, commit messages, and slide text
+- Notation in code uses the English names already in the project: death, lock / locking, drift, plateau, rotation number \(\rho\), natural frequency \(\omega\), lock center \(c\), noise \(\sigma\)
+
+Do not add Chinese comments, section headings, or figure annotations to tracked files.

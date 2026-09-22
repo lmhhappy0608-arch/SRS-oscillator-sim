@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 不依赖 CMake 的快速构建脚本（macOS / Linux）
+# Fast build without CMake (macOS / Linux)
 set -euo pipefail
 cd "$(dirname "$0")"
 mkdir -p build
@@ -41,14 +41,14 @@ if [[ "$(uname)" == "Darwin" ]]; then
     OPENMP_ENABLED=1
     echo "OpenMP: enabled (libomp at ${libomp_prefix})"
   else
-    echo "警告: 未找到 libomp，将以串行模式编译。安装: brew install libomp" >&2
+    echo "warning: libomp not found; building serial. install: brew install libomp" >&2
   fi
 elif command -v g++ &>/dev/null && g++ -fopenmp -x c++ - -o /dev/null 2>/dev/null <<< ""; then
   FLAGS+=(-fopenmp -DUSE_OPENMP=1)
   OPENMP_ENABLED=1
   echo "OpenMP: enabled (g++ -fopenmp)"
 else
-  echo "警告: 未检测到 OpenMP 支持，将以串行模式编译。" >&2
+  echo "warning: no OpenMP support detected; building serial." >&2
 fi
 
 echo "Building with $CXX ..."
