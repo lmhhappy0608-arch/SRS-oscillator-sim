@@ -11,11 +11,21 @@ env/
 # macOS
 .DS_Store
 
+# Editor / local
+.mplconfig/
+.vscode/
+
 # Simulation outputs (large / regenerable)
-raw_trials/*.npz
+raw_trials/
+raw_trials_rk4/
+cpp/raw_trials_c/
+cpp/raw_trials_c_rk45/
+cpp/build/
 *.log
 
-# Optional: uncomment to exclude large plot artifacts
-# *.png
-# winfree_phase_*.npz
-# winfree_phase_*.npy
+# Large local figure dumps (keep selected PNGs at repo root and classification/figures)
+figures/clean_state_changes/
+_report_figs/
+
+# Local-only binaries / caches
+n_sensitivity_summary.npz

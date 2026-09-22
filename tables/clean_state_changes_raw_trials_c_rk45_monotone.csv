@@ -1,0 +1,11 @@
+K,delta,p,trial,state_raw,state_cleaned,npz_file
+0.60,0.200,0.80,0,Incoherence,Partial Locking,K_0.60_delta_0.20_p_0.80_trial_00.npz
+0.60,0.250,0.80,0,Incoherence,Partial Locking,K_0.60_delta_0.25_p_0.80_trial_00.npz
+0.60,0.350,0.80,0,Incoherence,Partial Locking,K_0.60_delta_0.35_p_0.80_trial_00.npz
+0.60,0.400,0.80,0,Incoherence,Partial Locking,K_0.60_delta_0.40_p_0.80_trial_00.npz
+0.80,0.250,0.80,0,Incoherence,Partial Locking,K_0.80_delta_0.25_p_0.80_trial_00.npz
+0.80,0.300,0.80,0,Incoherence,Partial Locking,K_0.80_delta_0.30_p_0.80_trial_00.npz
+0.80,0.350,0.80,0,Incoherence,Partial Locking,K_0.80_delta_0.35_p_0.80_trial_00.npz
+0.90,0.250,0.80,0,Incoherence,Partial Locking,K_0.90_delta_0.25_p_0.80_trial_00.npz
+1.10,0.500,0.80,0,Death,Partial Death,K_1.10_delta_0.50_p_0.80_trial_00.npz
+1.20,0.700,0.80,0,Death,Partial Death,K_1.20_delta_0.70_p_0.80_trial_00.npz
