@@ -14,6 +14,7 @@ env/
 # Editor / local
 .mplconfig/
 .vscode/
+.cursor/
 
 # Simulation outputs (large / regenerable)
 raw_trials/

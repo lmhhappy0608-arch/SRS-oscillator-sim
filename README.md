@@ -43,7 +43,7 @@ python3 code/Ariaratnam2001.py --plot-stack --p-values 0.2 0.4 0.6 0.8
 python3 code/plot_rotation_vs_frequency.py --clean none --k 0.4 --delta 0.08 --p 0.8 --trial 0
 ```
 
-**Plateau observation (current)**
+**Plateau observation (current).** Full run guide: [classification/README.md](classification/README.md).
 
 ```bash
 cd classification
