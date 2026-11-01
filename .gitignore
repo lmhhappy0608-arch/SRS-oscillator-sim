@@ -22,6 +22,9 @@ raw_trials_rk4/
 cpp/raw_trials_c/
 cpp/raw_trials_c_rk45/
 cpp/build/
+stage1_runs/
+stage1_benchmark/
+stage1_pilot_plots/
 *.log
 
 # Large local figure dumps (keep selected PNGs at repo root and classification/figures)

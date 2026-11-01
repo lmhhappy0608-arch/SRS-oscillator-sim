@@ -1,0 +1,66 @@
+{
+  "record": "adopted_decision_rules",
+  "status": "partial",
+  "classification_executed": false,
+  "does_not_overwrite": "stage2_classifier/classifier_v1",
+  "parameter_status": "provisional",
+  "rules": {
+    "1_classification_curve": {
+      "status": "adopted",
+      "primary_window": {"name": "W3", "start": 12000.0, "end": 14000.0, "role": "assigns the five-state label"},
+      "stability_windows": [
+        {"name": "W1", "start": 8000.0, "end": 10000.0},
+        {"name": "W2", "start": 10000.0, "end": 12000.0}
+      ],
+      "temporal_review_flag": "set when the three windows do not agree",
+      "majority_vote": false,
+      "earlier_windows_override_w3": false
+    },
+    "2_candidate_plateaus": {
+      "status": "adopted",
+      "nonzero_plateau_candidates": "Method C constant segments, then Rule 3",
+      "linear_segments": "no secondary local-plateau search and no merge",
+      "near_zero": "detected independently of Method C",
+      "global_locking": "Rule 7 may label a profile Locking when Method C returns only linear segments"
+    },
+    "3_valid_plateau": {
+      "status": "adopted",
+      "source": "user specification, not a gap in the 732-profile histograms",
+      "minimum_oscillators": 15,
+      "minimum_relative_omega_span": 0.02,
+      "relative_omega_span_definition": "(max omega in G - min omega in G) / (max omega - min omega)",
+      "maximum_rho_span": 0.02,
+      "absolute_omega_span_0p03": "replaced"
+    },
+    "4_near_zero_tolerance": {
+      "status": "adopted",
+      "value": 0.001,
+      "definition": "an oscillator is near zero when abs(rho) < 0.001"
+    },
+    "5_death": {
+      "status": "adopted",
+      "rule": "f0 = 1",
+      "definition": "every oscillator satisfies abs(rho) < 0.001"
+    },
+    "6_partial_death_run": {
+      "status": "adopted",
+      "minimum_consecutive_near_zero_oscillators": 15,
+      "priority_against_locking_and_plateaus": "not adopted"
+    },
+    "7_locking": {
+      "status": "adopted",
+      "maximum_profile_rho_range": 0.01,
+      "definition": "max(rho) - min(rho) <= 0.01 on the whole profile",
+      "separate_coverage_fraction": null
+    },
+    "8_priority_and_remaining_review_flags": {
+      "status": "not_adopted"
+    }
+  },
+  "method_c": {
+    "alpha": 2,
+    "beta": 1,
+    "status": "provisional",
+    "minimum_segment_length": 4
+  }
+}

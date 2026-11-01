@@ -1,0 +1,123 @@
+{
+  "method_c_file": "/Users/mohan/Desktop/SRS/data_examine/experiments/plateau_detection_pilot/pilot.py",
+  "method_c_sha256": "fbe18c40e05a495352aa3552be7fcc7c28228012d7a0d58e1da3a5d403ed13c1",
+  "original_segment_profile_modified": false,
+  "alphas_initial": [
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "betas_initial": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "alphas_used": [
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "betas_used": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "calibration_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "validation_seeds": [
+    10,
+    11,
+    12
+  ],
+  "noise_levels": [
+    0.0,
+    0.002,
+    0.01,
+    0.03
+  ],
+  "master_seed": 20261101,
+  "omega": [
+    0.8,
+    1.2
+  ],
+  "n": 1000,
+  "min_segment_length": 4,
+  "case_roles": {
+    "C15": {
+      "role": "diagnostic",
+      "reason": "Stage 2B candidate near-horizontal region"
+    },
+    "C23": {
+      "role": "diagnostic",
+      "reason": "Stage 2B rising profile with local fluctuations"
+    },
+    "C01": {
+      "role": "examined",
+      "reason": "Near-zero range at p=1, Delta=0.05"
+    },
+    "C02": {
+      "role": "examined",
+      "reason": "Flat profile with range 0 and near-zero fraction 1"
+    },
+    "C05": {
+      "role": "examined",
+      "reason": "Large range and partial near-zero fraction, p=1, Delta=0.8"
+    },
+    "C09": {
+      "role": "examined",
+      "reason": "Mixed range at p=0.8, Delta=0.2"
+    },
+    "C13": {
+      "role": "examined",
+      "reason": "Near-flat profile at p=0.4, Delta=0.05"
+    },
+    "C17": {
+      "role": "examined",
+      "reason": "Partial near-zero fraction at p=0.4, Delta=0.8"
+    },
+    "C22": {
+      "role": "examined",
+      "reason": "Slope-scale sensitive profile at p=0.2, Delta=0.2"
+    },
+    "C25": {
+      "role": "examined",
+      "reason": "High window variation"
+    },
+    "C26": {
+      "role": "examined",
+      "reason": "Neighbor jump with a flatter median local slope"
+    },
+    "C30": {
+      "role": "examined",
+      "reason": "High rotation dispersion at p=0.2, Delta=0.8"
+    },
+    "C07": {
+      "role": "held_out",
+      "reason": "Held out. Range 0.10 at p=0.8, Delta=0.05"
+    },
+    "C20": {
+      "role": "held_out",
+      "reason": "Held out. Range 0 at p=0.2, Delta=0.05"
+    },
+    "C21": {
+      "role": "held_out",
+      "reason": "Held out. K=0 profile whose range equals the omega span"
+    },
+    "C28": {
+      "role": "held_out",
+      "reason": "Held out. Small near-zero fraction at p=0.2, Delta=0.8"
+    }
+  }
+}

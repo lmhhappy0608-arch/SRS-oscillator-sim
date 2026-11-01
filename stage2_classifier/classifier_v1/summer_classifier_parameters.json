@@ -1,0 +1,18 @@
+{
+  "classifier": "Summer classifier",
+  "source": "code/Ariaratnam2001.py:classify_state",
+  "priority": "Death -> Partial Death -> Locking -> Partial Locking -> Incoherence",
+  "primary_window": "W3",
+  "defaults": {
+    "tol_death": 0.01,
+    "min_fraction": 0.05,
+    "lock_threshold": 0.95,
+    "tol_lock_rho": 0.01,
+    "tol_plateau_rho": 0.02,
+    "min_omega_span": 0.03,
+    "min_plateau_points": 15,
+    "tol_identity": 0.01,
+    "identity_threshold": 0.9,
+    "min_zero_run": 4
+  }
+}

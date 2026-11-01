@@ -1,0 +1,68 @@
+{
+  "cases_per_stratum": 2,
+  "diversity_features": [
+    "zero_frac_eps0p001_w3",
+    "zero_frac_eps0p01_w3",
+    "zero_frac_eps_sensitivity_w3",
+    "rho_range_w3",
+    "rho_std_w3",
+    "rho_minus_omega_mean_w3",
+    "slope11_abs_q50_w3",
+    "slope31_abs_q50_w3",
+    "slope_scale_gap_w3",
+    "slope31_std_w3",
+    "D12_p95",
+    "D13_median",
+    "D13_p95"
+  ],
+  "interpretation": "Features describe saved profiles. Epsilons and slope cutoffs are not definitions of dynamical states.",
+  "k_distance_weight": 0.5,
+  "local_slope_absolute_cutoffs": [
+    0.05,
+    0.1,
+    0.25
+  ],
+  "missing_csv_value": "empty field means undefined, not zero",
+  "n_supplements": 6,
+  "near_zero_epsilons": [
+    0.001,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "output_dir": "/Users/mohan/Desktop/SRS/helper/stage1_analysis/pilot_exploration",
+  "pilot_config": "/Users/mohan/Desktop/SRS/helper/stage1/configs/stage1_pilot.json",
+  "review_top_n": 6,
+  "rho_quantiles": [
+    0.05,
+    0.25,
+    0.5,
+    0.75,
+    0.95
+  ],
+  "selection_is_deterministic": true,
+  "selection_rng_seed": null,
+  "slope_windows_oscillators": [
+    11,
+    31
+  ],
+  "window_difference_tolerances": [
+    0.001,
+    0.01,
+    0.05
+  ],
+  "windows": {
+    "w1": [
+      8000.0,
+      10000.0
+    ],
+    "w2": [
+      10000.0,
+      12000.0
+    ],
+    "w3": [
+      12000.0,
+      14000.0
+    ]
+  }
+}

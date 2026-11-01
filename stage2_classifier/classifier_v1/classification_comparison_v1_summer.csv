@@ -1,0 +1,733 @@
+run_id,K,p,Delta,N,v1_assigned_state,summer_assigned_state,changed,summer_state_w1,summer_state_w2,summer_state_w3,execution_status
+eeffd2fd37f08bceac1467299282fd51,0.0,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+72daf960b015b7422b40135e501af659,0.05,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+cb9194674f974a86441d99f3b8ef9d1c,0.1,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+96cbfab1694e5e437648c2cc4144e1b8,0.15,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+d5147d426292fcf8dff84e05b12c0168,0.2,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e60ff450dc2cd5e233a99596b7ac4301,0.25,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+215936277104169092127b1c6a56fada,0.3,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+cebe7d1d6c5635c6516cbab415dcc8d2,0.35,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+fa3c02bfebe68dd3cb0733794d066603,0.4,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+454b26de6793462d374d8d6e10da8e55,0.45,0.2,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+772305a5073918afc34163a9adfa2ddf,0.5,0.2,0.05,1000,Partial Locking,Incoherence,1,Incoherence,Incoherence,Incoherence,ok
+4787ee5dde639f74a2700171680e9f7c,0.55,0.2,0.05,1000,Partial Locking,Incoherence,1,Incoherence,Incoherence,Incoherence,ok
+24b3931574b61cd7c0e84042d56a4a3c,0.6,0.2,0.05,1000,Partial Locking,Incoherence,1,Incoherence,Incoherence,Incoherence,ok
+53a707720daa69350d9a952706141eae,0.65,0.2,0.05,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+2c943ed654365d7915d7767d72b81468,0.7,0.2,0.05,1000,Partial Locking,Locking,1,Locking,Locking,Locking,ok
+0445752e8d0043f6086a267dd90a60ba,0.75,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+ad22dfe127967aeab8f083e16df28024,0.8,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+9b59c54bd404d9ac76ff8e81c6f82baa,0.85,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+cf714a4378dcd6d639f06657cb657d51,0.9,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+3e7c4ab18fea953529065c233b2bc74c,0.95,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+698093bd88a98e2f7037922a4808f7d9,1.0,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+988e9581fe8219e268cf059c49c73abd,1.05,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5ed457f153c0f5cdf385b8cde0b16cf7,1.1,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+8522f4b2608d30ef6b80b17c7fc85297,1.15,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+1e72bdcba505b5d515b0098d444ed384,1.2,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+ed149a61e4d64392cb9e06c77d4179f9,1.25,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+2c40af60337ceaee74cb499e1e5f0971,1.3,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5c834bcd55bc61dfa5c229f1a6ce5981,1.35,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+b1812cd1f52cf25039706a6008272a93,1.4,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5bb7d2c7e4cac7f807cddfe7c3536522,1.45,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+7fa81ac8aaa32ec51121e533f9f7167e,1.5,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+0d22ae7a1e4d6dff5546ac6b359a992c,1.55,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+546f95e0bf5c6aadca47bd5b747f91b3,1.6,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+6a0ce733e8889aeaee2ce9e9cdf372e4,1.65,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+8dba354fb442c4ede3d12fb377063abe,1.7,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+f357e94d6776a9e0b78456c1627d6da4,1.75,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+83dde64756fda86568b9d63571fa36cc,1.8,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+7eb08be0f7715600214ce3a05cc181de,1.85,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+38798a96d529607645689ea534550e45,1.9,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+0501f36471cb37752bed4fc35ad45921,1.95,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+8bc3f2644ef58adc81e9ec00714c3875,2.0,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+465bb09826cd7e40c369400daa2a752b,2.05,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+4cc1cf37096538144610f9d01ef9e4a5,2.1,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+87cab2680bd8cb7052a5b5ccbde39322,2.15,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+3a74d989f9bd083f2d64a7285da4b0a1,2.2,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+0a197a3c8ec91884b7269564633b4925,2.25,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+c2c5aa9575e6c567e80139a12a4a6ce3,2.3,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5f9f25432db3a892bcda16dbfff146b8,2.35,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5a5cfadcc019c72d76c93fed81288409,2.4,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+d6b15d1337382149e9a05c3e34f37353,2.45,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+0e895e0335d8d2356612aa6335566dfa,2.5,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+c18f90bfc6a6c17705a1ec49b30087e3,2.55,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+b44930dacace3d03b05311b2946ead3c,2.6,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+db5b5865de24f461ef1cd41c62399217,2.65,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+060b44d5933d00ca71e80f6531f8a2f9,2.7,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+c5d0cdfe3e23ccb92b8cce1b40b0144e,2.75,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+e40c53531f64d20d976f001b20cc75a2,2.8,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+e0d67033e07c92af8ed7da23cd2e1aa1,2.85,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+bc844f36cd6ea4a2f386136f829b6f69,2.9,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+73567f3c49396bc2c87d255e308d69ff,2.95,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+7c2a26aa240e7bd6f7d72583c772df42,3.0,0.2,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+ffa37919bec345268485c6cc1f045e6a,0.0,0.4,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+8eb0480b6e6f35ee8e66a17f318f1a04,0.05,0.4,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+fe68f09ecb474517943d5ede2be4216e,0.1,0.4,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+471d246c2046eed3b9daffbafcdef6d5,0.15,0.4,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+31c7cc4417683b17112db30a427bd14d,0.2,0.4,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+5530803f4a639101c2b40d35a9c8743d,0.25,0.4,0.05,1000,Partial Locking,Incoherence,1,Incoherence,Incoherence,Incoherence,ok
+318c7ddb0a74b791a9080ba00fe8d6ac,0.3,0.4,0.05,1000,Partial Locking,Incoherence,1,Incoherence,Incoherence,Incoherence,ok
+3fceda4981aebcd3e918f060c20517e4,0.35,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+06a68f0c6e7ff7acf5d29681aa458a80,0.4,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+2133a499a564d10d243b07ed3913fbc9,0.45,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+a20b9ffad818fbab74f027b3dbf1cc4b,0.5,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+603373be7426253bfeba1875d2439882,0.55,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+ce63a3d0e25a2d1b64ca1c4a4446e4b9,0.6,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+600736edef8183f7f146e0ca80ee5eb7,0.65,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+070bb1435ffbe74d1b99b107be790fd4,0.7,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+9d087fcecf081797f8e521826fd41ce6,0.75,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+7bd45645f7927b2674284f950fb3b2d7,0.8,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+36751992b1251d2e795fe9472e17eea5,0.85,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+3c6582355fb2fa32e9bbc02151cac062,0.9,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+fcebbea76da2e3d32ad9af7219ec531f,0.95,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+3335722a0fe231bc5d45c6a9bc98b9ae,1.0,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+4ba7186b979be63f7791fe02fa37c118,1.05,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+c657441f8ad6ac00876bb4ae62e2ed52,1.1,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+a951ae406e1e59aab7344d54a22e2cf1,1.15,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+1f5bb2642b7ea5ffcdb721c5924bc809,1.2,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+4040c9207bd09bb8c9cba2253497f1d5,1.25,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+47fe558cd82cdb8c2f771efb4a9138a1,1.3,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+fba3dcadd5c750533a2c1a45a5a8c8a1,1.35,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+42508d7361b0c38cbf2f3a852941d550,1.4,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+b094daf2b27cf58ff826ea4017036171,1.45,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+ee11c1ea45fa28c9e38e3039a3f6d467,1.5,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+3f33bf98cd211c1e06158d21786ca7a9,1.55,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+a96e1618b4a25c796d4218bd163e75af,1.6,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+b0f0b8fb99e8a1afd7353873e23f4aa1,1.65,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+d36a58116dd936b7b3db68f83ec89235,1.7,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+f9fce3630cad384696bfd7311ae59ada,1.75,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+a7862ca286a3331848a5e59cec754c94,1.8,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+7d65e6272fb083924d54d63c5c283a4a,1.85,0.4,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+ec3a33d4ad47b6d3decf131b41a4b652,1.9,0.4,0.05,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+a3d4eb21e0239a074b9fa272ffb6fe2a,1.95,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+df0b02114247446442bb44501b04a8a6,2.0,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+e091786a37c2534d610db0af48285bd6,2.05,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+1dfc0e961cbbc966139bea2ca4298658,2.1,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+3400c7a07d3b9501639d31cb341fc8b4,2.15,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+191faff9fdc18a9b09dad78e597b5f43,2.2,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+27203a694bbbfc6af0b38561a308ec76,2.25,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+f7f2f51120410da7936bea1aee4e4e27,2.3,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+2bf976c05ab928aa80a162585a2fe402,2.35,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+ee96e421df7852322d953fcbfe1ffbfa,2.4,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+8d4104ee4c3e1d159bde445a47703eeb,2.45,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+3cbc90bfaaf8c8a27fa663494aad606e,2.5,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+fdf74dea48395a90ade981bc58bf08cb,2.55,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+9ac1969895d84ae89365b2eb1a5cd2ed,2.6,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+9ea7feeaf55896a63bc58fc9ce993af8,2.65,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+6971e6faa68bf9fb12e3e0aa1624853f,2.7,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+e5a22f4b27998936045e7180859fe2e9,2.75,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+2a48b8ab46132fe6f47de41f3a82ea6d,2.8,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+c7d2ab1daf067ad246f7cc87658af455,2.85,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+90aed9af3135881e853752d17bb92265,2.9,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+dfcbcc0e7515cd8400e5e18ef682b3bc,2.95,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+8e91e0784245c1647341e0fffdaeaffe,3.0,0.4,0.05,1000,Death,Death,0,Death,Death,Death,ok
+0527c72620eed567a022fa6f164f0b8b,0.0,0.8,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+3a7d7ded8ded0e2b51f7cc3a172c6821,0.05,0.8,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a3eb9a19b672af9371e1f004e5c1b2e5,0.1,0.8,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+8051cfe28feb900ff02eff80d4d67651,0.15,0.8,0.05,1000,Partial Locking,Incoherence,1,Incoherence,Incoherence,Incoherence,ok
+2ac72875b18e3ea11f79b578453ae736,0.2,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+8a3609283baabddb20b942ba23265a31,0.25,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5f8106dc6719a4ce8370d226ae685ef3,0.3,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+1571f584116026db2207b212953b72b0,0.35,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+e23ba030ffef05d5ad9c3fd723f22b90,0.4,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+407daf806834ca011c49f431c501249f,0.45,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+d98e6c96e46518331db83cc6f2323492,0.5,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+1cf76b6b1800eb0d7db1e7a28d75cf8e,0.55,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+22cd0b7bee642b8df714fe2a39434b93,0.6,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+61f7ba21c616ee214feb76ce7eca27fa,0.65,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+1a56bd13d25e1dd43f50aea028020de7,0.7,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5c1f78dcb2a5a0ef6a86e21af9fcbdeb,0.75,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+7717d9e1276b6132d710d5dd75a6ddba,0.8,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+6fe89fa487822ad8c0fb6622de32daa6,0.85,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+61e5a3f9172008a4facae8c9d0d4de94,0.9,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+8e14166734cfe7a537f85735ee7ab44e,0.95,0.8,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+615b00fdc26904472b0d20adb7b5c53f,1.0,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+9e504d21a8c96884282c49003a6a3857,1.05,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+01f8475b0f959f29be8b32db77f4862a,1.1,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+1b37d4ef4107fba7b11e272c4240af68,1.15,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+b8585824e4284ae7d422669f4c046200,1.2,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+430b0286b73a92635e63f4b358caa081,1.25,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+caebcb5c9ef8acf67efe56166423af1d,1.3,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+090f3b47be64b0c0021496454f703d2b,1.35,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+4aa400770560a253ac5faa58704eb16e,1.4,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+a0a46742cd9f6d8bae4dbc3651a3b483,1.45,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+0320906af1fda4178e32f885fdb58b21,1.5,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+e55cfd64d648d6ecce00ba3baa70c8d2,1.55,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+a5e7807d234ef099d42905c54d43156a,1.6,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+d15fa22df5c679386bcba3c74ada1260,1.65,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+7b6cbea1d386493d2f3cc1afa23f8e5b,1.7,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+e14953575276b1aa0a38a0c2ae00e622,1.75,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+2b33f4b0354403cf4546229113404ba6,1.8,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+865062b40b2acdde255c4e80bd3fe560,1.85,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+8dff4430919b9929f507235d6b7c5a04,1.9,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+3bbd4af02f5e8d505b629baea6224d77,1.95,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+61a79bd8a208703c586f0fd684543161,2.0,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+401b1c0fe552253eba7de563d5a1efe9,2.05,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+684a14295b71faafba7fcb233234aa6a,2.1,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+7633c9fabc5f7917a992da5f7691fc2d,2.15,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+6a1b5d6151f87742da3da55906b0f4ab,2.2,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+1b6f52ea98cd671cee364d317b7b242b,2.25,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+dde44bf94e12635e0de763541762224f,2.3,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+ed4290c375d64db797de29ac45485314,2.35,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+02d8154e3ef78abb361fcda2e59a2fbb,2.4,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+8633a38211d0a5b7272a71803dca9b6d,2.45,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+f21ede5376aa8fd11f8627e536702cf8,2.5,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+df97a133e47d193f1fbda8a231e5f903,2.55,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+03507284cac9ecf6a29bd14225385cf1,2.6,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+da1b77cc8aa12adabfd3eced7d5c1cec,2.65,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+8dd13b9ddce537332389a46a8adb762d,2.7,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+19352a6f06763031900edde9035b4db1,2.75,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+2fdad49a5f3c0d6ed4dc66220eb08a4f,2.8,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+4680884b75df73a766f23bb5dfdafe4b,2.85,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+bbf676c5222fae9a462d065eb73359ef,2.9,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+2526133d20b2f11ed476d0a2153f11bf,2.95,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+4d686f873fbe056e3de594d4262df6d6,3.0,0.8,0.05,1000,Death,Death,0,Death,Death,Death,ok
+c9a5458197a0cb43fd4caefdee7ee0e4,0.0,1.0,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+5e693ea66698277014e34d3a4f47ae70,0.05,1.0,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+2f583cbb99126ceb802e742d4d718275,0.1,1.0,0.05,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+850c80f2f97bc130750f812b5953bfcf,0.15,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+90f6c9a226a3f2db5478854af66c877a,0.2,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+da7b613b60bc3649573d39f472d2fc3f,0.25,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+6cf707d2625864d7c3e892a6ac4eb849,0.3,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+0a8072db7438b731f9751e5a3a5924a8,0.35,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+86a65e8d50bbf08f3b7db0eba60ffec5,0.4,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+5d945f1a83a74f36eba1bf6d287029ab,0.45,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+61a22a2ae9e67c436af14ed826a1baae,0.5,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+a0ed11f300acaecdecdd7115e24d8647,0.55,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+a1c72a7eae4d6576f8875a837daea603,0.6,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+7b3a04b643fbfc1329ab3cd17a6c045b,0.65,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+031f31e49e321af4dda4c0018ba496e9,0.7,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+0bb86bfab912c761d8ef86cf5c8faadd,0.75,1.0,0.05,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+a1cf455a377d24a442631d12bb91b84d,0.8,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+21db2a3fc51d8b313f0c2b76df31def9,0.85,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+6af2cde4fa7ee3083a745bb05aabf56f,0.9,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+122e540b3ecb2b1e80e632b4f0baef84,0.95,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+f69930d9dd335916c434311b80fc8356,1.0,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+66d030bc96e759f9a6bef46f273532a2,1.05,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+04b72ef846ba6847e1a6003f662a4b28,1.1,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+526a125d4bf2ec294397ceb8d5f06f3f,1.15,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+a671aec990d496399fc1e7f226228b61,1.2,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+0496ed52fb72903ed6f06ef1db738dcf,1.25,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+1ea872038172aa9bc900f58ec9496523,1.3,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+fed17fed3d2a0d6204aad44e00fff40b,1.35,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+7372d274e4daba5efa6ed5d0efbabdb6,1.4,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+3198a95ed8256f867ed5841c83b44305,1.45,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+3b56be9d4af3990fc013499894e23676,1.5,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+4e729cd2aad612e1273fb62c4c96ee85,1.55,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+d07bb06f0db5435838afc6b82c717a13,1.6,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+b743155a5c065f425d8906eb45fdfff3,1.65,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+d81cc5f9e77efea289f00aa6afe30abd,1.7,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+103299210688ad4d3c0017b60528e7d3,1.75,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+ed56e07eaabece58a26295d786e064a0,1.8,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+0a533091646ad22e2998a56d8392a3b8,1.85,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+c5c3536c88a3c68150b0d59b185b2d13,1.9,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+3371e3c27f97d8a397c837719e2b7634,1.95,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+b967b8b0ea8152e9f803c2938e380161,2.0,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+d597874ea7af20ec2ecfcf6cd2eefc1c,2.05,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+0726cbadfc88422cc0349e11f6c76143,2.1,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+f92a3bab885f3cd48806a9702bcd5eee,2.15,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+2c8ff54f86fdeafe5cc07cc1f1b7418a,2.2,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+1f4b99da9a67b41ca3d8db1f548d613a,2.25,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+c98906f90bdaa7677962ee6a31098be2,2.3,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+1282963f7da7b4178e3eec7011cab11e,2.35,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+eb9716a7fc06515a41b85accf41f6adb,2.4,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+7769be3a68e2480e99c902514053a8ff,2.45,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+08aea71f6c86e1204875db160221fadb,2.5,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+ede5bb324980b3b8948b1cd0be666299,2.55,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+6aa1b089269baa608a31d13bcaca9cde,2.6,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+b94ecd4d307e4510d9bd056d0c3548dc,2.65,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+c3009da44fb730661c58202c9c93aefe,2.7,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+0c0426ebfd2139389f7f470daa2ca406,2.75,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+1d8ec2ca7ad7b779cd22b89a812f6345,2.8,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+474520dc691e5ec90991c436177f6834,2.85,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+f7b047ab2f34c28c6d016cbf47a34490,2.9,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+684e69134d4e0089baf6a9c515cf876b,2.95,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+dc86bc81fdb2b343599426e7614d71b2,3.0,1.0,0.05,1000,Death,Death,0,Death,Death,Death,ok
+4a6a3df703a3900f770c46441621e57e,0.0,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+6cfb136e2433d9d0437b0e91ef8f9ec7,0.05,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+095675d7044fc35d8a39e78bb6b07685,0.1,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+d882b996f9bfbb9db36d01ce18c45c36,0.15,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+3e351e109bc3b12c4e0a0235d8e25992,0.2,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+33d5d129ea5e38e74344683b2c3412aa,0.25,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a1d36e7f68febb869f884a292f355741,0.3,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+70329d199eaafb01e79463ac266c7e07,0.35,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c2fc2ce141ff6405a3aa1d07de009b3d,0.4,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7712c73bee389dc1ea815d6afa5f125a,0.45,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+076202a3c47d7ad7f4edb02a360f8785,0.5,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+b211d515286119590544fdab98154289,0.55,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+1c7211badec4520676bb29ff3ba6adc8,0.6,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+5e0f7f5f06731c770f3f5260b21be3da,0.65,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+2ae6e9b27f0db829e6cea8fa8eb19191,0.7,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+00b5cb445ab347bfd56a606fba89a849,0.75,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a4ad45dcc16f8a879b1470dc2effec29,0.8,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+872ce5564bbed769556d0ea73c8c428c,0.85,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+1e9fc68dae45c7b00eb9ec0a92b206b3,0.9,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e13524051170f753ecd0f9405c287792,0.95,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+3e4ffa48f7c8a83b95abdf7da9cc1b6f,1.0,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+aa67ea9adf528134fb1af1562007dc19,1.05,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+dcfcb6a0807f43bf11fc7dd60e3d38bc,1.1,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+20bf3a7eb6e7ce860027c973d3fbdb05,1.15,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c0421a220eac1084bf28446f2b095e04,1.2,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4d78ec86abfa60761b8be7fc67b050ca,1.25,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c70255debe32fa7b813504773ed3195c,1.3,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+fe3839eac790ad714417df90d41fc123,1.35,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ec83d0cf91dbea03e933b3096c34b104,1.4,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7084ff5918c1e3804443746ae83ec0db,1.45,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+3d38afb03d3c63ab6e1c7843e2eeff73,1.5,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+9f1211d520a527718609f7dd32a6e110,1.55,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4fe4453e4392e27870af19de90cef43f,1.6,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7218ac6311e26f647a3371428f114ac3,1.65,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7650886861e1e37f918165300e3129c6,1.7,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+81f14f9c397f42b1cbc66546e4dbafe5,1.75,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c8472409d23fdf1210ff97e911295208,1.8,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a91f4fbe28e50648f13fa6ba79c24a92,1.85,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+847ce91397a09bf6b14fefe64b4019eb,1.9,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+909e0136ffa0c84ab22a0ce6f5576536,1.95,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+0ace8932bc7c99386def1cbf6b50b499,2.0,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a024871500d067c92761be846d1642cd,2.05,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7ab0da7862f3e7b10d18b4810c95993a,2.1,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ab40c2c69c90ff64aec729da3887b093,2.15,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a68b860af7d84c30dac01ccdd213c4c6,2.2,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ce31a6613b569f8d0fe694f439798fe4,2.25,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+5cf099973be86403f95d76872c3652de,2.3,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e2c83cb606eb18270ee35e6d931348e3,2.35,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+412a3e21bde766d030fa220ea9c2cde1,2.4,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ffb0126aa082e4874459fe329696a277,2.45,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+3deb5114d2ed66cf5bf2e506def53536,2.5,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+af320f29567166036e9457aa67e3beef,2.55,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7eafe6509dfdb2010ebad66d8ebc1c79,2.6,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+84d0e05f4b68b647499871b5775b36d2,2.65,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+bcb4674ae8146a618ad59818760691b3,2.7,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+69ef3196fff7d8f950eb2eedad86c537,2.75,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a228d53965bacbbfb3df874cd51af717,2.8,0.2,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+cdd0b5c6f41f32ad07013809332b7036,2.85,0.2,0.2,1000,Incoherence,Partial Locking,1,Partial Locking,Partial Locking,Partial Locking,ok
+ab81ddc18262e3fff9dbf69a88d68d1d,2.9,0.2,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+b65bbd279b620c19b9d7cba8f0132346,2.95,0.2,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+b6f77ae5e8ec230dd4dcae25092e26af,3.0,0.2,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+9a122455ea5e91d05cbd3d03ec3c8f40,0.0,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7ef0ea0a8cf377f0625df1aef5b2e76b,0.05,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+45631e1d39d75c528d0f59be6ca3c95e,0.1,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+fc4848960209fb5bf736e3ce4e913e49,0.15,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+825a847d93c6b8839b62925f96f506fc,0.2,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ea80c10d87bd193a5ec168f6ccfd2f06,0.25,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+5867e16aaac786b0d5711728111d8ded,0.3,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+1b5ae14fda9c1f1c49ab6d6789df3b98,0.35,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+6f5d2b29a6b3ad707f365ce8868298cc,0.4,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e756c3eef3a9e9ff0a30c8a6ad05734b,0.45,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+f1625c0c4f707ae4ad822405948250b4,0.5,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a208770eef67f26bfacee42843cdc9d2,0.55,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+fb8ac8169a650e566185ed80283aea12,0.6,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7d29208a34b658842f087605e49bb8b7,0.65,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e9a2d0d3ecc1e3bfd830a4b77e01faab,0.7,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+29a262598bc4b79421a1d034cb6f034e,0.75,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e93ad3f0fc666d9d1dc24d14e18583cd,0.8,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+396ab745d457ff2f75f1fef9d7bd5c30,0.85,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+86e4d49d2effa87e02f209d123dd0abe,0.9,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+eb064eb4327be48a2913bafc1de0cc3e,0.95,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4347c1ae217d755f3f646608a170b43d,1.0,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+17ec5b047900eb4700b53d4b1f51b3cd,1.05,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c9326eb351ed8d813161917a6cd07cfa,1.1,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c8cefbf41f3f34666b384c25b509aba3,1.15,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a8dcfe128e4ef8389420cfdf1cf7afec,1.2,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4a3ff41c737bf57b93c7d9fc99f3c1ca,1.25,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+9c9f45ea31e5e3ac0ee243b2f726725a,1.3,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+872283f335c2a768ea4756ef03f01458,1.35,0.4,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ba238fc07fe835f9a65ee9de85e4d601,1.4,0.4,0.2,1000,Incoherence,Partial Locking,1,Partial Locking,Partial Locking,Partial Locking,ok
+21447b8f60bac4f1c349f0c1fe56f066,1.45,0.4,0.2,1000,Incoherence,Partial Locking,1,Partial Locking,Partial Locking,Partial Locking,ok
+43b5851ee8ef4d5be9026a64b5dfe4d4,1.5,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+241b1156ff16dbff7cc8596d41b55f35,1.55,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+159aa2c0c001e8805b65f392dbfafbe3,1.6,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+e72e1b4eea6d750dc92b9f140e985a40,1.65,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+d76f86e4fb1448f97f24963be1aa6db4,1.7,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+ca5b55b85ff948079799a61e371a156f,1.75,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+e07b1b57ea5a977b01f74f33b9673f13,1.8,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+800f371a6ac05d4d5326dfded3e5a54e,1.85,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+01e7caad32f655e5a8eeb8b24c636ffc,1.9,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+579954d1cee927ba00afc0e3b5d7b901,1.95,0.4,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+a06fdb6fe4555410bc7d6a23f7c7b10c,2.0,0.4,0.2,1000,Partial Death,Death,1,Death,Death,Death,ok
+f4fe6e110b80c4f26f0616e06a2cfcbe,2.05,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+2386aab038f5d752764a47673f030d79,2.1,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+83080085494cd0dfc6b14210b2fdb984,2.15,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+9bf8b1cc4ab9c0638d51d129f32ab6cf,2.2,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+df7896827a19a2cd24a5047a549a3485,2.25,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+76331b496ab7897a68addd3c6a01f446,2.3,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+7f5422ab2328aebb3e6c39e30ec4abf9,2.35,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+266d6750e06d9ee5379539690ec79ae2,2.4,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+681abeae9d78ecdcac386bf4c7788af4,2.45,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+9943cfedde5832af8fa9d7a6cec67b7a,2.5,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+6ae5f86ae59e61c4fda722104df88c4b,2.55,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+b9421dec69a378c94ddf2097fdb75e0f,2.6,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+f565e2957b79b788787953a9f16b9bdb,2.65,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+e97082519d534aeca830afbb3fc2471e,2.7,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+3eaf25e1e60522be1e640f35385cd1f5,2.75,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+fcc143fea208143fe9d4b6f142da609e,2.8,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+6f4ae56dbbd394e7f4b4cecd7d5f8f34,2.85,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+2a51a85618b65cb133a63afc54d6179c,2.9,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+d138802feed317bb3122febce3362d57,2.95,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+53bdf338b6e5584ce966bb6e05ff833d,3.0,0.4,0.2,1000,Death,Death,0,Death,Death,Death,ok
+45472e9e5fb6152c8e75f2381d9ebef6,0.0,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+556af5998962a3b1bb7775608812fc50,0.05,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+cb784a964a2dc762133d51db52352f17,0.1,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+791ab28e0a3dd080d300a8bca3877ed4,0.15,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+d5eab56f81d99542ae1042aeb37626a6,0.2,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+f3a62645ae3d86a39e6b038243619f4c,0.25,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+1193ecfe179d969ff3491468ecd14249,0.3,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+116627197d4fad29395aca8170fe3fff,0.35,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+628c01d8ea6b8fc5788cc3921a86a2ed,0.4,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+819f3068f29c1a12a802f7f3e8916f36,0.45,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+75f782b4fa397d660a9383803a824d23,0.5,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+9b2dd058bcd1e5c02238e1326c6603a7,0.55,0.8,0.2,1000,Partial Locking,Incoherence,1,Incoherence,Incoherence,Incoherence,ok
+7ec00edca81e1857fece002fccb7b80b,0.6,0.8,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+f67bb26429b8cf8e97e8f6f928e91b03,0.65,0.8,0.2,1000,Incoherence,Partial Locking,1,Partial Locking,Partial Locking,Partial Locking,ok
+3b702160612d668d83e8bf57a45dfebb,0.7,0.8,0.2,1000,Incoherence,Partial Locking,1,Partial Locking,Partial Locking,Partial Locking,ok
+40c112a08118a6d39dca2d25ee344133,0.75,0.8,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+c85dfb1673b1611194830edbe0ad6564,0.8,0.8,0.2,1000,Partial Locking,Locking,1,Locking,Locking,Locking,ok
+771c014257dba3154b4c1cf1638fa2d2,0.85,0.8,0.2,1000,Partial Locking,Locking,1,Locking,Locking,Locking,ok
+7437a3d3d0e12047d2129ab630a07557,0.9,0.8,0.2,1000,Incoherence,Partial Locking,1,Partial Locking,Partial Locking,Partial Locking,ok
+c03d0c1e1981a8152bd54ab4043770a2,0.95,0.8,0.2,1000,Partial Locking,Partial Locking,0,Partial Locking,Partial Locking,Partial Locking,ok
+5b8dcbff749e906fb0622428b09634a5,1.0,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+e983a0adf0fad32b589b5d8d995ecfd3,1.05,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+54ecd346d3d6fa41f4aeb440cacaf308,1.1,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+3faa7863defa31205406dc8a30b7f258,1.15,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+ba179ff6311413d7aba76727fecc5c77,1.2,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+68db90bb8737a3617aabd857b207c7ac,1.25,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+88dce45215dc129092c3e493f89a1a2e,1.3,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+2d86231279ab0586d22d475c0e714e04,1.35,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+8a4d1e9ed326074d4f157f17aea5a431,1.4,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+b9ead10e12b55229d8b35226d599d727,1.45,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a3a3dc179b7f9574fea9e6e32c4c6f94,1.5,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+9658da7bb1ab67e6ac8fa9ed32f3404b,1.55,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+426929299d028f68ba6abc7d8dad3485,1.6,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+336d1a156a1f527506286d77ba6b1d84,1.65,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+d9632ac0bc97883789d3863339c2f2b0,1.7,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+581afb00ab3392c5c8eaabfaf5dbd416,1.75,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+f0cfcd7f62ec9c1723036f46e3754fe5,1.8,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+2648865cc09922a991197ada0a286e59,1.85,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+7e4adff1e93702bb4620804425e844da,1.9,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+b74bd8ef04039156277ba4aad5287af3,1.95,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a97d5208ded1af906f4c733678ffb176,2.0,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+91ceef8a4f3960d38d7e6cb53a9f5d4f,2.05,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+eb6028cee0a0ea42c10f0a3d9013e250,2.1,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a876696a28c7df7ba3d49cf62e6e089b,2.15,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+6bda21a809c4869a7ab4c888ec031570,2.2,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a182b4b2a1a83fe7e72f8866b84b9293,2.25,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+292722fbb43eed40593e09a555f1bde0,2.3,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+21085bc65b55f1b4d3b25d4c09deb002,2.35,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+3129e33156bdc1caaf0d01179f5416a5,2.4,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+20b0ed0672c8b2478b4e4d578499979f,2.45,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+92921d7522e65192ccbb8adfec3daae8,2.5,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a09b3b2f85204bf4a806cfed3cf69461,2.55,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+9b06a1f3d4a375cbe7a56214f2823583,2.6,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+d213a4ed5fb090afc60256cbbc6590a7,2.65,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+0fbfc38badef853b1769f50ccf4149a6,2.7,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+0917e622d272efa9b213568038e3ee83,2.75,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a01369dfff774eab0169c8778cad78c5,2.8,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+8729d33f010a107bb67d2e73fb24295b,2.85,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+165091c13f9f98156b772b1844694fe3,2.9,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+213ee35c1166ae48d30336cbedc1e481,2.95,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+42000763fa077c830e652a77c8e185bc,3.0,0.8,0.2,1000,Death,Death,0,Death,Death,Death,ok
+e750dc997d9e5ab4aaa82591c1da8783,0.0,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+b0a8c0c4cc0cdd8adb6bb7555d5df740,0.05,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+82542356e75be282a8d2ed6670a108e1,0.1,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+b587a3ebb7e3fa04ca745bc321b66775,0.15,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7fce713529a733c9adf944235c69d64d,0.2,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+325c2f71094fa514c880409c808287bd,0.25,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+3695e25c94e1d38a451ef5f3f3f2cf09,0.3,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4351edaa91d37856afec5b8db3a898f2,0.35,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+75a0f5a3d58d67c8a32631bddc2895ca,0.4,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4dc57e8a20491f9350c8281468a00bac,0.45,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+3635f30b835ffa87c39dfc50919163e7,0.5,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+13bcc816a3d999913c570ffcaa16bb3e,0.55,1.0,0.2,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c2a95393cae4918366636e9104cb493c,0.6,1.0,0.2,1000,Incoherence,Locking,1,Locking,Locking,Locking,ok
+66ce503a52b8e6a2350b2f2da7a3bedc,0.65,1.0,0.2,1000,Locking,Locking,0,Locking,Locking,Locking,ok
+574451163990e8f122d36f488da19e9c,0.7,1.0,0.2,1000,Incoherence,Locking,1,Locking,Locking,Locking,ok
+6990e4008ba1434d6872957a57162f12,0.75,1.0,0.2,1000,Incoherence,Partial Locking,1,Partial Locking,Partial Locking,Partial Locking,ok
+4073156c6c0e7f80756a6ba4c172a0d7,0.8,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+37e01cbd4c7e19b4bad3c32693f61cf0,0.85,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+c8e164681ca7eddcf46bd35df742e6a6,0.9,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a763fe6b7f4fda36e324e3443aa07f59,0.95,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+b5193ac1d5ed59ab15b2ee176de0e8f6,1.0,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+4b992f086cdf04fc6d6fb090a45e9bc6,1.05,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+9727c1477934d0f75308d379d41cfd13,1.1,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+14598e3c27899a4425d8d5295b4a1272,1.15,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+babbb4125b56905d64de509b10665a82,1.2,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+611a053a5cf35e87398a1673f4029206,1.25,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+dd0b28367b370fbb7c6bb75c4308d2e6,1.3,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+e54750a50e106d5e9e46edd178ca9b25,1.35,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a4b004895f4fddfbeb292519dcc521b8,1.4,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+9f8094514fc82540cbd7c46f5108a3ec,1.45,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+a6bccdfc6a1c2cb184b2b03a8ff0caae,1.5,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+5067e4e6e8cbec0bc06fe971cfa9c638,1.55,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+53aa4df101b335c170f522ea0bd73079,1.6,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+481eece31abc6f00b9e614b641b70fed,1.65,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+9e0037fd50871c95bb9ab435243d9d89,1.7,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+58ccaa589279b028c363a67630e62d21,1.75,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+c3bcb8a186abbf7926d20b3bd0ee403f,1.8,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+2b1472a1a4baa1d9abc8f92786661814,1.85,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+44297b4981ab57c410789f5471fd7015,1.9,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+8b395f4be455df68c40d5281936a11a9,1.95,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+6040c6cc03566780e83df54099cafe82,2.0,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+dbf64baccc6cf19dd4d17ffe1701e6a1,2.05,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+b40f449db44738bf21e482d5654c3347,2.1,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+49e94c12ea2c7f684ec0194e72c801e8,2.15,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+4a8f02d553dc6b6f4a2714d345e1adb0,2.2,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+21c71d970484f89b44e9d16545a076dc,2.25,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+07e29273cbc91226dc458801241ba96c,2.3,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+da5703da01c9e4baa550807e8dad56ef,2.35,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+d2acb5ebcb3a94a1380a2c9ae40ff4e1,2.4,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+07e22d63048231f40bced205f780b7d0,2.45,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+533b5e131b04b6a7b81f2445acfffce2,2.5,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+15815568dc09f2bb14378dbf1c553a57,2.55,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+f035c2035db074ea92263560b7cf259e,2.6,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+73e8579510ee35c49a4dc4337b04aa01,2.65,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+987c2dbbff0ec8eff0e30cd9d9d24565,2.7,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+c621c8775c18e5dde2952dca4db46a73,2.75,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+197a9672ddbfcd85704865e5af77b142,2.8,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+c2430f7a7ef852bc5c3edb28a6b1bfb7,2.85,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+01665cac7b0930131302a3e859e8854b,2.9,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+c98ddbf0f5451bda0bb95ba3c3d18c74,2.95,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+c59fa27486b25ee0d027b1b041da9316,3.0,1.0,0.2,1000,Death,Death,0,Death,Death,Death,ok
+7c7b6208cbb61ab515b8486fb112b501,0.0,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4c19c4b4a9c7a9225449bab3b02f2911,0.05,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+4a6c01f8b1f351a38d03ea0bce029155,0.1,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+df85dfc36af6cd4451765676d3ebb1b2,0.15,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+856be99fb8ff7bcd7a8b991f2998a13d,0.2,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+57ae7badcc473a4868fbd9c95ddcc475,0.25,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+9f0528b35a6df8829e715cb6f10d24c4,0.3,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+001de26b2ed60641dce7b966adbe2aa6,0.35,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+6c8e356ea2cdf0071680fec3d4a43c46,0.4,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+1cc0d7db6ba3811854a9fecc9e2a82c0,0.45,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+aba1a416e48578866f4b6b2c0a4260fc,0.5,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+7ca95e6d546e58c9ac4b7b925dd05b2f,0.55,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+0e6c2ebdb8cf518c9ad8b1e0a7e8c3f1,0.6,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+28f83604f8cbf825f35ee39b4e34ec76,0.65,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+175d043891d8a13e112a255534d06096,0.7,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+b0d90500fac519963c93136d2f9a141a,0.75,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+db0d7c27492bdde74acbf193dc22a0d4,0.8,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ec1c4823e34d08286b5b3da9417588f9,0.85,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+9cfbf81a71b6c59257a5e0ac03602c5e,0.9,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+0088e01d06736ffda4d143ffba2bf003,0.95,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+bf6ac2b365ddabf2b4001f69c3ca6960,1.0,0.2,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+22ca7b92978afe91781029273db1d580,1.05,0.2,0.8,1000,Incoherence,Partial Death,1,Partial Death,Partial Death,Partial Death,ok
+49a5435f98fa9cd38a3482778bec0cc8,1.1,0.2,0.8,1000,Incoherence,Partial Death,1,Partial Death,Partial Death,Partial Death,ok
+7847f52c5c1b95054067198220013aac,1.15,0.2,0.8,1000,Incoherence,Partial Death,1,Partial Death,Partial Death,Partial Death,ok
+1c51efaaf904d307f0cb013cb7fb713e,1.2,0.2,0.8,1000,Incoherence,Partial Death,1,Partial Death,Partial Death,Partial Death,ok
+e54754b4518a65f36bb1d41e1bb3035b,1.25,0.2,0.8,1000,Incoherence,Partial Death,1,Partial Death,Partial Death,Partial Death,ok
+57d4d6427753325e6b576f17b5b0b1b9,1.3,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+281ae4c529ab6337105f65bcb467b337,1.35,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+3f09d8a3ad335d7281c3a2839948c2b9,1.4,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+4d56a61aa29c3e04a06a10256fafc3cd,1.45,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+5c374e7b8fd524479b2ec747cb44728f,1.5,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+e1ebc0826414a9208a09d58835f744cd,1.55,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+a969ab9817bbec43d71c0f23172de3e1,1.6,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+1f56f926a4c73ad11aa17c454e0db888,1.65,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+59e3524e0d9271a853bc845f78fd31c6,1.7,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ee88ff642cee4e608555e291b6e614e2,1.75,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+39f46c5dba31e2660c26ad219f842211,1.8,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+043c98eb5f76bcce9ad400577a45c013,1.85,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+c7cf75817bd69c91bec8cfbc412fdc25,1.9,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+dbc5b9ad7be342a519fede5da0bc0540,1.95,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ddf589d98358538025e9a3194b38a39d,2.0,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+797535b69d73e69b5d66a781fb2c5b11,2.05,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+1cbab2586f98e4b3c5ece37d3844b2b9,2.1,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+dd0dc6981a8891586e8bee770e761622,2.15,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+8d00815acbdc3c86fc50a6286fe5074a,2.2,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+3747d8a5b1af970dde04df641354f73a,2.25,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+8e85a4689ef3415fd00ec7615515ed9e,2.3,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+12681c4fee0fe53c946318073a68d0d0,2.35,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ff918b946b427fb1ebe4cef8e11dcfaa,2.4,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+02295659a146b2330a9e5c3a17d57792,2.45,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+7a1c0fad19e1a040d5c2e4545621d518,2.5,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+aaf3353f884d2f244ef5719480a22b77,2.55,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+623f3f9dd369f191e5ad3b796d97240f,2.6,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+511a0fd26a33b78296c788c3322d8b6c,2.65,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+c81c77d2b7a8cd115fd7eea351c527ec,2.7,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+b6210bf7ed2c65b54609bfd098045985,2.75,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+f704ba17d0957b3b2b248bf28b1774aa,2.8,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+6fc7ac118268ecd2ed146581b62cc097,2.85,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+4c61142f34c178dc66e561276f7ee9b9,2.9,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+fedf6f5d65d8046740d3c8b2398384b5,2.95,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+413445abf20cb2880ffba59a43e589ee,3.0,0.2,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+9ae8e83801c5e18017e9a8b039a9297c,0.0,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+685d92f26c06ef9989b1aa6bd6788cbe,0.05,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+ee2c6d88578047132459d087195f0cfb,0.1,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a72632d3ccd9cf54920f6933da8f1355,0.15,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+acc27af3e1d128d96943b4267c021e2b,0.2,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+1459c22190488261687a1229bf920c73,0.25,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+adf19baef6a056be49b62a61c7daebd9,0.3,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+67f5a731fcc2425bc3354a35587d478a,0.35,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+5daaccf9872bb47c6e26ae209e4a4161,0.4,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+c358b862cd1c26d38ea26cec6ee8efb3,0.45,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+280189b95106b36164bebaff356cb7c9,0.5,0.4,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+bc3892687ed7515ec579c75b8a1ef299,0.55,0.4,0.8,1000,Incoherence,Partial Death,1,Partial Death,Partial Death,Partial Death,ok
+840445eef371cb09bf8ebc979102c7c3,0.6,0.4,0.8,1000,Incoherence,Partial Death,1,Partial Death,Partial Death,Partial Death,ok
+c65208ed9f5762b5468c51d3b80a4371,0.65,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+e4be6ee7f2e371c9b12851c5de03ba28,0.7,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+fdb9400249bc4dc9f584bd3e05920215,0.75,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+76653645ae89a78f03a9e58e16a739b2,0.8,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+a416adf77e6d0fcc569641a587a9af69,0.85,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+c7123814a491fa16cc038732cf312d9e,0.9,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+1ebb4d54010284fc51639bf22d1f9f4b,0.95,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+4debccd2b67ab2e1996d898276f44f28,1.0,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ddc0b3c32d722dfff18a4d1dabb37a55,1.05,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+3e84123613375750dd83a423a685d24b,1.1,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+8e59ab53a3b35e9e5bac5c1b5e0dcd22,1.15,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+d4a3e62cf01aff4cb893d346782f56dc,1.2,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+a7769b8e696c037f976ba13af7388fba,1.25,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+17893a3a294658d566f4d80fd14818de,1.3,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+59135bdf9ef3f3186a5c9b612387bf8d,1.35,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+a7aa99b45496778d622aaf520be87b8c,1.4,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+145293f626e6c29ef4a7d3094e436f2f,1.45,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+038c007a8608e7fd22052b852668ac8a,1.5,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+f9114be28a22831c88ec957fcf86008e,1.55,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+25d6c504d551211a6c0d08d99fda026e,1.6,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+62ea6157a7952cf605eb6079c5640c33,1.65,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+b7fc269743ce93f54b9885db7f12f5b9,1.7,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+124ae867c862653a111811f186b7bca4,1.75,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+7a2e32ce968440989d5c2abf4b6daf47,1.8,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+b6b8f09ef9a525109e31acb7023a6414,1.85,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+5ae1527241945ab7a64d6d4b05746ccd,1.9,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ad97721300c5a919eff46099b524528f,1.95,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+dfae80b1c204fe9a4e5c6fb5ddf83a6e,2.0,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ad16c784ba4bcfb3bafafa3b977937b2,2.05,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+0c8c6c0799de78e43dd27d95a7ffd6cb,2.1,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+a1a3fafb478de738f7c246bc29cf750f,2.15,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+0de7f9190cbc97a2e404fcd06c814831,2.2,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+98198c0fa7606c30466613d578bf3060,2.25,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+278aa98f4d20ab0f7319788edb500449,2.3,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+d6486329f70510e334376190ecf9760a,2.35,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+dc97a728c27b7656b40363e2643c8c4e,2.4,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+bf46fe1754815cf9e924b4b22ae50f8b,2.45,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+1dc42aa10870e78e6f462e796af7b345,2.5,0.4,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+96210a717ff58af7fb8da8e5dd59c924,2.55,0.4,0.8,1000,Partial Death,Death,1,Death,Death,Death,ok
+4cd89718be82c0260c10061ea7c9d6c0,2.6,0.4,0.8,1000,Partial Death,Death,1,Death,Death,Death,ok
+f98f5a39510c975e73449d5c89ba9262,2.65,0.4,0.8,1000,Partial Death,Death,1,Death,Death,Death,ok
+25031a00b0a4040c329d325e25dab689,2.7,0.4,0.8,1000,Partial Death,Death,1,Death,Death,Death,ok
+9be242a4d2ad8b0ea903a831636e9036,2.75,0.4,0.8,1000,Death,Death,0,Death,Death,Death,ok
+d6b43dc3cb9191dc892743244001d9a4,2.8,0.4,0.8,1000,Death,Death,0,Death,Death,Death,ok
+29d461d2eeb4dcf26b8e72c438bde53e,2.85,0.4,0.8,1000,Death,Death,0,Death,Death,Death,ok
+260a305010a861e8d03d7457491c98f6,2.9,0.4,0.8,1000,Death,Death,0,Death,Death,Death,ok
+61deb93d9be7b9a289e649afe5e2ef1f,2.95,0.4,0.8,1000,Death,Death,0,Death,Death,Death,ok
+006d841d5603b1a1df7476f4c408e766,3.0,0.4,0.8,1000,Death,Death,0,Death,Death,Death,ok
+4dd80d4bfa94fe085a535a7c54742038,0.0,0.8,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+70e8435cbe4f22482a5790726ccbf4f5,0.05,0.8,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a2529b70f80b06dda3d2a4210a9ae89d,0.1,0.8,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+a22aa08ea72debf94728f2ca25b0a82d,0.15,0.8,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+bad6f76a9b80faebc545bc4f015d0dca,0.2,0.8,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+b3ed5cc0f184893b0cdbea605e7dafc9,0.25,0.8,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e16f731dd91a2b1e2115192eb5e4f2c4,0.3,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+2d34d3067ea80905c752843ad829f983,0.35,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+4125f02e585e1ab3560d840932c061f8,0.4,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+af3ee22b671c5476c9826f7ffc9c8c6c,0.45,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+b08e8067f5c28b1c6c1e862d91400266,0.5,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+f4d9be1a339d03e20e64b0e81ca4c7b1,0.55,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+6052719a516e5459664eb04cd3d385e6,0.6,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+7316520b6ac8dc54fe0140edaadada55,0.65,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ca3def8bcfd5edb8054b798858a1c15c,0.7,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+5047210d681ec675802b6c90b5f613b4,0.75,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+2e253e7313d6702eda3132f28c7b1a32,0.8,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+9a114300e42f207860821222945e566e,0.85,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+1ac54a9116f94df277f675cfa57e9e41,0.9,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+b564ff74f0f11a3d1b719f113baac592,0.95,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+04058bf931d54d9940086cd464f8b291,1.0,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+79098cbcf80213b5d6bbc287a2f78916,1.05,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ee58c446e3a5807ba2a1fcb109f03bcb,1.1,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+06b8be46298b4cdaf243d133607dc693,1.15,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+1bed5faf9c2f395c3e10b526a4700bb7,1.2,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+51a006840e1f3f8f49b914f79712fdd8,1.25,0.8,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+1f4fa448cb707dbeefd11a591cb29682,1.3,0.8,0.8,1000,Partial Death,Death,1,Death,Death,Death,ok
+c2df08b19fd07faa2d2d4e861bbd7765,1.35,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+892801347ab8b37ebe7f62fbc30217c6,1.4,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+15a6b04b540184bd1674c8b30d03baef,1.45,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+e1ffc06ea459845d7257b544c59fcde5,1.5,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+d6fe0be19de39121fbbf7f8b6498c894,1.55,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+692709002d7776c0d3eb13f8858db66b,1.6,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+6f5cb118a62d78a679021e1aa5b6d20f,1.65,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+9acf8ae72250065aec1c650567b61f32,1.7,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+e03aee8ee93884321c022331ae8e6723,1.75,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+7a36379788cfa379522102fbc9543f3b,1.8,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+2d2dd59a36a786310071402b1c694315,1.85,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+2703af71047bed3f3a1472ba7837ab23,1.9,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+f9d19090c3d4c82a2236a5df9cd54e74,1.95,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+13ecd0ca29e774a457483782b6a2452e,2.0,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+4c6e677e8a713852d4d3c7e9b591f98a,2.05,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+b2fc8e0f83c33efe43c87b62f4d14c6a,2.1,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+b1ac76719140c21c6757409342ebfffc,2.15,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+801959c16fc581bf20cc80104dbceb3b,2.2,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+3c98d94316cdf59a37fdb9c526e1deee,2.25,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+6f1f1952753d38eeaa0bbd697f8a1a87,2.3,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+3af1f24a4be099f229696ebece58200b,2.35,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+a3ab405a5b7619f2de8ff695bb8dcdbb,2.4,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+8a860e233a36d3067049d27c45b83cb7,2.45,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+5d95f4574737c690d1c3bd4a520c353a,2.5,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+7c31bcd49cf693306a38c0036e6db996,2.55,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+d5d48d777d1acc8f088092a8e5f54a8b,2.6,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+ac091288498b3b6949339f3255169375,2.65,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+c6648aabd7dc58cec53951c4eb0d6e04,2.7,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+e9986e41b0522eb8aac3fce22aebef21,2.75,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+54a18d2076d879eaf98f26a8b84c0ec7,2.8,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+43ab1aa9e0a6771e6e97be284631d608,2.85,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+a856b6a30029b7551b85adb82d540422,2.9,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+29a7edb0690fc6a4aebc39f04353b15b,2.95,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+98404cc97fa1963a615abc37a886b00c,3.0,0.8,0.8,1000,Death,Death,0,Death,Death,Death,ok
+67c33578fe8b578967145b9a0a9e7ccc,0.0,1.0,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+5f2dc4bef90094ffcc9430188e505b69,0.05,1.0,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+e6a7a09797c5ea84f187e03efa13f270,0.1,1.0,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+58dd111b749972e00d2c39a0bdb5c95b,0.15,1.0,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+72501756c500ce3db5ff2d2c7f1be199,0.2,1.0,0.8,1000,Incoherence,Incoherence,0,Incoherence,Incoherence,Incoherence,ok
+2e7b457d58e7ab50315720425d73988a,0.25,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+e5f0dd3dafc408db0ab336b3167b42c4,0.3,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+dc4f70329423693deb1c93d71ec085a0,0.35,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+85a62b7243999dff8a976665a998f9d8,0.4,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+6b813970526adc9af672590859ca0ced,0.45,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+30cc867efa72ef216fa212a596d363e6,0.5,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+0fed22736bf073b6da488a2c8a8e85c9,0.55,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+a80251ba96f19efbd051a3aaf86a5a9d,0.6,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+00e754c61b77135051409ac4f2e4644d,0.65,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+f5bdcd225466069d6636eb62529f29fe,0.7,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+5808dfb57fcf0f1d428f20fd0754f644,0.75,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+19b477820ad0e1283b727c8790cd33b0,0.8,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+7c4e26a67f04634be5237c46769c9744,0.85,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+5f1a69fa7772aa9f5ae14cdb24d161eb,0.9,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+cef1f40c981030782f48de1ca529b556,0.95,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+223896efb66be7ff1f66b820620267c9,1.0,1.0,0.8,1000,Partial Death,Partial Death,0,Partial Death,Partial Death,Partial Death,ok
+ba9588c756ddc3fa3412a5cc4c34748f,1.05,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+3080142fba5b2d7531b1363a36032a85,1.1,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+a8a22a17a6f1cab2e82abae048de6269,1.15,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+c619af9d83cfac9c4ac008fd0c3fc198,1.2,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+f6cb26b0611084b94799606629bb7195,1.25,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+2b9c6b96a24705d9007e27ea09d5c389,1.3,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+953da7f584c3e9f6efaea9d02c2ca064,1.35,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+bd609f810c975b0d44e5caa3bf0387aa,1.4,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+38166d6c76c7573d84b2d6ea5b77d749,1.45,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+c6efd7985836665d066e0537c8bbfb19,1.5,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+16610332bada340324e6accb5e2ec9bf,1.55,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+cf94398c305d24cf5def8fea6878374f,1.6,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+ba2299dc8ef10bfcf17cc94e3eab1662,1.65,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+12e24956b41946fbdb7925c6ef36455c,1.7,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+c126c5b15225133483968003bb0ee978,1.75,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+db8e337b2aa1ca5860cd452d2dfffa6f,1.8,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+f7d50991867a80567ea0aa8c4aecc748,1.85,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+00ca83bfcdc0742713cde5128fa5c1af,1.9,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+f26dae0dc896af7c3e68744922411d47,1.95,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+0d7af25f217d69265dd10613fd850ce6,2.0,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+67ca3c699e2496d31b6d4ad2040d8f9d,2.05,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+cd1cecc280ac168662bccc4a139a7c3c,2.1,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+e6ec80249c6e2da68daf2fc4001bbca5,2.15,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+6101ea21e221ff0886e88310ef087425,2.2,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+86c05e6eb20de21e6a1b85f2faa0afea,2.25,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+546926caca6dbb7396ce047f6d96ca86,2.3,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+d822c3404fabfe290359fe7065e99bc7,2.35,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+bc405a0a367ba138665753fbf3a95594,2.4,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+4084d7386059c08f0f2188f491af4b01,2.45,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+66df8e0482fa46a62741f3bcbcee231e,2.5,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+e0f25b8c09b9b307d0765f3728bbde27,2.55,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+bcffbfdae459bf294c5735ebf6d481bd,2.6,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+bba30531c833760fe0cdeaf94be8db81,2.65,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+723083dbca28b2679d174ad207300b12,2.7,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+ac7929be54b3d466e519f9855f3b0d90,2.75,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+29241830a00d22bcac6e1c37f9165c21,2.8,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+47d4c477a7f36482e9a3beb3d5b962dc,2.85,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+a9315a00999d1fef3f2b471d79e092b1,2.9,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+8a80de9e26a29449b39dd4e773874bf8,2.95,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
+341e29716369b77a7bc5fa7f46ed9cf1,3.0,1.0,0.8,1000,Death,Death,0,Death,Death,Death,ok
