@@ -1,6 +1,6 @@
 # Weekly report — week ending 2026-11-01
 
-Repository: `lmhhappy0608-arch/SRS-oscillator-sim ‘
+Repository: `lmhhappy0608-arch/SRS-oscillator-sim `
 
 ## What was finished
 
