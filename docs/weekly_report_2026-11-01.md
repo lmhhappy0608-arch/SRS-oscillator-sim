@@ -1,7 +1,6 @@
 # Weekly report — week ending 2026-11-01
 
 Repository: `lmhhappy0608-arch/SRS-oscillator-sim`  
-Branch: `main`, last push `730d622` (2026-09-23)  
 
 The ODE was not rerun for classification. Stage 1 NPZ files, the SQLite index, the original Method C function, and `code/Ariaratnam2001.py` `classify_state` were not edited in order to produce these labels.
 
