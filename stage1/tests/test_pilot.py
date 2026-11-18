@@ -22,24 +22,34 @@ from stage1.tests.test_stage1 import tiny_config
 
 
 class PilotConfigTests(unittest.TestCase):
-    def test_pilot_grid_has_732_runs_and_reuses_the_recorded_point(self):
+    def test_pilot_grid_is_only_p02_from_k_3_05_to_8(self):
         config = load_config(PROJECT_ROOT / "stage1" / "configs" / "stage1_pilot.json")
         coupling = config.resolved_k()
-        self.assertEqual(len(coupling), 61)
-        self.assertEqual(quantize(coupling[0]), quantize(0.0))
-        self.assertEqual(quantize(coupling[-1]), quantize(3.0))
-        self.assertEqual(quantize(coupling[14]), quantize(0.7))
-        self.assertEqual(config.resolved_p(), (1.0, 0.8, 0.4, 0.2))
-        self.assertEqual([quantize(value) for value in config.resolved_delta()], [quantize(v) for v in (0.05, 0.2, 0.8)])
+        self.assertEqual(len(coupling), 100)
+        self.assertEqual(quantize(coupling[0]), quantize(3.05))
+        self.assertEqual(quantize(coupling[-1]), quantize(8.0))
+        self.assertEqual(quantize(coupling[1] - coupling[0]), quantize(0.05))
+        self.assertEqual(config.resolved_p(), (0.2,))
+        self.assertEqual(config.extensions, ())
+        self.assertEqual(len(config.resolved_delta()), 41)
+        self.assertEqual(quantize(config.resolved_delta()[0]), quantize(0.0))
+        self.assertEqual(quantize(config.resolved_delta()[-1]), quantize(1.0))
         self.assertEqual(config.n_trials, 1)
         self.assertEqual(config.N, 1000)
         self.assertEqual(config.t_end, 14000.0)
         self.assertEqual(config.observation_windows[0], (8000.0, 10000.0))
         self.assertEqual(config.observation_windows[-1], (12000.0, 14000.0))
-        self.assertEqual(len(coupling) * len(config.resolved_p()) * len(config.resolved_delta()) * config.n_trials, 732)
+        self.assertEqual(len(build_run_specs(config)), 4100)
         self.assertEqual(config.output_dir, PROJECT_ROOT / "stage1_runs")
         point = validate_config(
-            replace(config, k_values=(0.70,), p_values=(0.80,), delta_values=(0.20,), n_trials=1)
+            replace(
+                config,
+                k_values=(0.70,),
+                p_values=(0.80,),
+                delta_values=(0.20,),
+                n_trials=1,
+                extensions=(),
+            )
         )
         spec = build_run_specs(point)[0]
         self.assertEqual(spec.trial_id, 0)
@@ -55,7 +65,7 @@ class PilotConfigTests(unittest.TestCase):
         self.assertEqual(len(refine.resolved_k()), 41)
         self.assertEqual(refine.n_trials, 3)
         pilot_point = validate_config(
-            replace(pilot, k_values=(0.5,), p_values=(0.8,), delta_values=(0.2,), n_trials=1)
+            replace(pilot, k_values=(0.5,), p_values=(0.8,), delta_values=(0.2,), n_trials=1, extensions=())
         )
         refine_point = validate_config(
             replace(refine, k_values=(0.5,), p_values=(0.8,), delta_values=(0.2,), n_trials=2)
@@ -85,8 +95,8 @@ class PilotConfigTests(unittest.TestCase):
                 )
             self.assertEqual(code, 1)
             text = buffer.getvalue()
-            self.assertIn("planned=732", text)
-            self.assertIn("absent=732", text)
+            self.assertIn("planned=4100", text)
+            self.assertIn("absent=4100", text)
             self.assertNotIn("Death", text)
             self.assertFalse(directory.exists())
 

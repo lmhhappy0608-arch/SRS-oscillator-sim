@@ -72,10 +72,11 @@ refused. The parent NPZ is left unchanged. The extended run gets a new
 
 ## Pilot grid
 
-`stage1/configs/stage1_pilot.json` plans 732 runs: K from 0 to 3 with step
-0.05 (61 values), four values of p, three values of Delta, and one paired
-trial. It writes to the same `stage1_runs` index as any earlier single-cell
-run. A completed `run_id` is skipped.
+`stage1/configs/stage1_pilot.json` now plans only the new p=0.2 cells:
+K from 3.05 to 8 with step 0.05 (100 values), and Delta from 0 to 1 with
+step 0.025 (41 values), one paired trial, 4100 runs. K=3 is already stored,
+so it is not in this grid. Results still go to `stage1_runs`. A completed
+`run_id` is skipped and its files are not rewritten.
 
 ```bash
 python3 -m stage1 scan --config stage1/configs/stage1_pilot.json --workers 1

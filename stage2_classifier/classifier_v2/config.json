@@ -1,0 +1,127 @@
+{
+  "archive_status": "complete",
+  "classification_executed": true,
+  "classifier_version": "v2.0.0",
+  "archive_note": "Classifier v1.0.0-pilot plus Hybrid A. A Method C linear segment that passes Rule 3 is a plateau when S = |slope| * omega_span is at most 1e-4. No merging. The ODE was not rerun.",
+  "structure_detection": "Method C separated",
+  "ode_simulation": "not rerun",
+  "alpha": {
+    "value": 2,
+    "source": "Stage 2C selected cell, equivalent to original Method C at tau=1. Stage 2C status remains Calibration inconclusive.",
+    "status": "provisional",
+    "reason_for_use": "User adopted this pair for the first full pilot classification together with the decision rules below."
+  },
+  "beta": {
+    "value": 1,
+    "source": "Same Stage 2C cell. beta = tau when tau = 1.",
+    "status": "provisional",
+    "reason_for_use": "Paired with alpha = 2."
+  },
+  "method_c": {
+    "original_file": "/Users/mohan/Desktop/SRS/data_examine/experiments/plateau_detection_pilot/pilot.py",
+    "original_function_modified": false,
+    "wrapper": "stage2_classifier/penalty_calibration/method_c_separated.py",
+    "dynamic_program": "cost_audit.dp_penalized",
+    "minimum_segment_length": {
+      "value": 4,
+      "unit": "oscillators",
+      "source": "pilot.MIN_SEGMENT",
+      "status": "provisional",
+      "reason_for_use": "Existing Method C constraint. Not a physical plateau size."
+    }
+  },
+  "noise_estimation": {
+    "value": "sigma_hat = max(1.4826 * MAD(second difference of rho) / sqrt(6), 1e-12)",
+    "implementation": "pilot.estimate_sigma",
+    "status": "provisional",
+    "reason_for_use": "Required by the Method C objective. Not replaced."
+  },
+  "rule_1_windows": {
+    "status": "adopted",
+    "primary": {"name": "W3", "start": 12000.0, "end": 14000.0, "role": "assigns assigned_state"},
+    "stability": [
+      {"name": "W1", "start": 8000.0, "end": 10000.0},
+      {"name": "W2", "start": 10000.0, "end": 12000.0}
+    ],
+    "majority_vote": false,
+    "earlier_windows_override_primary": false,
+    "temporal_review_flag": "Set when the three window states differ, or when the counts of validated nonzero plateaus differ."
+  },
+  "rule_2_candidates": {
+    "status": "adopted",
+    "nonzero_plateau_candidates": "A Method C constant segment that passes Rule 3, or a Method C linear segment that passes Rule 3 and S = |slope| * omega_span <= tau_S.",
+    "linear_segments": "Eligible when Rule 3 holds and the trend cap holds. No second segmentation and no merge.",
+    "near_zero": "Detected from abs(rho) < 0.001, independent of Method C.",
+    "global_locking_exception": "Rule 7 can assign Locking when Method C returns only linear segments."
+  },
+  "rule_3_valid_plateau": {
+    "status": "adopted",
+    "source": "User specification. The 732-profile constant-segment histograms had no empty gap selecting these numbers.",
+    "minimum_oscillators": 15,
+    "minimum_relative_omega_span": 0.02,
+    "relative_omega_span_definition": "(max omega in the segment - min omega in the segment) / (max omega - min omega) on the frequency-sorted profile",
+    "maximum_rho_span": 0.02,
+    "nonzero_level_for_partial_locking": 0.001,
+    "nonzero_level_definition": "A Rule 3 segment counts toward Partial Locking only when abs(mean rho) >= 0.001. Near-zero levels stay with the near-zero rules."
+  },
+  "rule_4_near_zero_tolerance": {
+    "value": 0.001,
+    "definition": "abs(rho) < 0.001",
+    "status": "adopted",
+    "source": "User choice. On this pilot it labels the same oscillators as any tolerance in (0.001, 0.00622]."
+  },
+  "rule_5_death": {
+    "value": 1.0,
+    "definition": "near-zero fraction equals 1",
+    "status": "adopted"
+  },
+  "rule_6_partial_death": {
+    "minimum_consecutive_near_zero_oscillators": 15,
+    "status": "adopted",
+    "source": "User choice. On this pilot any integer from 12 through 26 selects the same profiles."
+  },
+  "rule_7_locking": {
+    "maximum_profile_rho_range": 0.01,
+    "definition": "max(rho) - min(rho) <= 0.01 on the whole frequency-sorted profile",
+    "coverage_fraction": null,
+    "status": "adopted",
+    "source": "User choice. On this pilot any threshold in [0.000851, 0.01253) selects the same non-death profiles."
+  },
+  "state_priority": [
+    "Death",
+    "Locking",
+    "Partial Death",
+    "Partial Locking",
+    "Incoherence"
+  ],
+  "hybrid_a": {
+    "status": "adopted",
+    "tau_s": 0.0001,
+    "definition": "S = abs(ordinary-least-squares slope of rho on omega) * (omega_end - omega_start)",
+    "source": "Provisional operating value chosen between 1e-4 and 5e-4 after the incremental-error recalibration. It is the smaller cap. It is not an identified optimum.",
+    "merge": false
+  },
+  "partial_locking_boundary": {
+    "status": "adopted",
+    "rule": "At least one validated plateau with abs(mean rho) >= 0.001. Otherwise Incoherence, after the higher-priority states.",
+    "coverage_threshold": null,
+    "source": "No empty gap in plateau coverage above the smallest positive coverage 0.024. Count >= 1 matches coverage > 0 on this pilot."
+  },
+  "locked_fraction_definition": "1 when the W3 state is Locking. Otherwise the fraction of oscillators covered by validated nonzero plateaus.",
+  "observation_windows": [
+    {"name": "W1", "start": 8000.0, "end": 10000.0},
+    {"name": "W2", "start": 10000.0, "end": 12000.0},
+    {"name": "W3", "start": 12000.0, "end": 14000.0}
+  ],
+  "data_source": {
+    "name": "Stage 1 Pilot",
+    "dataset_identifier": "stage1_pilot",
+    "config_path": "stage1/configs/stage1_pilot.json",
+    "storage_directory": "stage1_runs",
+    "expected_runs": 6962,
+    "indexed_runs": 6964,
+    "not_completed": 2,
+    "N": 1000,
+    "master_seed": 0
+  }
+}

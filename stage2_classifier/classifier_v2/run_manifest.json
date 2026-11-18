@@ -1,0 +1,40 @@
+{
+  "archive_status": "complete",
+  "execution_timestamp_utc": "2026-11-09T03:26:12Z",
+  "classifier_version": "v2.0.0",
+  "archive_note": "Classifier v1 plus Hybrid A linear eligibility at tau_S = 1e-4. The ODE was not rerun.",
+  "alpha": 2,
+  "beta": 1,
+  "tau_s": 0.0001,
+  "git_commit": "910f9c2700396a0cc081f0df5c96089b84bb8b2c",
+  "git_commit_created": false,
+  "source_data_directory": "/Users/mohan/Desktop/SRS/helper/stage1_runs",
+  "dataset_identifier": "stage1_runs_completed",
+  "number_of_input_runs": 6962,
+  "number_of_successfully_classified_runs": 6962,
+  "number_of_failed_runs": 0,
+  "configuration_file": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/config.json",
+  "algorithm_specification": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/algorithm_specification.md",
+  "output_files": {
+    "config.json": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/config.json",
+    "algorithm_specification.md": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/algorithm_specification.md",
+    "classify.py": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/classify.py",
+    "classification_results.csv": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/classification_results.csv",
+    "segmentation_details.csv": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/segmentation_details.csv",
+    "state_summary.csv": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/state_summary.csv",
+    "review_candidates.csv": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/review_candidates.csv",
+    "README.md": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/README.md",
+    "CHANGELOG.md": "/Users/mohan/Desktop/SRS/helper/stage2_classifier/classifier_v2/CHANGELOG.md"
+  },
+  "checksums_sha256": {
+    "config.json": "56473bac3a4d43ede00d324c08149cd50a94fa42627cf7bf1c8cd7513ce00483",
+    "algorithm_specification.md": "ca05e3ad244783dc0152aa7051036465691e779d683046ca761da1ffeb35779b",
+    "classify.py": "9d50e2941d604f6b45c22877017893590f05c5338961e31700fce102c39f5b02",
+    "classification_results.csv": "4a68e5289204ab2187bc4e83f2d1f0e4466ae1fae34084a784628c5a5a28d2eb",
+    "segmentation_details.csv": "6fa852230dce1a27ee3afbf4d5b20f282806a228ee9cc159d8287cb1c792a8fe",
+    "state_summary.csv": "9efbb887adff29a34467a3af0f2bf2fea680d227a2137d045a4611fb4efe3f22",
+    "review_candidates.csv": "ead1c50600d5de112a1a8fa5c2b0c6ed9ad340456bfecb8dd9bd5779c8fa65e5",
+    "README.md": "f89e1ac833b41520eeda2d30eebb3ebe17c42bad0357a9b4c503b6af950dfd52",
+    "CHANGELOG.md": "815608acb10590cdd91a938c780d71f31f79be285942c581e4020682a30c29f2"
+  }
+}

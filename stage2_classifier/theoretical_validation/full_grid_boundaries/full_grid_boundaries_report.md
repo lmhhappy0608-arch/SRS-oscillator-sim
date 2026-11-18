@@ -93,4 +93,8 @@ Eq. (7) is in the CSV as `K_eq7_p1` and `K_eq7_scaling` and is omitted from the 
 
 ## p = 0.6
 
-Classifier v2.0.0 has no p=0.6 cells, so `phase_diagram_theory_p_0.60.png` uses the same δ step 0.025 and K step 0.05, with a gray background. The curves are the same annealed boundaries as the other panels. Degree-based roots again exist only for δ = 0.025 through 0.200. They recover the three Step 2 values at δ = 0.05, 0.10, and 0.20. The largest relative deviation from naive pK scaling on this grid is 0.064% at δ = 0.20. The deviation figure includes this probability.
+Classifier v2.0.0 has no p=0.6 cells, so the first `phase_diagram_theory_p_0.60.png` used the same δ step 0.025 and K step 0.05, with a gray background. The curves are the same annealed boundaries as the other panels. Degree-based roots again exist only for δ = 0.025 through 0.200. They recover the three Step 2 values at δ = 0.05, 0.10, and 0.20. The largest relative deviation from naive pK scaling on this grid is 0.064% at δ = 0.20. The deviation figure includes this probability.
+
+## Extended Stage 1 cells
+
+After the Stage 1 scan finished, 3263 completed cells were absent from the archived Classifier v2.0.0 table: all 1741 p=0.6 cells, 760 new p=0.4 cells with K>2, and 762 p=0.2 cells (K>2, plus the previously unfinished K=1.95 and K=2 at δ=1). Those cells were labeled with the unchanged v2.0.0 rule and written to `extended_classification.csv`. The archived classification table and its figures were not edited. The three overlay figures were redrawn from the archived labels plus these new labels. p=0.6 follows the saved p=0.8 coverage, so K>2 remains gray except at δ=0.05, 0.20, and 0.80. On the new p=0.2 cells the labels are Locking, Partial Locking, Incoherence, and Partial Death; Death does not appear. On the new p=0.4 cells the labels are Death and Partial Death.

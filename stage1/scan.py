@@ -66,36 +66,60 @@ from stage1.storage import (
 )
 
 
+def _rectangles(config: ScanConfig) -> tuple[tuple[tuple[float, ...], tuple[float, ...], tuple[float, ...]], ...]:
+    """Base grid first, then each extension. Overlaps are removed later by run_id."""
+    blocks = [(config.resolved_k(), config.resolved_p(), config.resolved_delta())]
+    for region in config.extensions:
+        blocks.append((region.resolved_k(), region.resolved_p(), region.resolved_delta()))
+    return tuple(blocks)
+
+
 def build_run_specs(config: ScanConfig) -> list[RunSpec]:
-    """Expand a validated configuration into stable run specifications."""
-    k_values = config.resolved_k()
-    p_values = config.resolved_p()
-    delta_values = config.resolved_delta()
+    """Expand a validated configuration into stable run specifications.
+
+    An extension that repeats a base point keeps the first specification.
+    A repeated run_id with different parameters is an error.
+    """
+    rectangles = _rectangles(config)
     dt_by_delta: dict[int, float] = {}
-    for delta in delta_values:
-        omega = natural_frequencies(delta, config.N)
-        quantile_check(omega, delta)
-        dt_by_delta[quantize(delta)] = resolve_dt(omega, config.dt if config.solver == RK4_SOLVER else config.dt)
+    for _couplings, _probabilities, deltas in rectangles:
+        for delta in deltas:
+            key = quantize(delta)
+            if key in dt_by_delta:
+                continue
+            omega = natural_frequencies(delta, config.N)
+            quantile_check(omega, delta)
+            dt_by_delta[key] = resolve_dt(omega, config.dt if config.solver == RK4_SOLVER else config.dt)
     solver_source = RK4_SOURCE if config.solver == RK4_SOLVER else RK45_SOURCE
     specs: list[RunSpec] = []
-    seen: set[str] = set()
-    for p in p_values:
-        for delta in delta_values:
-            for coupling in k_values:
-                for trial_id in range(config.n_trials):
-                    spec = _make_spec(
-                        config,
-                        K=coupling,
-                        p=p,
-                        delta=delta,
-                        trial_id=trial_id,
-                        dt=dt_by_delta[quantize(delta)],
-                        solver_source=solver_source,
-                    )
-                    if spec.run_id in seen:
-                        raise RuntimeError(f"duplicate run_id {spec.run_id}")
-                    seen.add(spec.run_id)
-                    specs.append(spec)
+    seen: dict[str, RunSpec] = {}
+    for k_values, p_values, delta_values in rectangles:
+        for p in p_values:
+            for delta in delta_values:
+                for coupling in k_values:
+                    for trial_id in range(config.n_trials):
+                        spec = _make_spec(
+                            config,
+                            K=coupling,
+                            p=p,
+                            delta=delta,
+                            trial_id=trial_id,
+                            dt=dt_by_delta[quantize(delta)],
+                            solver_source=solver_source,
+                        )
+                        previous = seen.get(spec.run_id)
+                        if previous is not None:
+                            same = (
+                                previous.k_units == spec.k_units
+                                and previous.p_units == spec.p_units
+                                and previous.delta_units == spec.delta_units
+                                and previous.trial_id == spec.trial_id
+                            )
+                            if not same:
+                                raise RuntimeError(f"duplicate run_id {spec.run_id}")
+                            continue
+                        seen[spec.run_id] = spec
+                        specs.append(spec)
     return specs
 
 
@@ -532,17 +556,13 @@ def execute_task(payload: dict) -> dict:
 
 def run_scan(config: ScanConfig) -> dict:
     """Insert the planned index and execute pending or resumable runs."""
-    k_values = config.resolved_k()
-    p_values = config.resolved_p()
-    delta_values = config.resolved_delta()
-    planned_count = len(k_values) * len(p_values) * len(delta_values) * config.n_trials
+    specs = build_run_specs(config)
     print(
         "stage1 planning "
-        f"{planned_count} runs "
-        f"({len(k_values)} K x {len(p_values)} p x {len(delta_values)} Delta "
-        f"x {config.n_trials} trials)"
+        f"{len(specs)} runs "
+        f"({len(config.resolved_p())} p, {len(config.extensions)} extensions, "
+        f"{config.n_trials} trials); completed run_ids are skipped"
     )
-    specs = build_run_specs(config)
     output_dir = Path(config.output_dir)
     connection = connect(output_dir)
     try:

@@ -1,0 +1,31 @@
+{
+  "sampler_check": {
+    "mean_cos": 0.006226561069114058,
+    "mean_sin": 0.15523653029536108,
+    "expected_sin": 0.15353599527684783,
+    "passed": true
+  },
+  "dt_check_p1": {"coupling": 0.14077815169, "max_abs_C": 2.334509512091909e-08, "passed": true},
+  "dt_check_p02_delta020": {"coupling": 3.12607027733, "max_abs_C": 1.372421547685132e-06, "passed": true},
+  "p1_gate_passed": true,
+  "n_rows": 202,
+  "n_pinned_max": 0,
+  "a_max": 0.7658872,
+  "aggregate_status": {
+    "p=1.00,delta=0.05": "confirmed",
+    "p=1.00,delta=0.20": "confirmed",
+    "p=0.80,delta=0.05": "suggestive",
+    "p=0.80,delta=0.20": "suggestive",
+    "p=0.40,delta=0.05": "suggestive",
+    "p=0.40,delta=0.20": "suggestive",
+    "p=0.20,delta=0.05": "suggestive",
+    "p=0.20,delta=0.20": "suggestive"
+  },
+  "perturbation_difference_rms": {
+    "p1_delta0.05_r-0.10_late": 0.0454,
+    "p1_delta0.05_r+0.10_late": 0.3064,
+    "p1_delta0.20_r-0.10_late": 0.0265,
+    "p1_delta0.20_r+0.10_late": 0.0792
+  },
+  "statement": "confirmed means the p=1 amplitude diagnostic separates the two sides of the known continuum boundary. It is not a measured quenched eigenvalue. No finite-network critical K is reported."
+}

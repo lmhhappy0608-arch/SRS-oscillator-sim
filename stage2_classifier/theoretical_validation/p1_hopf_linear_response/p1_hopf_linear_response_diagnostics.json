@@ -1,0 +1,705 @@
+{
+  "identity": {
+    "checks": [
+      {
+        "name": "forcing_fourier",
+        "max_absolute_error": 2.9273005738434673e-17,
+        "max_relative_error_above_1e-8": 5.187443805824197e-10,
+        "passed": true
+      },
+      {
+        "name": "k_to_zero_observable",
+        "relative_error": 1.9482657902611835e-12,
+        "passed": true
+      },
+      {
+        "name": "finite_k_identity",
+        "samples": [
+          {
+            "lambda": {
+              "real": 0.02,
+              "imag": 0.95
+            },
+            "omega": 1.15,
+            "K": 0.45,
+            "galerkin_24_vs_40": 0.0,
+            "galerkin_40_vs_closed_form": 6.360133419721734e-16,
+            "finite_difference_1024_vs_galerkin": 7.143973473352957e-05,
+            "richardson_vs_galerkin": 2.3020534464193688e-08,
+            "finite_difference_256": {
+              "real": 0.4316149624751918,
+              "imag": 2.1976872568751977
+            },
+            "passed": true
+          },
+          {
+            "lambda": {
+              "real": 0.01,
+              "imag": 0.98
+            },
+            "omega": 1.0,
+            "K": 0.25,
+            "galerkin_24_vs_40": 0.0,
+            "galerkin_40_vs_closed_form": 9.227009004167363e-16,
+            "finite_difference_1024_vs_galerkin": 0.00043604597098817396,
+            "richardson_vs_galerkin": 7.52912446341971e-07,
+            "finite_difference_256": {
+              "real": 10.5539659497724,
+              "imag": -12.647742725161411
+            },
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "name": "split_quadrature",
+        "relative_error": 2.3246465630375484e-14,
+        "adaptive_error_estimate": 3.517959199009202e-09,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "adjacency": {
+    "definition": "p=1 is the undirected complete graph with a zero diagonal. The coupling factor remains K/N. There is no self-pulse and no K/(N-1) rescaling.",
+    "n_checked": 8,
+    "diagonal_max": 0.0,
+    "off_diagonal_min": 1.0,
+    "symmetric": true,
+    "paper_sum_includes_self": true,
+    "continuum_normalization": "The continuum theory replaces the sum by an integral. The missing diagonal is a relative factor (N-1)/N and is not inserted into the Hopf comparison."
+  },
+  "results": [
+    {
+      "delta": 0.05,
+      "paper": {
+        "delta": 0.05,
+        "status": "ok",
+        "eq7_K_H": 0.12785172592948257,
+        "all_drifting_edge": 0.95,
+        "eq7_inside_branch": true,
+        "K": 0.1278520948201301,
+        "Omega": 0.9905111621691126,
+        "imag_residual": -4.46479892631802e-16,
+        "real_gap": 1.6930901125533637e-15,
+        "branch_ok": true
+      },
+      "continuation": {
+        "grid_at_largest_eps": {
+          "min_abs_D": 0.0533553034618525,
+          "min_location": {
+            "K": 0.1514285714285714,
+            "Omega": 0.9842857142857144
+          },
+          "local_minima": [
+            {
+              "K": 0.1514285714285714,
+              "Omega": 0.9842857142857144,
+              "abs_D": 0.0533553034618525
+            }
+          ]
+        },
+        "rows": [
+          {
+            "eps": 0.01,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.14619619816543786,
+                "Omega": 0.9879062788788796,
+                "residual": 1.1334556478972848e-15,
+                "count": 4
+              }
+            ],
+            "K": 0.14619619816543786,
+            "Omega": 0.9879062788788796,
+            "residual": 1.1334556478972848e-15
+          },
+          {
+            "eps": 0.003,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.1329215299787705,
+                "Omega": 0.98983537177376,
+                "residual": 3.118671714207238e-15,
+                "count": 2
+              }
+            ],
+            "K": 0.1329215299787705,
+            "Omega": 0.98983537177376,
+            "residual": 3.118671714207238e-15
+          },
+          {
+            "eps": 0.001,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.12950069969079578,
+                "Omega": 0.9902952563371017,
+                "residual": 0.0,
+                "count": 2
+              }
+            ],
+            "K": 0.12950069969079578,
+            "Omega": 0.9902952563371017,
+            "residual": 0.0
+          },
+          {
+            "eps": 0.0003,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.12834236585701064,
+                "Omega": 0.9904473503920443,
+                "residual": 9.551756995265442e-15,
+                "count": 2
+              }
+            ],
+            "K": 0.12834236585701064,
+            "Omega": 0.9904473503920443,
+            "residual": 9.551756995265442e-15
+          },
+          {
+            "eps": 0.0001,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.12801510862054427,
+                "Omega": 0.990489982284979,
+                "residual": 1.0978369905298791e-15,
+                "count": 2
+              }
+            ],
+            "K": 0.12801510862054427,
+            "Omega": 0.990489982284979,
+            "residual": 1.0978369905298791e-15
+          }
+        ],
+        "edge": 0.95
+      },
+      "truncation_sweep": [
+        {
+          "M": 8,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.12950069969079758,
+          "Omega": 0.9902952563370995,
+          "residual": 2.5398395204516254e-14
+        },
+        {
+          "M": 12,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.12950069969079717,
+          "Omega": 0.9902952563371002,
+          "residual": 8.032835040578277e-15
+        },
+        {
+          "M": 16,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.12950069969079717,
+          "Omega": 0.9902952563371002,
+          "residual": 8.032835040578277e-15
+        },
+        {
+          "M": 24,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.12950069969079717,
+          "Omega": 0.9902952563371002,
+          "residual": 8.032835040578277e-15
+        },
+        {
+          "M": 32,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.12950069969079717,
+          "Omega": 0.9902952563371002,
+          "residual": 8.032835040578277e-15
+        }
+      ],
+      "extrapolation_K": {
+        "value": 0.12785215780811177,
+        "linear_value": 0.12785148000231109,
+        "uncertainty": 6.778058006806642e-07,
+        "fit_max_abs_deviation": 5.9050593137488505e-08,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.12801510862054427,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9905108033225414,
+        "linear_value": 0.9905112982314463,
+        "uncertainty": 4.949089049688382e-07,
+        "fit_max_abs_deviation": 4.202597583269352e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.990489982284979,
+        "n_points": 5
+      },
+      "M_gap": 0.0,
+      "response_K_H": 0.12785215780811177,
+      "response_Omega": 0.9905108033225414,
+      "convergence_status": "converged",
+      "validity_status": "valid_all_drifting"
+    },
+    {
+      "delta": 0.1,
+      "paper": {
+        "delta": 0.1,
+        "status": "ok",
+        "eq7_K_H": 0.2591520063156052,
+        "all_drifting_edge": 0.9,
+        "eq7_inside_branch": true,
+        "K": 0.25920499187210694,
+        "Omega": 0.9602588831756503,
+        "imag_residual": -1.9468846148277076e-16,
+        "real_gap": 1.1102230246251565e-16,
+        "branch_ok": true
+      },
+      "continuation": {
+        "grid_at_largest_eps": {
+          "min_abs_D": 0.04145558206289922,
+          "min_location": {
+            "K": 0.26857142857142857,
+            "Omega": 0.9528571428571428
+          },
+          "local_minima": [
+            {
+              "K": 0.26857142857142857,
+              "Omega": 0.9528571428571428,
+              "abs_D": 0.04145558206289922
+            }
+          ]
+        },
+        "rows": [
+          {
+            "eps": 0.01,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.27675519404302085,
+                "Omega": 0.9551805391653714,
+                "residual": 5.400221540886873e-16,
+                "count": 4
+              }
+            ],
+            "K": 0.27675519404302085,
+            "Omega": 0.9551805391653714,
+            "residual": 5.400221540886873e-16
+          },
+          {
+            "eps": 0.003,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.26425913894858555,
+                "Omega": 0.9588424235752437,
+                "residual": 7.012368290041698e-15,
+                "count": 2
+              }
+            ],
+            "K": 0.26425913894858555,
+            "Omega": 0.9588424235752437,
+            "residual": 7.012368290041698e-15
+          },
+          {
+            "eps": 0.001,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.26086960533536707,
+                "Omega": 0.9597965446187154,
+                "residual": 1.0637134449220764e-14,
+                "count": 2
+              }
+            ],
+            "K": 0.26086960533536707,
+            "Omega": 0.9597965446187154,
+            "residual": 1.0637134449220764e-14
+          },
+          {
+            "eps": 0.0003,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.25970226652937445,
+                "Omega": 0.9601212000939772,
+                "residual": 3.1744916286015773e-15,
+                "count": 2
+              }
+            ],
+            "K": 0.25970226652937445,
+            "Omega": 0.9601212000939772,
+            "residual": 3.1744916286015773e-15
+          },
+          {
+            "eps": 0.0001,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.25937054925782077,
+                "Omega": 0.9602130854306161,
+                "residual": 7.0555462905782405e-15,
+                "count": 2
+              }
+            ],
+            "K": 0.25937054925782077,
+            "Omega": 0.9602130854306161,
+            "residual": 7.0555462905782405e-15
+          }
+        ],
+        "edge": 0.9
+      },
+      "truncation_sweep": [
+        {
+          "M": 8,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.26086960533216597,
+          "Omega": 0.9597965446190472,
+          "residual": 1.2716779771381236e-14
+        },
+        {
+          "M": 12,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.26086960533536785,
+          "Omega": 0.9597965446187149,
+          "residual": 8.673376055823976e-15
+        },
+        {
+          "M": 16,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.26086960533536757,
+          "Omega": 0.9597965446187156,
+          "residual": 8.670920368107885e-15
+        },
+        {
+          "M": 24,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.26086960533536757,
+          "Omega": 0.9597965446187156,
+          "residual": 8.670920368107885e-15
+        },
+        {
+          "M": 32,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.26086960533536757,
+          "Omega": 0.9597965446187156,
+          "residual": 8.670920368107885e-15
+        }
+      ],
+      "extrapolation_K": {
+        "value": 0.2592049853741524,
+        "linear_value": 0.25920469062204393,
+        "uncertainty": 2.9475210844287503e-07,
+        "fit_max_abs_deviation": 9.711898063535784e-09,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.25937054925782077,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9602586902636219,
+        "linear_value": 0.9602590280989356,
+        "uncertainty": 3.378353137239998e-07,
+        "fit_max_abs_deviation": 2.2602910620950212e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9602130854306161,
+        "n_points": 5
+      },
+      "M_gap": 0.0,
+      "response_K_H": 0.2592049853741524,
+      "response_Omega": 0.9602586902636219,
+      "convergence_status": "converged",
+      "validity_status": "valid_all_drifting"
+    },
+    {
+      "delta": 0.2,
+      "paper": {
+        "delta": 0.2,
+        "status": "ok",
+        "eq7_K_H": 0.5543502199096025,
+        "all_drifting_edge": 0.8,
+        "eq7_inside_branch": true,
+        "K": 0.569049492850578,
+        "Omega": 0.7858376357809553,
+        "imag_residual": -1.3230644312897773e-13,
+        "real_gap": -2.220446049250313e-16,
+        "branch_ok": true
+      },
+      "continuation": {
+        "grid_at_largest_eps": {
+          "min_abs_D": 0.004827141508634597,
+          "min_location": {
+            "K": 0.5920000000000001,
+            "Omega": 0.7642857142857142
+          },
+          "local_minima": [
+            {
+              "K": 0.5920000000000001,
+              "Omega": 0.7642857142857142,
+              "abs_D": 0.004827141508634597
+            }
+          ]
+        },
+        "rows": [
+          {
+            "eps": 0.01,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.591007666612411,
+                "Omega": 0.7669821750959309,
+                "residual": 6.927027125445852e-16,
+                "count": 4
+              }
+            ],
+            "K": 0.591007666612411,
+            "Omega": 0.7669821750959309,
+            "residual": 6.927027125445852e-16
+          },
+          {
+            "eps": 0.003,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.5754476351392408,
+                "Omega": 0.7804867726827717,
+                "residual": 8.881784197001252e-16,
+                "count": 2
+              }
+            ],
+            "K": 0.5754476351392408,
+            "Omega": 0.7804867726827717,
+            "residual": 8.881784197001252e-16
+          },
+          {
+            "eps": 0.001,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.571165001859328,
+                "Omega": 0.7840811133474054,
+                "residual": 4.796874495224756e-15,
+                "count": 2
+              }
+            ],
+            "K": 0.571165001859328,
+            "Omega": 0.7840811133474054,
+            "residual": 4.796874495224756e-15
+          },
+          {
+            "eps": 0.0003,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.5696823617323492,
+                "Omega": 0.7853134673272646,
+                "residual": 1.1650558240062519e-14,
+                "count": 2
+              }
+            ],
+            "K": 0.5696823617323492,
+            "Omega": 0.7853134673272646,
+            "residual": 1.1650558240062519e-14
+          },
+          {
+            "eps": 0.0001,
+            "M": 32,
+            "n_roots": 1,
+            "roots": [
+              {
+                "K": 0.5692602799515352,
+                "Omega": 0.7856631767558927,
+                "residual": 1.808278275313841e-13,
+                "count": 2
+              }
+            ],
+            "K": 0.5692602799515352,
+            "Omega": 0.7856631767558927,
+            "residual": 1.808278275313841e-13
+          }
+        ],
+        "edge": 0.8
+      },
+      "truncation_sweep": [
+        {
+          "M": 8,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.5711573265508801,
+          "Omega": 0.7840753339002813,
+          "residual": 4.512046738007221e-14
+        },
+        {
+          "M": 12,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.571165001231508,
+          "Omega": 0.7840810952509196,
+          "residual": 4.4353758165451603e-14
+        },
+        {
+          "M": 16,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.5711650018627087,
+          "Omega": 0.7840811133207202,
+          "residual": 4.728043404996312e-14
+        },
+        {
+          "M": 24,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.5711650018593292,
+          "Omega": 0.7840811133473854,
+          "residual": 4.873779089353311e-14
+        },
+        {
+          "M": 32,
+          "eps": 0.001,
+          "n_roots": 1,
+          "K": 0.571165001859326,
+          "Omega": 0.7840811133473882,
+          "residual": 4.3754445382617195e-14
+        }
+      ],
+      "extrapolation_K": {
+        "value": 0.5690499090949349,
+        "linear_value": 0.5690492390611281,
+        "uncertainty": 6.700338067711087e-07,
+        "fit_max_abs_deviation": 4.916247675623708e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.5692602799515352,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.785836613562851,
+        "linear_value": 0.7858380314702068,
+        "uncertainty": 1.4179073558606703e-06,
+        "fit_max_abs_deviation": 1.2057928331365986e-06,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.7856631767558927,
+        "n_points": 5
+      },
+      "M_gap": 3.219646771412954e-15,
+      "response_K_H": 0.5690499090949349,
+      "response_Omega": 0.785836613562851,
+      "convergence_status": "converged",
+      "validity_status": "valid_all_drifting"
+    },
+    {
+      "delta": 0.25,
+      "paper": {
+        "delta": 0.25,
+        "status": "no valid root",
+        "eq7_K_H": 0.7378319194686642,
+        "all_drifting_edge": 0.75,
+        "eq7_inside_branch": true,
+        "K": null,
+        "Omega": null,
+        "imag_residual": null,
+        "real_gap": null
+      },
+      "continuation": {
+        "grid_at_largest_eps": {
+          "min_abs_D": 0.13100456946088904,
+          "min_location": {
+            "K": 0.7194285714285714,
+            "Omega": 0.6071428571428572
+          },
+          "local_minima": [
+            {
+              "K": 0.7194285714285714,
+              "Omega": 0.6071428571428572,
+              "abs_D": 0.13100456946088904
+            }
+          ]
+        },
+        "rows": [
+          {
+            "eps": 0.01,
+            "M": 32,
+            "n_roots": 0,
+            "roots": [],
+            "K": null,
+            "Omega": null,
+            "residual": null
+          },
+          {
+            "eps": 0.003,
+            "M": 32,
+            "n_roots": 0,
+            "roots": [],
+            "K": null,
+            "Omega": null,
+            "residual": null
+          },
+          {
+            "eps": 0.001,
+            "M": 32,
+            "n_roots": 0,
+            "roots": [],
+            "K": null,
+            "Omega": null,
+            "residual": null
+          },
+          {
+            "eps": 0.0003,
+            "M": 32,
+            "n_roots": 0,
+            "roots": [],
+            "K": null,
+            "Omega": null,
+            "residual": null
+          },
+          {
+            "eps": 0.0001,
+            "M": 32,
+            "n_roots": 0,
+            "roots": [],
+            "K": null,
+            "Omega": null,
+            "residual": null
+          }
+        ],
+        "edge": 0.75
+      },
+      "truncation_sweep": [],
+      "extrapolation_K": null,
+      "extrapolation_Omega": null,
+      "M_gap": null,
+      "response_K_H": null,
+      "response_Omega": null,
+      "convergence_status": "not_applicable",
+      "validity_status": "no_hopf_root_inside_all_drifting_branch"
+    }
+  ],
+  "baseline": {
+    "passed": true,
+    "reason": "matches_eq6_inside_all_drifting_branch",
+    "detail": "At delta=0.05, 0.10, and 0.20 the extrapolated Galerkin root agrees with Eq. (6) to a relative error below 1e-3, stays below K=1-delta, and is stable under M and epsilon. Equation (7) is the small-delta truncation, not the pass target."
+  },
+  "elapsed_sec": 87.9817962499801,
+  "regularization": "Roots solve D(eps + i*Omega)=0 for eps>0 and are extrapolated to eps=0. The imaginary axis itself is the continuous spectrum and is not used as a root finder."
+}

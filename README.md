@@ -1,60 +1,41 @@
 # Winfree oscillators on ER networks (SRS)
 
-Winfree model on ER random graphs: from reproducing Ariaratnam & Strogatz (2001), through five-state classification on rotation numbers, to observing plateaus and noise.
+Winfree model on ER random graphs. The current five-state classifier is
+Classifier v2.0.0 in `stage2_classifier/classifier_v2/`. It is Classifier
+v1 plus one Hybrid A plateau rule, `tau_S = 1e-4`.
 
-**Current status:** we are refining the five-state classification, with the plateau definition under review. The old `classify_state()` has not been replaced.
+Stage 1 stores every completed profile in `stage1_runs/`, including the
+parameter sets added after the first v2 archive: all of p=0.6, p=0.4 for
+K>2, and p=0.2 through K=8. That directory is local and is not in git.
+Labels for all 14325 completed runs are in
+`stage2_classifier/classifier_v2/classification_labels_all.csv`.
 
-See [docs/progress.md](docs/progress.md) for the full timeline.
-
-## Where things stand
-
-Each trial has \(N=1000\) oscillators and a pair \((\omega,\rho)\). The observation script finds tight horizontal clusters in \(\rho\) and reports
-
-- \(c\): median of the cluster (common locked rotation number; Death should sit at 0)
-- \(\sigma\): width of the cluster, i.e. noise at the current \(T\)
-- \(f\): fraction of oscillators in the cluster (complete vs partial)
-
-The classifier itself is still the old rule set in `code/plot_rotation_vs_frequency.py` (\(|\rho|<0.01\), at least 15 consecutive oscillators, coverage 0.95, and so on).
+Equation checks and the annealed phase-diagram overlays are in
+`stage2_classifier/theoretical_validation/`.
 
 ## Layout
 
 | Path | Contents |
-|---|---|
-| `code/` | Python simulation, \(\rho(\omega)\) plots, old five-state classifier |
+| --- | --- |
+| `code/` | Python simulation and the older summer classifier |
 | `cpp/` | C++ RK4 / RK45 cross-check |
-| `classification/` | Three-line mixture, residuals, plateau observation (does not replace the old classifier) |
-| `docs/progress.md` | Research timeline; append new sections here |
-| `tables/` | Cleaning comparisons and mixture-weight CSVs |
-| `winfree_phase_diagram_p_*.png` | Phase diagrams under the old rules, one slice per \(p\) |
-
-Raw solutions in `raw_trials/` are large and not in git. Re-run the grid locally when you need them.
+| `stage1/` | Parameter scan. Writes only to `stage1_runs/` |
+| `stage2_classifier/classifier_v2/` | Current classifier, archived 6962-run tables, and the full label table |
+| `stage2_classifier/classifier_v1/` | Pilot archive. Earlier equation checks still import it |
+| `stage2_classifier/theoretical_validation/` | Equation checks and overlay figures |
+| `docs/progress.md` | Research timeline |
 
 ## How to run
 
-**Old phase diagrams (reproduction + old labels)**
+Stage 1 scan and the current classifier:
 
 ```bash
-python3 code/Ariaratnam2001.py --plot-stack --p-values 0.2 0.4 0.6 0.8
+python3 -m stage1 scan --config stage1/configs/stage1_pilot.json --workers 1
+python3 stage2_classifier/classifier_v2/classify.py
 ```
 
-**Single-cell \(\rho(\omega)\)**
+The pilot config now plans only the additional p=0.2 strip, K from 3.05 to
+8. Completed runs already in `stage1_runs/` are skipped.
 
-```bash
-python3 code/plot_rotation_vs_frequency.py --clean none --k 0.4 --delta 0.08 --p 0.8 --trial 0
-```
-
-**Stage 1 parameter scan** (rotation profiles only; no five-state labels). Usage: [stage1/README.md](stage1/README.md).
-
-**Plateau observation (current).** Full run guide: [classification/README.md](classification/README.md).
-
-```bash
-cd classification
-python3 code/observe_plateaus.py
-python3 code/observe_plateaus.py --k 0.7 --delta 0.20 --p 0.8 --trial 0
-```
-
-Figures go to `classification/figures/plateau_observe/`. The table is `classification/tables/plateau_observe_gallery.csv`.
-
-## Requirements
-
-Python 3 with NumPy, SciPy, and Matplotlib. See `cpp/README.md` for the C++ cross-check.
+Python 3 with NumPy, SciPy, and Matplotlib. See `cpp/README.md` for the
+C++ cross-check.

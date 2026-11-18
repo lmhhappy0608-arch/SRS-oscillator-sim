@@ -19,6 +19,7 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
+import matplotlib.patheffects as pe
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import BoundaryNorm, ListedColormap
@@ -344,6 +345,30 @@ def segments(points: list[tuple[float, float]], max_gap: float) -> list[np.ndarr
     return [np.array(group, dtype=float) for group in groups if group]
 
 
+def _annotate_existence(ax, points, delta_axis, k_axis, target_delta: float, text: str, dy_points: float) -> None:
+    """Place a short curve name beside one interior point, away from the join."""
+    if not points:
+        return
+    delta, coupling = min(points, key=lambda item: abs(item[0] - target_delta))
+    x = float(index_of(np.array([delta]), delta_axis)[0])
+    y = float(index_of(np.array([coupling]), k_axis)[0])
+    if y > k_axis.size - 6:
+        dy_points = -abs(dy_points)
+    ax.annotate(
+        text,
+        (x, y),
+        textcoords="offset points",
+        xytext=(6, dy_points),
+        fontsize=8,
+        color="black",
+        ha="left",
+        va="bottom" if dy_points > 0 else "top",
+        bbox={"boxstyle": "round,pad=0.15", "fc": "white", "ec": "none", "alpha": 0.9},
+        zorder=6,
+        clip_on=False,
+    )
+
+
 def draw_phase(
     classifier_rows: list[dict],
     theory_rows: list[dict],
@@ -367,15 +392,18 @@ def draw_phase(
     cmap = ListedColormap(PHASE_COLORS)
     cmap.set_bad("#f0f0f0")
     norm = BoundaryNorm(np.arange(-0.5, len(PHASE_COLORS) + 0.5, 1), cmap.N)
-    fig, ax = plt.subplots(figsize=(9.4, 7.8))
+    tall = float(k_axis[-1]) > 4.0
+    fig, ax = plt.subplots(figsize=(9.4, 12.2 if tall else 7.8))
     ax.imshow(display, origin="lower", aspect="auto", cmap=cmap, norm=norm, interpolation="nearest", zorder=0)
     ax.set_xticks(np.arange(delta_axis.size))
     ax.set_xticklabels(
         [f"{value:.1f}" if abs(value / 0.1 - round(value / 0.1)) < 1.0e-6 else "" for value in delta_axis]
     )
     ax.set_yticks(np.arange(k_axis.size))
+    y_step = 1.0 if float(k_axis[-1]) > 4.0 else 0.2
+    y_fmt = ".0f" if y_step >= 1.0 else ".1f"
     ax.set_yticklabels(
-        [f"{value:.1f}" if abs(value / 0.2 - round(value / 0.2)) < 1.0e-6 else "" for value in k_axis]
+        [format(value, y_fmt) if abs(value / y_step - round(value / y_step)) < 1.0e-6 else "" for value in k_axis]
     )
     ax.tick_params(axis="x", labelsize=8)
     ax.tick_params(axis="y", labelsize=6)
@@ -410,8 +438,6 @@ def draw_phase(
         (hopf_degree, "#085c5c", 2.5, "-", 1.0, None),
         (hopf_scaling, "#e66101", 1.5, "--", 0.95, None),
         (edge, "black", 1.3, (0, (1.0, 1.3)), 1.0, None),
-        (death_sn, "#8c510a", 2.0, "-.", 1.0, None),
-        (death_ep, "#8c510a", 2.0, (0, (6, 2)), 1.0, None),
     )
     for points, color, width, linestyle, alpha, _marker in styles:
         for group in segments(points, step):
@@ -425,6 +451,55 @@ def draw_phase(
                 solid_capstyle="round",
                 zorder=3,
             )
+    for group in segments(death_sn, step):
+        ax.plot(
+            index_of(group[:, 0], delta_axis),
+            index_of(group[:, 1], k_axis),
+            color="black",
+            lw=2.5,
+            ls="-.",
+            solid_capstyle="round",
+            zorder=4,
+        )
+    endpoint_effect = [pe.Stroke(linewidth=5.4, foreground="#1a1a1a"), pe.Normal()]
+    for group in segments(death_ep, step):
+        ax.plot(
+            index_of(group[:, 0], delta_axis),
+            index_of(group[:, 1], k_axis),
+            color="#ffe500",
+            lw=3.0,
+            ls=(0, (8, 2.6)),
+            solid_capstyle="round",
+            path_effects=endpoint_effect,
+            zorder=5,
+        )
+    _annotate_existence(ax, death_sn, delta_axis, k_axis, 0.08, "Saddle-node existence", 10)
+    _annotate_existence(ax, death_ep, delta_axis, k_axis, 0.72, "Endpoint existence", 12)
+    if k_axis[0] <= switch_k <= k_axis[-1]:
+        marker_x = float(index_of(np.array([switch]), delta_axis)[0])
+        marker_y = float(index_of(np.array([switch_k]), k_axis)[0])
+        ax.scatter(
+            [marker_x],
+            [marker_y],
+            s=42,
+            facecolor="white",
+            edgecolor="black",
+            linewidth=1.2,
+            zorder=6,
+        )
+        ax.annotate(
+            "δ* ≈ 0.2956",
+            (marker_x, marker_y),
+            textcoords="offset points",
+            xytext=(8, 10),
+            fontsize=8,
+            color="black",
+            ha="left",
+            va="bottom",
+            bbox={"boxstyle": "round,pad=0.15", "fc": "white", "ec": "none", "alpha": 0.9},
+            zorder=6,
+            clip_on=False,
+        )
     ax.set_xlim(-0.5, delta_axis.size - 0.5)
     ax.set_ylim(-0.5, k_axis.size - 0.5)
     if show_states:
@@ -444,8 +519,16 @@ def draw_phase(
         Line2D([0], [0], color="#085c5c", lw=2.5, label="Degree-based annealed Hopf"),
         Line2D([0], [0], color="#e66101", lw=1.5, ls="--", label="Naive pK Hopf"),
         Line2D([0], [0], color="black", lw=1.3, ls=(0, (1.0, 1.3)), label="All-drifting edge (1−δ)/p"),
-        Line2D([0], [0], color="#8c510a", lw=2.0, ls="-.", label="Death existence, saddle-node (pK approx.)"),
-        Line2D([0], [0], color="#8c510a", lw=2.0, ls=(0, (6, 2)), label="Death existence, end-point (pK approx.)"),
+        Line2D([0], [0], color="black", lw=2.5, ls="-.", label="Saddle-node existence"),
+        Line2D(
+            [0],
+            [0],
+            color="#ffe500",
+            lw=3.0,
+            ls=(0, (8, 2.6)),
+            label="Endpoint existence",
+            path_effects=[pe.Stroke(linewidth=5.4, foreground="#1a1a1a"), pe.Normal()],
+        ),
     ]
     fig.tight_layout(rect=(0.0, 0.20, 1.0, 1.0))
     fig.legend(
