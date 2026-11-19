@@ -1,7 +1,7 @@
-"""Compare Classifier v1 incoherence exits with the Ariaratnam–Strogatz Hopf boundary.
+"""Compare Classifier v2 incoherence exits with the Ariaratnam–Strogatz Hopf boundary.
 
-Reads saved Stage 1 p=1 profiles and labels them in memory with the archived
-Classifier v1 rules. The Hopf threshold is the printed Eq. (7) truncation.
+Reads saved Stage 1 p=1 profiles and labels them in memory with Classifier v2.
+The Hopf threshold is the printed Eq. (7) truncation.
 Eq. (6) is solved only at a few widths as a check on that truncation.
 This script does not integrate the ODE, edit thresholds, or rewrite archives.
 """
@@ -28,7 +28,7 @@ from scipy.optimize import brentq
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v1"
+CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v2"
 sys.path.insert(0, str(CLASSIFIER_DIR))
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "stage2_classifier" / "penalty_calibration"))
@@ -201,7 +201,7 @@ def load_records() -> tuple[list[dict], dict]:
         raise RuntimeError(f"archived near-zero rule is |rho|<{tolerance}, death fraction>={death_level}")
     if config["state_priority"] != ["Death", "Locking", "Partial Death", "Partial Locking", "Incoherence"]:
         raise RuntimeError(f"archived priority is {config['state_priority']}")
-    if config["classifier_version"] != "v1.0.0-pilot":
+    if config["classifier_version"] != "v2.0.0":
         raise RuntimeError(config["classifier_version"])
     runs = query_runs(status="completed", p=1.0)
     if not runs:
@@ -570,7 +570,7 @@ def draw_figure(records: list[dict], summaries: list[dict], eq6: list[dict]) -> 
         fontsize=8,
         framealpha=0.95,
     )
-    fig.suptitle("N=1000, p=1, trial 0, W3=[12000, 14000], Classifier v1.0.0-pilot", fontsize=10)
+    fig.suptitle("N=1000, p=1, trial 0, W3=[12000, 14000], Classifier v2.0.0", fontsize=10)
     fig.tight_layout()
     fig.savefig(FIGURE_PATH, dpi=160, bbox_inches="tight")
     plt.close(fig)

@@ -161,7 +161,7 @@ def draw_figure(records: list[dict], curves: dict) -> None:
         fontsize=8,
         frameon=False,
     )
-    fig.suptitle("Winfree model, p=1, N=1000, trial 0, W3=[12000, 14000], Classifier v1.0.0-pilot", fontsize=11)
+    fig.suptitle("Winfree model, p=1, N=1000, trial 0, W3=[12000, 14000], Classifier v2.0.0", fontsize=11)
     fig.text(0.5, 0.005, NOTE, ha="center", va="bottom", fontsize=8)
     fig.tight_layout(rect=(0.0, 0.14, 1.0, 0.94))
     fig.savefig(FIGURE_PATH, dpi=160, bbox_inches="tight")

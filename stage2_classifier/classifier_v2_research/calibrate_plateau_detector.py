@@ -1015,7 +1015,7 @@ def flat_linear_count(segments: list[dict]) -> int:
 
 
 def collect_focus_cases(config: DetectorConfig, pilot, cost_audit, v1_config) -> list[dict]:
-    from stage2_classifier.classifier_v1.classify import classify_window
+    from stage2_classifier.classifier_v2.classify import classify_window
 
     rows, _split = load_index()
     details = []
@@ -1035,7 +1035,7 @@ def collect_focus_cases(config: DetectorConfig, pilot, cost_audit, v1_config) ->
 
 
 def shadow(config: DetectorConfig) -> dict:
-    from stage2_classifier.classifier_v1.classify import WINDOWS, classify_window, load_config
+    from stage2_classifier.classifier_v2.classify import WINDOWS, classify_window, load_config
     from stage2_classifier.penalty_calibration.method_c_separated import load_method_c
 
     pilot, cost_audit = load_method_c()
@@ -1317,7 +1317,7 @@ def make_figure(config: DetectorConfig) -> None:
             and abs(float(row["K"]) - coupling) < 1e-9
         ]
         focus_rows.append(match[0])
-    from stage2_classifier.classifier_v1.classify import classify_window, load_config
+    from stage2_classifier.classifier_v2.classify import classify_window, load_config
     from stage2_classifier.penalty_calibration.method_c_separated import load_method_c
 
     pilot, cost_audit = load_method_c()

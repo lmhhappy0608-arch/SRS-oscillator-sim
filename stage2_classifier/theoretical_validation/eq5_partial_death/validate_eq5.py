@@ -1,11 +1,11 @@
 """Compare Stage 1 p=1 W3 profiles with Ariaratnam & Strogatz Eq. (5).
 
-Reads the Stage 1 index and saved rotation numbers. Assigns labels with the
-archived Classifier v1.0.0-pilot rules. Does not integrate the ODE, edit
-thresholds, or rewrite the classifier archive.
+Reads the Stage 1 index and saved rotation numbers. Assigns labels with
+Classifier v2.0.0. Does not integrate the ODE, edit thresholds, or rewrite
+the classifier archive.
 
 Structural near-zero counts in this script use |rho| < 0.01, as specified
-for this comparison. Classifier v1 itself uses the archived tolerance
+for this comparison. Classifier v2 itself uses the archived tolerance
 |rho| < 0.001. Both numbers are reported.
 """
 
@@ -28,7 +28,7 @@ from matplotlib.patches import Patch
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v1"
+CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v2"
 sys.path.insert(0, str(CLASSIFIER_DIR))
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "stage2_classifier" / "penalty_calibration"))
@@ -643,7 +643,7 @@ def draw_figure(records: list[dict], meta: dict) -> None:
             np.ma.masked_less(states.astype(float), 0),
             state_cmap,
             state_norm,
-            "Classifier v1.0.0-pilot",
+            "Classifier v2.0.0",
         ),
     )
     for ax, field, cmap, norm, title in panels:

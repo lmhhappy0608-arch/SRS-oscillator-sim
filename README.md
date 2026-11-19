@@ -21,7 +21,6 @@ Equation checks and the annealed phase-diagram overlays are in
 | `cpp/` | C++ RK4 / RK45 cross-check |
 | `stage1/` | Parameter scan. Writes only to `stage1_runs/` |
 | `stage2_classifier/classifier_v2/` | Current classifier, archived 6962-run tables, and the full label table |
-| `stage2_classifier/classifier_v1/` | Pilot archive. Earlier equation checks still import it |
 | `stage2_classifier/theoretical_validation/` | Equation checks and overlay figures |
 | `docs/progress.md` | Research timeline |
 

@@ -1,6 +1,6 @@
 """Locate and diagnose operational Incoherence labels above the Eq. (7) boundary.
 
-The screen and the diagnostics reuse the archived Classifier v1.0.0-pilot rules,
+The screen and the diagnostics reuse the Classifier v2.0.0 rules,
 the printed Eq. (7) truncation, the Eq. (6) roots already reported for the
 reliable widths, and the death-existence function from the death-boundary
 validation. No ODE is integrated, no threshold is edited, and no archive is
@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 sys.path.insert(0, str(ROOT / "stage2_classifier" / "theoretical_validation" / "eq7_hopf"))
 sys.path.insert(0, str(ROOT / "stage2_classifier" / "theoretical_validation" / "death_boundary"))
-sys.path.insert(0, str(ROOT / "stage2_classifier" / "classifier_v1"))
+sys.path.insert(0, str(ROOT / "stage2_classifier" / "classifier_v2"))
 sys.path.insert(0, str(ROOT / "stage2_classifier" / "penalty_calibration"))
 sys.path.insert(0, str(ROOT))
 
@@ -113,7 +113,7 @@ def fmt_small(value: float | None) -> str:
 
 def require_config(config: dict) -> dict:
     """Stop if the archived rule card is not the pilot card used in the three validations."""
-    if config["classifier_version"] != "v1.0.0-pilot":
+    if config["classifier_version"] != "v2.0.0":
         raise RuntimeError(config["classifier_version"])
     if config["state_priority"] != ["Death", "Locking", "Partial Death", "Partial Locking", "Incoherence"]:
         raise RuntimeError(config["state_priority"])
@@ -893,7 +893,7 @@ def draw(records, diags, rules, temporal_points, panel_d_choice):
     ax_d.grid(True, alpha=0.25, lw=0.4)
     ax_d.legend(fontsize=7, loc="best", frameon=False)
     fig.suptitle(
-        "Operational Incoherence above Eq. (7): p=1, N=1000, trial 0, W3 primary, Classifier v1.0.0-pilot",
+        "Operational Incoherence above Eq. (7): p=1, N=1000, trial 0, W3 primary, Classifier v2.0.0",
         fontsize=11.5,
     )
     fig.savefig(FIGURE_PATH, dpi=160, bbox_inches="tight")
@@ -954,7 +954,7 @@ def provenance_paragraph(all_runs: list[dict]) -> str:
         f"{'matches' if hash_ok else 'does not match'} the archived hash. "
         "W1=[8000, 10000], W2=[10000, 12000], and W3=[12000, 14000]. W3 assigns the primary state. "
         "The archived classification_results.csv contains the original 732-run pilot and does not cover this full p=1 rectangle. "
-        "Labels used here were rebuilt in memory with Classifier v1.0.0-pilot and were not written back."
+        "Labels used here were rebuilt in memory with Classifier v2.0.0 and were not written back."
     )
 
 
@@ -1320,18 +1320,19 @@ def write_report(context: dict) -> None:
         "# Incoherence anomaly diagnostic",
         "",
         "Operational Incoherence on the saved p=1 grid is compared with the printed Eq. (7) Hopf truncation. "
-        "The linear instability of the incoherent state, the finite-time rotation-number profile, and the Classifier v1 label are kept separate. "
+        "The linear instability of the incoherent state, the finite-time rotation-number profile, and the Classifier v2 label are kept separate. "
         "A green cell above the truncation is not treated as a misclassification by default.",
         "",
         "## 1. Data and classifier provenance",
         "",
         context["provenance"],
         "",
-        "Classifier v1.0.0-pilot reads alpha=2, beta=1, and Method C minimum segment length 4 from the archived config. "
+        "Classifier v2.0.0 reads alpha=2, beta=1, tau_S=1e-4, and Method C minimum segment length 4 from its config. "
         "Near-zero means |ρ|<0.001. Death requires near-zero fraction 1. Locking requires the full-profile ρ range ≤ 0.01. "
         "Partial Death requires at least 15 consecutive near-zero oscillators after those two rules. "
-        "Partial Locking requires at least one Method C constant segment that passes Rule 3 "
+        "Partial Locking requires at least one Method C segment that passes Rule 3 "
         "(at least 15 oscillators, relative ω span ≥ 0.02, ρ span ≤ 0.02) with |mean ρ|≥0.001. "
+        "A linear segment passes only when S = |slope| * omega_span <= 1e-4. "
         "Incoherence is the remaining label. The priority is Death, Locking, Partial Death, Partial Locking, Incoherence. "
         "Cells with K>1 were screened from the index and not loaded: for every δ in (0, 0.20], both 1−δ and K_exist are below 1, "
         "so K≥1 cannot satisfy the strict inequalities. "

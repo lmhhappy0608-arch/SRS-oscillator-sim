@@ -1,6 +1,6 @@
 # Theoretical validation
 
-The first block uses Classifier v1.0.0-pilot on the completed Stage 1 p=1 grid: N=1000, trial 0, W3=[12000, 14000], 1741 profiles. Labels are rebuilt in memory from the local Stage 1 database. The ODE is not rerun, and the archived thresholds are not changed.
+The first block uses Classifier v2.0.0 on the completed Stage 1 p=1 grid: N=1000, trial 0, W3=[12000, 14000], 1741 profiles. Labels are rebuilt in memory from the local Stage 1 database. The ODE is not rerun, and the archived thresholds are not changed.
 
 Later notes use the same Stage 1 profiles. Where a classifier label is required, the note states which classifier it used. `stage1_runs/` stays local.
 

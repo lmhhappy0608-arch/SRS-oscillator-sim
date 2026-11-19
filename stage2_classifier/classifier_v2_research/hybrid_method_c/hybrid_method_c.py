@@ -36,7 +36,7 @@ from method_c_separated import load_method_c, segment_separated  # noqa: E402
 from stage1.query import query_runs  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
-V1_CONFIG = ROOT / "stage2_classifier" / "classifier_v1" / "config.json"
+CLASSIFIER_CONFIG = ROOT / "stage2_classifier" / "classifier_v2" / "config.json"
 DATA = ROOT / "stage1_runs"
 
 MIN_POINTS = 15
@@ -85,7 +85,7 @@ FIGURE_KEYS = (
 
 
 def load_archived_constants() -> None:
-    config = json.loads(V1_CONFIG.read_text(encoding="utf-8"))
+    config = json.loads(CLASSIFIER_CONFIG.read_text(encoding="utf-8"))
     rule3 = config["rule_3_valid_plateau"]
     if int(config["alpha"]["value"]) != int(ALPHA) or int(config["beta"]["value"]) != int(BETA):
         raise RuntimeError("archived alpha/beta differ from the fixed Hybrid Method C constants")
@@ -1065,7 +1065,7 @@ def write_report(path: Path, payload: dict) -> None:
         "## 2. Reused code and data",
         "",
         "- Method C dynamic program: `stage2_classifier/penalty_calibration/method_c_separated.py`, calling the archived `cost_audit.dp_penalized`.",
-        "- Rule 3 and the state priority: `stage2_classifier/classifier_v1/config.json`.",
+        "- Rule 3 and the state priority: `stage2_classifier/classifier_v2/config.json`.",
         "- Synthetic profiles, families, and the development / validation / test split: `catalog()` in `stage2_classifier/classifier_v2_research/calibrate_plateau_detector.py`.",
         "- Real profiles: completed Stage 1 NPZ files, window W3 = [12000, 14000], frequency-sorted before segmentation.",
         "",

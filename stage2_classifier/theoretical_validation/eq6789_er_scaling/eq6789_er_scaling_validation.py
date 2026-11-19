@@ -1036,7 +1036,7 @@ def render_report(context: dict, analyses: list[dict], bundle: dict, summary: di
         f"The Stage 1 index `{DATABASE}` was reread for this check. Status counts: "
         + ", ".join(f"{key} {value}" for key, value in sorted(index["status"].items()))
         + f". The Eq. (5) label cache records {context['audit']['status']}. "
-        "Labels below come from that cache, version 1, built with archived Classifier v1.0.0-pilot. "
+        "Labels below come from that cache, version 1, built with Classifier v2.0.0. "
         f"Config SHA-256 `{context['config_sha']}` matches the archive manifest: {context['config_matches_manifest']}. "
         f"`classify.py` SHA-256 in the cache is `{context['classify_sha']}`; the manifest checksum is `{context['manifest_classify_sha']}`. "
         "The Eq. (5) note already traced that worktree difference to phase-diagram drawing helpers. This script does not reclassify and does not change thresholds."
@@ -1308,7 +1308,7 @@ def render_report(context: dict, analyses: list[dict], bundle: dict, summary: di
     add(
         f"Theory implementation: `stage2_classifier/theoretical_validation/eq7_hopf/validate_eq7.py` SHA-256 `{file_sha256(ROOT / 'stage2_classifier/theoretical_validation/eq7_hopf/validate_eq7.py')}`, "
         f"`stage2_classifier/theoretical_validation/death_boundary/validate_death_boundary.py` SHA-256 `{file_sha256(ROOT / 'stage2_classifier/theoretical_validation/death_boundary/validate_death_boundary.py')}`. "
-        f"Classifier config SHA-256 `{file_sha256(ROOT / 'stage2_classifier/classifier_v1/config.json')}`. "
+        f"Classifier config SHA-256 `{file_sha256(ROOT / 'stage2_classifier/classifier_v2/config.json')}`. "
         f"This script SHA-256 `{file_sha256(Path(__file__))}`. "
         f"Label cache `{CACHE_PATH}`, version {CACHE_VERSION}. "
         "No ODE was rerun, no threshold was changed, and no new network correction was fitted."

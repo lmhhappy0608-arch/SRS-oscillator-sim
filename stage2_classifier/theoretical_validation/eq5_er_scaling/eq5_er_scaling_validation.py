@@ -2,8 +2,8 @@
 
 The annealed hypothesis under test is p * K_c(p, delta) ~= 1 - delta.
 It is not treated as an exact critical curve. The ODE is not rerun.
-Labels come from the archived Classifier v1.0.0-pilot rules, with W3 as
-the primary window and the archived near-zero cut |rho| < 0.001.
+Labels come from Classifier v2.0.0, with W3 as the primary window and the
+near-zero cut |rho| < 0.001.
 """
 
 from __future__ import annotations
@@ -31,7 +31,7 @@ from matplotlib.patches import Patch
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v1"
+CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v2"
 sys.path.insert(0, str(CLASSIFIER_DIR))
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "stage2_classifier" / "penalty_calibration"))
@@ -1153,10 +1153,11 @@ def render_report(context: dict) -> str:
     )
     lines.append("")
     lines.append(
-        f"Classifier v1.0.0-pilot, config SHA-256 `{context['config_sha']}` "
+        f"Classifier v2.0.0, config SHA-256 `{context['config_sha']}` "
         f"({'matches' if context['config_matches_manifest'] else 'does not match'} the archive manifest). "
-        f"`classify.py` SHA-256 `{context['classify_sha']}` does not equal the manifest checksum `{context['manifest_classify_sha']}`; "
-        "the worktree difference from git HEAD is in the phase-diagram drawing helpers. "
+        f"`classify.py` SHA-256 `{context['classify_sha']}` "
+        f"{'matches' if context['classify_sha'] == context['manifest_classify_sha'] else 'does not match'} "
+        f"the manifest checksum `{context['manifest_classify_sha']}`. "
         "State decisions were made by the archived `classify_window` rules: W3 primary, |ρ|<0.001, death fraction 1, "
         "locking range 0.01, partial-death run 15, priority Death > Locking > Partial Death > Partial Locking > Incoherence. "
         f"Method C ran on {context['classify_meta']['method_c_calls']} profiles. "

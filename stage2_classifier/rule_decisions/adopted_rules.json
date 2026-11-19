@@ -2,7 +2,7 @@
   "record": "adopted_decision_rules",
   "status": "partial",
   "classification_executed": false,
-  "does_not_overwrite": "stage2_classifier/classifier_v1",
+  "does_not_overwrite": "stage2_classifier/classifier_v2",
   "parameter_status": "provisional",
   "rules": {
     "1_classification_curve": {

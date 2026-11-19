@@ -1,7 +1,7 @@
-"""Compare Classifier v1 Death onsets with the Ariaratnam–Strogatz existence boundary.
+"""Compare Classifier v2 Death onsets with the Ariaratnam–Strogatz existence boundary.
 
-Reads saved Stage 1 p=1 profiles and labels them with the archived
-Classifier v1 rules. The existence threshold is computed from Eq. (8)–(9)
+Reads saved Stage 1 p=1 profiles and labels them with Classifier v2.
+The existence threshold is computed from Eq. (8)–(9)
 alone. This script does not integrate the ODE, edit thresholds, or rewrite
 the classifier archive.
 """
@@ -28,7 +28,7 @@ from scipy.optimize import brentq, minimize_scalar
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v1"
+CLASSIFIER_DIR = ROOT / "stage2_classifier" / "classifier_v2"
 sys.path.insert(0, str(CLASSIFIER_DIR))
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "stage2_classifier" / "penalty_calibration"))
@@ -465,7 +465,7 @@ def draw_figure(records: list[dict], summaries: list[dict], switch: float) -> No
     axes[1].set_ylabel(r"$K_{\mathrm{observed}} - K_{\mathrm{exist}}$")
     axes[1].set_title("Boundary discrepancy")
     axes[1].legend(loc="upper right", fontsize=8, framealpha=0.95)
-    fig.suptitle("N=1000, p=1, trial 0, W3=[12000, 14000], Classifier v1.0.0-pilot", fontsize=10)
+    fig.suptitle("N=1000, p=1, trial 0, W3=[12000, 14000], Classifier v2.0.0", fontsize=10)
     fig.tight_layout()
     fig.savefig(FIGURE_PATH, dpi=160, bbox_inches="tight")
     plt.close(fig)
