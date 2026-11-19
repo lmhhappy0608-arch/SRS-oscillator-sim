@@ -17,7 +17,7 @@ Equation checks and the annealed phase-diagram overlays are in
 
 | Path | Contents |
 | --- | --- |
-| `code/` | Python simulation and the older summer classifier |
+| `code/` | RK4 and RK45 solvers used by Stage 1 |
 | `cpp/` | C++ RK4 / RK45 cross-check |
 | `stage1/` | Parameter scan. Writes only to `stage1_runs/` |
 | `stage2_classifier/classifier_v2/` | Current classifier, archived 6962-run tables, and the full label table |
