@@ -27,9 +27,33 @@ stage1_benchmark/
 stage1_pilot_plots/
 *.log
 
-# Large local figure dumps (keep selected PNGs at repo root and classification/figures)
+# Large local figure dumps
 figures/clean_state_changes/
 _report_figs/
+
+# Retired from the snapshot. Local copies stay; git history still has them.
+# Individual-oscillator rho(omega) figures and the scripts that drew them.
+figures/rotation_vs_frequency/
+figures/rotation_vs_frequency_monotone/
+figures/compare_py_cpp/
+winfree_phase_diagram_*.png
+code/plot_rotation_vs_frequency.py
+code/plot_rotation_vs_frequency_c.py
+code/plot_clean_state_changes.py
+code/compare_clean_state_changes.py
+code/rotation_cleaning.py
+code/Winfree_phase_3d.py
+run_refine_grid.sh
+classification/
+stage1_analysis/
+tables/
+
+# Classifier development that v2 no longer reruns.
+stage2_classifier/method_c_diagnostics/
+stage2_classifier/classifier_v2_research/
+stage2_classifier/summer_reference.py
+stage2_classifier/penalty_calibration/*
+!stage2_classifier/penalty_calibration/method_c_separated.py
 
 # Local-only binaries / caches
 n_sensitivity_summary.npz
