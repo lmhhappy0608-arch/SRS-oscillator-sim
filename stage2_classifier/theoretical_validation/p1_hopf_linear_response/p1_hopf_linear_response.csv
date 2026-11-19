@@ -1,0 +1,5 @@
+delta,paper_K_H,response_K_H,absolute_error,relative_error,convergence_status,validity_status,eq7_K_H,eq7_absolute_error,eq7_relative_error,paper_Omega,response_Omega,all_drifting_edge,extrapolation_uncertainty,paper_source
+0.05,0.1278520948,0.1278521578,6.298798e-08,4.926629e-07,converged,valid_all_drifting,0.1278517259,-3.688906e-07,2.885292e-06,0.9905111622,0.9905108033,0.9500000000,6.778058e-07,Ariaratnam-Strogatz Eq. (6)
+0.10,0.2592049919,0.2592049854,-6.497955e-09,2.506879e-08,converged,valid_all_drifting,0.2591520063,-5.298556e-05,2.044156e-04,0.9602588832,0.9602586903,0.9000000000,2.947521e-07,Ariaratnam-Strogatz Eq. (6)
+0.20,0.5690494929,0.5690499091,4.162444e-07,7.314730e-07,converged,valid_all_drifting,0.5543502199,-1.469927e-02,2.583127e-02,0.7858376358,0.7858366136,0.8000000000,6.700338e-07,Ariaratnam-Strogatz Eq. (6)
+0.25,,,,,not_applicable,no_hopf_root_inside_all_drifting_branch,0.7378319195,,,,,0.7500000000,,

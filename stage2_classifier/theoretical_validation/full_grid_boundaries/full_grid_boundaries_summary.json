@@ -1,0 +1,346 @@
+{
+  "elapsed_sec": 36.37156454194337,
+  "n_delta": 41,
+  "deltas": [
+    0.0,
+    0.025,
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.225,
+    0.25,
+    0.275,
+    0.3,
+    0.325,
+    0.35,
+    0.375,
+    0.4,
+    0.425,
+    0.45,
+    0.475,
+    0.5,
+    0.525,
+    0.55,
+    0.575,
+    0.6,
+    0.625,
+    0.65,
+    0.675,
+    0.7,
+    0.725,
+    0.75,
+    0.775,
+    0.8,
+    0.825,
+    0.85,
+    0.875,
+    0.9,
+    0.925,
+    0.95,
+    0.975,
+    1.0
+  ],
+  "eq6_endpoint": {
+    "last_grid_root": 0.2,
+    "first_grid_without_root": 0.225,
+    "refined_bracket": [
+      0.22275390625,
+      0.2228515625
+    ],
+    "last_refined_root": {
+      "delta": 0.22275390625,
+      "K": 0.7184045467212944,
+      "Omega": 0.6182902150346606
+    }
+  },
+  "recovery": {
+    "passed": true,
+    "comparisons": [
+      {
+        "delta": 0.05,
+        "p": 1.0,
+        "kind": "eq6_vs_step1",
+        "relative_gap": 1.5744827700482755e-10,
+        "passed": true
+      },
+      {
+        "delta": 0.05,
+        "p": 1.0,
+        "kind": "eq6_vs_step2",
+        "relative_gap": 1.5744827700482755e-10,
+        "passed": true
+      },
+      {
+        "delta": 0.05,
+        "p": 1.0,
+        "kind": "degree_vs_step2",
+        "relative_gap": 3.599146930312118e-10,
+        "passed": true
+      },
+      {
+        "delta": 0.05,
+        "p": 0.8,
+        "kind": "degree_vs_step2",
+        "relative_gap": 1.3979340323235139e-10,
+        "passed": true
+      },
+      {
+        "delta": 0.05,
+        "p": 0.4,
+        "kind": "degree_vs_step2",
+        "relative_gap": 1.9962191198129357e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.05,
+        "p": 0.2,
+        "kind": "degree_vs_step2",
+        "relative_gap": 3.0894023055926546e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.1,
+        "p": 1.0,
+        "kind": "eq6_vs_step1",
+        "relative_gap": 1.076101063207523e-10,
+        "passed": true
+      },
+      {
+        "delta": 0.1,
+        "p": 1.0,
+        "kind": "eq6_vs_step2",
+        "relative_gap": 1.076101063207523e-10,
+        "passed": true
+      },
+      {
+        "delta": 0.1,
+        "p": 1.0,
+        "kind": "degree_vs_step2",
+        "relative_gap": 9.241744290421085e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.1,
+        "p": 0.8,
+        "kind": "degree_vs_step2",
+        "relative_gap": 3.801436888847436e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.1,
+        "p": 0.4,
+        "kind": "degree_vs_step2",
+        "relative_gap": 6.674823851603198e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.1,
+        "p": 0.2,
+        "kind": "degree_vs_step2",
+        "relative_gap": 2.336101978598828e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.2,
+        "p": 1.0,
+        "kind": "eq6_vs_step1",
+        "relative_gap": 8.684993418802892e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.2,
+        "p": 1.0,
+        "kind": "eq6_vs_step2",
+        "relative_gap": 8.684993418802892e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.2,
+        "p": 1.0,
+        "kind": "degree_vs_step2",
+        "relative_gap": 4.1366668924176804e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.2,
+        "p": 0.8,
+        "kind": "degree_vs_step2",
+        "relative_gap": 4.23415846333667e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.2,
+        "p": 0.4,
+        "kind": "degree_vs_step2",
+        "relative_gap": 1.9948094999132845e-11,
+        "passed": true
+      },
+      {
+        "delta": 0.2,
+        "p": 0.2,
+        "kind": "degree_vs_step2",
+        "relative_gap": 7.987843118876955e-12,
+        "passed": true
+      }
+    ]
+  },
+  "relative_deviation": {
+    "0.2": {
+      "n": 8,
+      "max_abs_relative_deviation": 0.002987425884909364,
+      "delta_at_max_abs": 0.025,
+      "signed_at_max_abs": -0.002987425884909364,
+      "min_signed": -0.002987425884909364,
+      "max_signed": -0.0011828123818653892
+    },
+    "0.4": {
+      "n": 8,
+      "max_abs_relative_deviation": 0.0005039407375726393,
+      "delta_at_max_abs": 0.025,
+      "signed_at_max_abs": -0.0005039407375726393,
+      "min_signed": -0.0005039407375726393,
+      "max_signed": 0.00017993985068425858
+    },
+    "0.8": {
+      "n": 8,
+      "max_abs_relative_deviation": 0.0008645258654784219,
+      "delta_at_max_abs": 0.2,
+      "signed_at_max_abs": 0.0008645258654784219,
+      "min_signed": 0.0007424390485499101,
+      "max_signed": 0.0008645258654784219
+    }
+  },
+  "classifier_regions": {
+    "0.2": [
+      {
+        "delta": 0.025,
+        "K_H_degree": 0.3176823548051429,
+        "placement": "between Partial Locking (K=0.3) and Locking (K=0.35)"
+      },
+      {
+        "delta": 0.05,
+        "K_H_degree": 0.6373805249196912,
+        "placement": "between Partial Locking (K=0.6) and Partial Locking (K=0.65)"
+      },
+      {
+        "delta": 0.075,
+        "K_H_degree": 0.9613448171334942,
+        "placement": "between Partial Locking (K=0.95) and Partial Locking (K=1)"
+      },
+      {
+        "delta": 0.1,
+        "K_H_degree": 1.2924313848698075,
+        "placement": "between Incoherence (K=1.25) and Partial Locking (K=1.3)"
+      },
+      {
+        "delta": 0.125,
+        "K_H_degree": 1.6346981974004977,
+        "placement": "between Incoherence (K=1.6) and Partial Locking (K=1.65)"
+      },
+      {
+        "delta": 0.15,
+        "K_H_degree": 1.994752577418607,
+        "placement": "between Incoherence (K=1.95) and Partial Locking (K=2)"
+      },
+      {
+        "delta": 0.175,
+        "K_H_degree": 2.385506481399878,
+        "placement": "above saved cells, last cell Incoherence"
+      },
+      {
+        "delta": 0.2,
+        "K_H_degree": 2.8418820703227006,
+        "placement": "between Incoherence (K=2.8) and Incoherence (K=2.85)"
+      }
+    ],
+    "0.4": [
+      {
+        "delta": 0.025,
+        "K_H_degree": 0.159236839117485,
+        "placement": "between Partial Locking (K=0.15) and Locking (K=0.2)"
+      },
+      {
+        "delta": 0.05,
+        "K_H_degree": 0.31947665749362253,
+        "placement": "between Partial Locking (K=0.3) and Locking (K=0.35)"
+      },
+      {
+        "delta": 0.075,
+        "K_H_degree": 0.48183854862696485,
+        "placement": "between Partial Locking (K=0.45) and Partial Locking (K=0.5)"
+      },
+      {
+        "delta": 0.1,
+        "K_H_degree": 0.6477419967432356,
+        "placement": "between Partial Locking (K=0.6) and Partial Locking (K=0.65)"
+      },
+      {
+        "delta": 0.125,
+        "K_H_degree": 0.8192015517433816,
+        "placement": "between Partial Locking (K=0.8) and Partial Locking (K=0.85)"
+      },
+      {
+        "delta": 0.15,
+        "K_H_degree": 0.9994920983410662,
+        "placement": "between Incoherence (K=0.95) and Incoherence (K=1)"
+      },
+      {
+        "delta": 0.175,
+        "K_H_degree": 1.194996625602601,
+        "placement": "between Incoherence (K=1.15) and Partial Locking (K=1.2)"
+      },
+      {
+        "delta": 0.2,
+        "K_H_degree": 1.4228797188283837,
+        "placement": "between Incoherence (K=1.4) and Incoherence (K=1.45)"
+      }
+    ],
+    "0.8": [
+      {
+        "delta": 0.025,
+        "K_H_degree": 0.07971770438115018,
+        "placement": "between Incoherence (K=0.05) and Locking (K=0.1)"
+      },
+      {
+        "delta": 0.05,
+        "K_H_degree": 0.15993565012235794,
+        "placement": "between Partial Locking (K=0.15) and Locking (K=0.2)"
+      },
+      {
+        "delta": 0.075,
+        "K_H_degree": 0.2412118511905685,
+        "placement": "between Partial Locking (K=0.2) and Locking (K=0.25)"
+      },
+      {
+        "delta": 0.1,
+        "K_H_degree": 0.3242538808876737,
+        "placement": "between Partial Locking (K=0.3) and Locking (K=0.35)"
+      },
+      {
+        "delta": 0.125,
+        "K_H_degree": 0.4100653828526984,
+        "placement": "between Partial Locking (K=0.4) and Locking (K=0.45)"
+      },
+      {
+        "delta": 0.15,
+        "K_H_degree": 0.5002765914157784,
+        "placement": "between Partial Locking (K=0.5) and Locking (K=0.55)"
+      },
+      {
+        "delta": 0.175,
+        "K_H_degree": 0.59806081734851,
+        "placement": "between Partial Locking (K=0.55) and Partial Locking (K=0.6)"
+      },
+      {
+        "delta": 0.2,
+        "K_H_degree": 0.7119268135698559,
+        "placement": "between Incoherence (K=0.7) and Partial Locking (K=0.75)"
+      }
+    ]
+  },
+  "statement": "Hopf values are annealed characteristic roots. Death values are existence thresholds scaled by 1/p, not attraction thresholds. No missing Hopf root was filled by interpolation."
+}

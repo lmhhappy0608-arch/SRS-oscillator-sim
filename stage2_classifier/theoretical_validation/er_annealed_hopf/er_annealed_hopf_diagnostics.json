@@ -1,0 +1,1877 @@
+{
+  "identity": {
+    "checks": [
+      {
+        "name": "stable_form_a_0.05",
+        "relative_error": 8.910947529832406e-14,
+        "passed": true
+      },
+      {
+        "name": "stable_form_a_0.25",
+        "relative_error": 2.887938468989818e-15,
+        "passed": true
+      },
+      {
+        "name": "stable_form_a_0.55",
+        "relative_error": 5.977031785378416e-16,
+        "passed": true
+      },
+      {
+        "name": "chi_matches_p1_adaptive_quad",
+        "max_relative_error": 1.8816008431124093e-13,
+        "passed": true
+      },
+      {
+        "name": "small_a_limit",
+        "relative_error": 3.9618096128099253e-10,
+        "passed": true
+      },
+      {
+        "name": "p1_reduces_to_local_coefficient",
+        "relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "name": "excess_degree_mean",
+        "discarded_probability": 4.559259447381696e-18,
+        "support_size": 230,
+        "relative_mean_error": 3.1170369265647463e-15,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "p1_recovery": {
+    "passed": true,
+    "comparisons": [
+      {
+        "delta": 0.05,
+        "passed": true,
+        "expected": 0.12798007489502514,
+        "actual": 0.12798013794606194,
+        "relative_gap": 4.926629153794176e-07
+      },
+      {
+        "delta": 0.1,
+        "passed": true,
+        "expected": 0.25946445632843534,
+        "actual": 0.25946444982397904,
+        "relative_gap": 2.506877588915674e-08
+      },
+      {
+        "delta": 0.2,
+        "passed": true,
+        "expected": 0.5696191119625407,
+        "actual": 0.5696195286235632,
+        "relative_gap": 7.314730384265888e-07
+      }
+    ]
+  },
+  "pinned_q_limit": 1e-08,
+  "tail_production": 1e-12,
+  "finite_n_factor": 1.001001001001001,
+  "results": [
+    {
+      "p": 1.0,
+      "delta": 0.05,
+      "K_H_p1": 0.1278520948201301,
+      "K_H_scaling": 0.1278520948201301,
+      "K_H_homogeneous": 0.12798007489502514,
+      "paper_Omega": 0.9905111621691126,
+      "discarded_probability": 0.0,
+      "support_size": 1,
+      "mean_neighbor_degree": 999.0,
+      "distribution_mean": 999.0,
+      "K_H_degree": 0.12798013794606194,
+      "Omega_H": 0.9905108033225424,
+      "relative_deviation": 0.0010014941570725242,
+      "heterogeneity_deviation": 4.926629153794176e-07,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 6.784842951912395e-07,
+      "residual": 9.527621423527926e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.1463425407061433,
+            "Omega": 0.9879062788788796,
+            "residual": 2.4392301846616886e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.13305458456333308,
+            "Omega": 0.9898353717737596,
+            "residual": 6.545094983735291e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.12963033002081625,
+            "Omega": 0.9902952563371012,
+            "residual": 7.396641167830455e-16
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.12847083669371445,
+            "Omega": 0.9904473503920465,
+            "residual": 2.885766998291366e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.128143251872416,
+            "Omega": 0.9904899822849785,
+            "residual": 9.527621423527926e-16
+          }
+        ],
+        "upper": 0.9509509509503737
+      },
+      "extrapolation_K": {
+        "value": 0.12798013794606194,
+        "linear_value": 0.12797945946176675,
+        "uncertainty": 6.784842951912395e-07,
+        "fit_max_abs_deviation": 5.910970046762998e-08,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.128143251872416,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9905108033225424,
+        "linear_value": 0.9905112982314446,
+        "uncertainty": 4.949089021932807e-07,
+        "fit_max_abs_deviation": 4.202597592151136e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9904899822849785,
+        "n_points": 5
+      },
+      "a_max_retained": 0.12785215780811587,
+      "all_drifting_edge": 0.95,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.12963033002081642
+          },
+          "1e-08": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.12963033002081642
+          },
+          "1e-12": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.12963033002081642
+          }
+        },
+        "relative_shift": 0.0,
+        "coarse_relative_shift": 0.0,
+        "passed": true
+      },
+      "fourier_tail_degree": 999,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 1.5691047401608015e-14,
+          "32": 1.5691047401608015e-14,
+          "48": 1.5691047401608015e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 1.5691047401608015e-14,
+          "32": 1.5691047401608015e-14,
+          "48": 1.5691047401608015e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 1.0,
+      "delta": 0.1,
+      "K_H_p1": 0.25920499187210694,
+      "K_H_scaling": 0.25920499187210694,
+      "K_H_homogeneous": 0.25946445632843534,
+      "paper_Omega": 0.9602588831756503,
+      "discarded_probability": 0.0,
+      "support_size": 1,
+      "mean_neighbor_degree": 999.0,
+      "distribution_mean": 999.0,
+      "K_H_degree": 0.25946444982397904,
+      "Omega_H": 0.9602586902636171,
+      "relative_deviation": 0.001000975907131131,
+      "heterogeneity_deviation": -2.506877588915674e-08,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 2.950471694185275e-07,
+      "residual": 9.992026611491773e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.2770322262692899,
+            "Omega": 0.9551805391653712,
+            "residual": 9.760905692891777e-17
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.2645236626111968,
+            "Omega": 0.9588424235752427,
+            "residual": 7.621174845755661e-18
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.26113073607143916,
+            "Omega": 0.9597965446187158,
+            "residual": 1.0411776639101994e-15
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.25996222875814295,
+            "Omega": 0.9601212000939624,
+            "residual": 1.1671900039601584e-15
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.2596301794372541,
+            "Omega": 0.9602130854306192,
+            "residual": 9.992026611491773e-16
+          }
+        ],
+        "upper": 0.9009009009008371
+      },
+      "extrapolation_K": {
+        "value": 0.25946444982397904,
+        "linear_value": 0.2594641547768096,
+        "uncertainty": 2.950471694185275e-07,
+        "fit_max_abs_deviation": 9.721620841673939e-09,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.2596301794372541,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9602586902636171,
+        "linear_value": 0.9602590280989477,
+        "uncertainty": 3.3783533059938975e-07,
+        "fit_max_abs_deviation": 2.2602910243474383e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9602130854306192,
+        "n_points": 5
+      },
+      "a_max_retained": 0.25920498537415504,
+      "all_drifting_edge": 0.9,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.2611307360714391
+          },
+          "1e-08": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.2611307360714391
+          },
+          "1e-12": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.2611307360714391
+          }
+        },
+        "relative_shift": 0.0,
+        "coarse_relative_shift": 0.0,
+        "passed": true
+      },
+      "fourier_tail_degree": 999,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 3.867153161226675e-14,
+          "32": 3.867153161226675e-14,
+          "48": 3.867153161226675e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 3.867153161226675e-14,
+          "32": 3.867153161226675e-14,
+          "48": 3.867153161226675e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 1.0,
+      "delta": 0.2,
+      "K_H_p1": 0.569049492850578,
+      "K_H_scaling": 0.569049492850578,
+      "K_H_homogeneous": 0.5696191119625407,
+      "paper_Omega": 0.7858376357809553,
+      "discarded_probability": 0.0,
+      "support_size": 1,
+      "mean_neighbor_degree": 999.0,
+      "distribution_mean": 999.0,
+      "K_H_degree": 0.5696195286235632,
+      "Omega_H": 0.7858366135628932,
+      "relative_deviation": 0.0010017332062448232,
+      "heterogeneity_deviation": 7.314730384265888e-07,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 6.707044336584644e-07,
+      "residual": 4.543195354552218e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.5915992658782876,
+            "Omega": 0.7669821750959324,
+            "residual": 2.0862326192017504e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.5760236587980349,
+            "Omega": 0.7804867726827752,
+            "residual": 4.734337116087748e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.5717367385979228,
+            "Omega": 0.784081113347407,
+            "residual": 1.1744234339652552e-16
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.5702526143466587,
+            "Omega": 0.7853134673273273,
+            "residual": 1.486348455651322e-15
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.5698301100616393,
+            "Omega": 0.7856631767559232,
+            "residual": 4.543195354552218e-16
+          }
+        ],
+        "upper": 0.8008008008002059
+      },
+      "extrapolation_K": {
+        "value": 0.5696195286235632,
+        "linear_value": 0.5696188579191296,
+        "uncertainty": 6.707044336584644e-07,
+        "fit_max_abs_deviation": 4.921168824667532e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.5698301100616393,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.7858366135628932,
+        "linear_value": 0.7858380314702212,
+        "uncertainty": 1.4179073279940724e-06,
+        "fit_max_abs_deviation": 1.2057928557851483e-06,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.7856631767559232,
+        "n_points": 5
+      },
+      "a_max_retained": 0.5690499090949397,
+      "all_drifting_edge": 0.8,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.5717367385979271
+          },
+          "1e-08": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.5717367385979271
+          },
+          "1e-12": {
+            "discarded_probability": 0.0,
+            "support_size": 1,
+            "K": 0.5717367385979271
+          }
+        },
+        "relative_shift": 0.0,
+        "coarse_relative_shift": 0.0,
+        "passed": true
+      },
+      "fourier_tail_degree": 999,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 5.3381536237830494e-11,
+          "32": 2.5925493983182287e-14,
+          "48": 2.5925493983182287e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 5.3381536237830494e-11,
+          "32": 2.5925493983182287e-14,
+          "48": 2.5925493983182287e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.8,
+      "delta": 0.05,
+      "K_H_p1": 0.1278520948201301,
+      "K_H_scaling": 0.1598151185251626,
+      "K_H_homogeneous": 0.15993506982753328,
+      "paper_Omega": 0.9905111621691126,
+      "discarded_probability": 4.559259447381436e-18,
+      "support_size": 230,
+      "mean_neighbor_degree": 799.4000000000001,
+      "distribution_mean": 799.4000000000007,
+      "K_H_degree": 0.15993565012235794,
+      "Omega_H": 0.990504653163024,
+      "relative_deviation": 0.000754193960544168,
+      "heterogeneity_deviation": 3.6283150736762753e-06,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 8.495250039819435e-07,
+      "residual": 2.0686577451023425e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.18288408716626173,
+            "Omega": 0.9878981042736289,
+            "residual": 2.9633456936982935e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.1662773451298168,
+            "Omega": 0.9898287045748024,
+            "residual": 4.59918561568351e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.161997938491245,
+            "Omega": 0.9902889416542757,
+            "residual": 9.754043147778174e-16
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.16054888746096296,
+            "Omega": 0.9904411520201576,
+            "residual": 1.3136560942754092e-15
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.16013949621855697,
+            "Omega": 0.9904838165005792,
+            "residual": 2.0686577451023425e-16
+          }
+        ],
+        "upper": 1.0957324106110198
+      },
+      "extrapolation_K": {
+        "value": 0.15993565012235794,
+        "linear_value": 0.15993480059735396,
+        "uncertainty": 8.495250039819435e-07,
+        "fit_max_abs_deviation": 7.565184634295008e-08,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.16013949621855697,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.990504653163024,
+        "linear_value": 0.99050514874079,
+        "uncertainty": 4.95577765935451e-07,
+        "fit_max_abs_deviation": 4.2092384400227445e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9904838165005792,
+        "n_points": 5
+      },
+      "a_max_retained": 0.14618118421183515,
+      "all_drifting_edge": 0.95,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 5.647458994102915e-07,
+            "support_size": 128,
+            "K": 0.16199793238008947
+          },
+          "1e-08": {
+            "discarded_probability": 5.59422746481043e-12,
+            "support_size": 179,
+            "K": 0.16199793849114166
+          },
+          "1e-12": {
+            "discarded_probability": 4.559259447381436e-18,
+            "support_size": 230,
+            "K": 0.16199793849124522
+          }
+        },
+        "relative_shift": 6.392430273272144e-13,
+        "coarse_relative_shift": 3.772366367762268e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 855,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 5.230409981252902e-14,
+          "32": 5.230409981252902e-14,
+          "48": 5.230409981252902e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 3.530886969861215e-14,
+          "32": 3.530886969861215e-14,
+          "48": 3.530886969861215e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.8,
+      "delta": 0.1,
+      "K_H_p1": 0.25920499187210694,
+      "K_H_scaling": 0.32400623984013366,
+      "K_H_homogeneous": 0.32424942691031633,
+      "paper_Omega": 0.9602588831756503,
+      "discarded_probability": 4.559259447381436e-18,
+      "support_size": 230,
+      "mean_neighbor_degree": 799.4000000000001,
+      "distribution_mean": 799.4000000000007,
+      "K_H_degree": 0.3242538808876737,
+      "Omega_H": 0.9602330340557937,
+      "relative_deviation": 0.0007643095011449023,
+      "heterogeneity_deviation": 1.3736269019247917e-05,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 3.704844185326017e-07,
+      "residual": 9.235387608043625e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.34621197450941205,
+            "Omega": 0.9551505019764613,
+            "residual": 3.626236012983389e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.33057723971281444,
+            "Omega": 0.9588155917954412,
+            "residual": 1.708702623837155e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.32633650560072935,
+            "Omega": 0.9597705087534493,
+            "residual": 1.22140086323355e-15
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.3248760322955014,
+            "Omega": 0.9600954316909033,
+            "residual": 6.673536957935132e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.3244610177006706,
+            "Omega": 0.9601873924258577,
+            "residual": 9.235387608043625e-16
+          }
+        ],
+        "upper": 1.038062283736883
+      },
+      "extrapolation_K": {
+        "value": 0.3242538808876737,
+        "linear_value": 0.3242535104032552,
+        "uncertainty": 3.704844185326017e-07,
+        "fit_max_abs_deviation": 1.0390310944963232e-08,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.3244610177006706,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9602330340557937,
+        "linear_value": 0.960233372793335,
+        "uncertainty": 3.387375412389204e-07,
+        "fit_max_abs_deviation": 2.2689463097247398e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9601873924258577,
+        "n_points": 5
+      },
+      "a_max_retained": 0.29636804713133375,
+      "all_drifting_edge": 0.9,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 5.647458994102915e-07,
+            "support_size": 128,
+            "K": 0.32633649323636954
+          },
+          "1e-08": {
+            "discarded_probability": 5.59422746481043e-12,
+            "support_size": 179,
+            "K": 0.32633650560051947
+          },
+          "1e-12": {
+            "discarded_probability": 4.559259447381436e-18,
+            "support_size": 230,
+            "K": 0.326336505600729
+          }
+        },
+        "relative_shift": 6.421426726753863e-13,
+        "coarse_relative_shift": 3.788837371396517e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 855,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 4.163301762618356e-14,
+          "32": 4.163301762618356e-14,
+          "48": 4.163301762618356e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 6.702944267124589e-15,
+          "32": 6.702944267124589e-15,
+          "48": 6.702944267124589e-15
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.8,
+      "delta": 0.2,
+      "K_H_p1": 0.569049492850578,
+      "K_H_scaling": 0.7113118660632225,
+      "K_H_homogeneous": 0.7118457503760045,
+      "paper_Omega": 0.7858376357809553,
+      "discarded_probability": 4.559259447381436e-18,
+      "support_size": 230,
+      "mean_neighbor_degree": 799.4000000000001,
+      "distribution_mean": 799.4000000000007,
+      "K_H_degree": 0.7119268135698559,
+      "Omega_H": 0.7856813428496477,
+      "relative_deviation": 0.0008645258654784219,
+      "heterogeneity_deviation": 0.00011387747107930796,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 8.515725657964879e-07,
+      "residual": 1.3117173821016616e-15,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.7394351339115957,
+            "Omega": 0.7667903851356253,
+            "residual": 4.449557262054371e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.7199403609980498,
+            "Omega": 0.7803222240922404,
+            "residual": 8.99089371655742e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.7145759735782806,
+            "Omega": 0.7839228923555722,
+            "residual": 7.87971287047744e-16
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.7127189430535387,
+            "Omega": 0.7851573337611556,
+            "residual": 8.550620767745488e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.7121902890160396,
+            "Omega": 0.7855076280926221,
+            "residual": 1.3117173821016616e-15
+          }
+        ],
+        "upper": 0.922722029988386
+      },
+      "extrapolation_K": {
+        "value": 0.7119268135698559,
+        "linear_value": 0.7119259619972901,
+        "uncertainty": 8.515725657964879e-07,
+        "fit_max_abs_deviation": 6.283949746110906e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.7121902890160396,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.7856813428496477,
+        "linear_value": 0.7856827752583554,
+        "uncertainty": 1.4324087076467151e-06,
+        "fit_max_abs_deviation": 1.2207235600136812e-06,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.7855076280926221,
+        "n_points": 5
+      },
+      "a_max_retained": 0.6507011076028483,
+      "all_drifting_edge": 0.8,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 5.647458994102915e-07,
+            "support_size": 128,
+            "K": 0.7145759454001908
+          },
+          "1e-08": {
+            "discarded_probability": 5.59422746481043e-12,
+            "support_size": 179,
+            "K": 0.7145759735778131
+          },
+          "1e-12": {
+            "discarded_probability": 4.559259447381436e-18,
+            "support_size": 230,
+            "K": 0.7145759735782936
+          }
+        },
+        "relative_shift": 6.724330831494442e-13,
+        "coarse_relative_shift": 3.9433319748979e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 855,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 5.3725790401199694e-11,
+          "32": 3.160216547379418e-14,
+          "48": 3.160216547379418e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 1.0292324389261249e-09,
+          "32": 8.719397316561917e-14,
+          "48": 8.719397316561917e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.6,
+      "delta": 0.05,
+      "K_H_p1": 0.1278520948201301,
+      "K_H_scaling": 0.21308682470021684,
+      "K_H_homogeneous": 0.2131578773259922,
+      "paper_Omega": 0.9905111621691126,
+      "discarded_probability": 1.7451546510582628e-19,
+      "support_size": 281,
+      "mean_neighbor_degree": 599.8,
+      "distribution_mean": 599.7999999999997,
+      "K_H_degree": 0.21315976350566174,
+      "Omega_H": 0.990494413743472,
+      "relative_deviation": 0.0003422961769105831,
+      "heterogeneity_deviation": 8.848744851456398e-06,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 1.1358595477517497e-06,
+      "residual": 5.211784991515305e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.24374754173314703,
+            "Omega": 0.9878844931217207,
+            "residual": 3.929148673087468e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.22161232985330273,
+            "Omega": 0.9898176041021964,
+            "residual": 9.311128257305512e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.2159084782892147,
+            "Omega": 0.9902784282524429,
+            "residual": 7.41594285980085e-17
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.213977111085927,
+            "Omega": 0.9904308323136858,
+            "residual": 4.273699976438833e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.213431455459385,
+            "Omega": 0.9904735510623108,
+            "residual": 5.211784991515305e-16
+          }
+        ],
+        "upper": 1.3868613138678207
+      },
+      "extrapolation_K": {
+        "value": 0.21315976350566174,
+        "linear_value": 0.21315862764611399,
+        "uncertainty": 1.1358595477517497e-06,
+        "fit_max_abs_deviation": 1.0479586923239914e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.213431455459385,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.990494413743472,
+        "linear_value": 0.9904949104366234,
+        "uncertainty": 4.966931513861184e-07,
+        "fit_max_abs_deviation": 4.220314642200407e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9904735510623108,
+        "n_points": 5
+      },
+      "a_max_retained": 0.15773822499418969,
+      "all_drifting_edge": 0.95,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 3.907307085956763e-07,
+            "support_size": 157,
+            "K": 0.2159084744002007
+          },
+          "1e-08": {
+            "discarded_probability": 1.636350728784631e-12,
+            "support_size": 219,
+            "K": 0.21590847828916845
+          },
+          "1e-12": {
+            "discarded_probability": 1.7451546510582628e-19,
+            "support_size": 281,
+            "K": 0.21590847828921508
+          }
+        },
+        "relative_shift": 2.1596820747259083e-13,
+        "coarse_relative_shift": 1.8012328275009136e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 668,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 2.2243738855933688e-14,
+          "32": 2.2243738855933688e-14,
+          "48": 2.2243738855933688e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 1.0696747505768996e-13,
+          "32": 1.0696747505768996e-13,
+          "48": 1.0696747505768996e-13
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.6,
+      "delta": 0.1,
+      "K_H_p1": 0.25920499187210694,
+      "K_H_scaling": 0.4320083197868449,
+      "K_H_homogeneous": 0.43215237057703726,
+      "paper_Omega": 0.9602588831756503,
+      "discarded_probability": 1.7451546510582628e-19,
+      "support_size": 281,
+      "mean_neighbor_degree": 599.8,
+      "distribution_mean": 599.7999999999997,
+      "K_H_degree": 0.4321682084275999,
+      "Omega_H": 0.9601903118147443,
+      "relative_deviation": 0.0003701054665657629,
+      "heterogeneity_deviation": 3.6648764743535166e-05,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 4.977154022811625e-07,
+      "residual": 6.668652496727995e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.4614420662345468,
+            "Omega": 0.9551004761523305,
+            "residual": 4.718958039861916e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.44059789663955573,
+            "Omega": 0.9587709100827888,
+            "residual": 2.444975662751205e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.4349445244578494,
+            "Omega": 0.9597271537204227,
+            "residual": 1.3771399252625926e-15
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.43299758336625943,
+            "Omega": 0.9600525224547615,
+            "residual": 7.277164981722706e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.4324443349302182,
+            "Omega": 0.9601446088587191,
+            "residual": 6.668652496727995e-16
+          }
+        ],
+        "upper": 1.3138686131382702
+      },
+      "extrapolation_K": {
+        "value": 0.4321682084275999,
+        "linear_value": 0.4321677107121976,
+        "uncertainty": 4.977154022811625e-07,
+        "fit_max_abs_deviation": 9.924756905199672e-09,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.4324443349302182,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9601903118147443,
+        "linear_value": 0.960190652060698,
+        "uncertainty": 3.4024595363391086e-07,
+        "fit_max_abs_deviation": 2.2834227086931946e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9601446088587191,
+        "n_points": 5
+      },
+      "a_max_retained": 0.31980447423642394,
+      "all_drifting_edge": 0.9,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 3.907307085956763e-07,
+            "support_size": 157,
+            "K": 0.43494451649116594
+          },
+          "1e-08": {
+            "discarded_probability": 1.636350728784631e-12,
+            "support_size": 219,
+            "K": 0.43494452445775394
+          },
+          "1e-12": {
+            "discarded_probability": 1.7451546510582628e-19,
+            "support_size": 281,
+            "K": 0.4349445244578489
+          }
+        },
+        "relative_shift": 2.183717104499076e-13,
+        "coarse_relative_shift": 1.831654965631906e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 668,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 2.3187503933488576e-14,
+          "32": 2.3187503933488576e-14,
+          "48": 2.3187503933488576e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 2.8598074425554276e-15,
+          "32": 2.8598074425554276e-15,
+          "48": 2.8598074425554276e-15
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.6,
+      "delta": 0.2,
+      "K_H_p1": 0.569049492850578,
+      "K_H_scaling": 0.9484158214176301,
+      "K_H_homogeneous": 0.9487320654394433,
+      "paper_Omega": 0.7858376357809553,
+      "discarded_probability": 1.7451546510582628e-19,
+      "support_size": 281,
+      "mean_neighbor_degree": 599.8,
+      "distribution_mean": 599.7999999999997,
+      "K_H_degree": 0.9490190718242217,
+      "Omega_H": 0.7854225113847577,
+      "relative_deviation": 0.0006360610957437361,
+      "heterogeneity_deviation": 0.0003025157420451172,
+      "pinned_q_mass": 4.994820839757881e-63,
+      "continuation_uncertainty": 1.1653674026890215e-06,
+      "residual": 1.1843047501802263e-14,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.9857721636020523,
+            "Omega": 0.7664703140104676,
+            "residual": 2.0816681711721685e-17
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.9597225504066161,
+            "Omega": 0.7800478522106461,
+            "residual": 2.514331927660129e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.9525572032018856,
+            "Omega": 0.7836591207318321,
+            "residual": 6.800846163604443e-16
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.9500769703829028,
+            "Omega": 0.7848970578369744,
+            "residual": 8.577063015816385e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.9493709277655137,
+            "Omega": 0.7852483315624356,
+            "residual": 1.1843047501802263e-14
+          }
+        ],
+        "upper": 1.167883211678411
+      },
+      "extrapolation_K": {
+        "value": 0.9490190718242217,
+        "linear_value": 0.949017906456819,
+        "uncertainty": 1.1653674026890215e-06,
+        "fit_max_abs_deviation": 8.679809269107608e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9493709277655137,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.7854225113847577,
+        "linear_value": 0.7854239684251662,
+        "uncertainty": 1.4570404084368604e-06,
+        "fit_max_abs_deviation": 1.2461190902479657e-06,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.7852483315624356,
+        "n_points": 5
+      },
+      "a_max_retained": 0.7022741131499242,
+      "all_drifting_edge": 0.8,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 3.907307085956763e-07,
+            "support_size": 157,
+            "K": 0.9525571830280769
+          },
+          "1e-08": {
+            "discarded_probability": 1.636350728784631e-12,
+            "support_size": 219,
+            "K": 0.9525572032016877
+          },
+          "1e-12": {
+            "discarded_probability": 1.7451546510582628e-19,
+            "support_size": 281,
+            "K": 0.9525572032019174
+          }
+        },
+        "relative_shift": 2.4114577373706905e-13,
+        "coarse_relative_shift": 2.1178613126028923e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 668,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 5.4312055076514997e-11,
+          "32": 1.2353744908201778e-13,
+          "48": 1.2353744908201778e-13
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 7.623383415155176e-09,
+          "32": 8.226986787612473e-14,
+          "48": 8.226986787612473e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.4,
+      "delta": 0.05,
+      "K_H_p1": 0.1278520948201301,
+      "K_H_scaling": 0.3196302370503252,
+      "K_H_homogeneous": 0.3194705017994255,
+      "paper_Omega": 0.9905111621691126,
+      "discarded_probability": 1.7451546510582628e-19,
+      "support_size": 281,
+      "mean_neighbor_degree": 400.20000000000005,
+      "distribution_mean": 400.2000000000003,
+      "K_H_degree": 0.31947665749362253,
+      "Omega_H": 0.9904739754974279,
+      "relative_deviation": -0.0004804913268531535,
+      "heterogeneity_deviation": 1.926842748350403e-05,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 1.7132949251541518e-06,
+      "residual": 3.3809867353605984e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.36532796602239564,
+            "Omega": 0.9878573201723848,
+            "residual": 4.36282954208167e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.332146439951544,
+            "Omega": 0.9897954462903854,
+            "residual": 6.630980486921345e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.3235967249828272,
+            "Omega": 0.9902574428766654,
+            "residual": 5.082539961853706e-16
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.32070177354657575,
+            "Omega": 0.9904102337444954,
+            "residual": 8.640221460552335e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.31988388731465683,
+            "Omega": 0.990453060863948,
+            "residual": 3.3809867353605984e-16
+          }
+        ],
+        "upper": 1.9467213114751019
+      },
+      "extrapolation_K": {
+        "value": 0.31947665749362253,
+        "linear_value": 0.3194749441986974,
+        "uncertainty": 1.7132949251541518e-06,
+        "fit_max_abs_deviation": 1.6900303861921984e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.31988388731465683,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9904739754974279,
+        "linear_value": 0.9904744744236743,
+        "uncertainty": 4.989262464283328e-07,
+        "fit_max_abs_deviation": 4.2424975310595414e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.990453060863948,
+        "n_points": 5
+      },
+      "a_max_retained": 0.17251739504655617,
+      "all_drifting_edge": 0.95,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 3.907307085956763e-07,
+            "support_size": 157,
+            "K": 0.32359673359978947
+          },
+          "1e-08": {
+            "discarded_probability": 1.636350728784631e-12,
+            "support_size": 219,
+            "K": 0.32359672498293146
+          },
+          "1e-12": {
+            "discarded_probability": 1.7451546510582628e-19,
+            "support_size": 281,
+            "K": 0.32359672498282765
+          }
+        },
+        "relative_shift": 3.207877113341021e-13,
+        "coarse_relative_shift": 2.6628705254097584e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 470,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 2.5478002782642923e-14,
+          "32": 2.5478002782642923e-14,
+          "48": 2.5478002782642923e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 9.293794265398333e-14,
+          "32": 9.293794265398333e-14,
+          "48": 9.293794265398333e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.4,
+      "delta": 0.1,
+      "K_H_p1": 0.25920499187210694,
+      "K_H_scaling": 0.6480124796802673,
+      "K_H_homogeneous": 0.6476886353625859,
+      "paper_Omega": 0.9602588831756503,
+      "discarded_probability": 1.7451546510582628e-19,
+      "support_size": 281,
+      "mean_neighbor_degree": 400.20000000000005,
+      "distribution_mean": 400.2000000000003,
+      "K_H_degree": 0.6477419967432356,
+      "Omega_H": 0.9601050097964103,
+      "relative_deviation": -0.0004174039011797249,
+      "heterogeneity_deviation": 8.238739686984852e-05,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 7.57855176169997e-07,
+      "residual": 8.466023748608873e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.6916420674485704,
+            "Omega": 0.9550005594518736,
+            "residual": 5.086764170806066e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.660382177936818,
+            "Omega": 0.9586816883795112,
+            "residual": 1.8666019585483366e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.6519049260650472,
+            "Omega": 0.9596405859924102,
+            "residual": 2.039150290549029e-15
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.6489855800581606,
+            "Omega": 0.9599668464307142,
+            "residual": 7.716229614414663e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.6481560192780932,
+            "Omega": 0.960059184194905,
+            "residual": 8.466023748608873e-16
+          }
+        ],
+        "upper": 1.844262295081811
+      },
+      "extrapolation_K": {
+        "value": 0.6477419967432356,
+        "linear_value": 0.6477412388880595,
+        "uncertainty": 7.57855176169997e-07,
+        "fit_max_abs_deviation": 3.019920646885055e-09,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.6481560192780932,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9601050097964103,
+        "linear_value": 0.9601053530770004,
+        "uncertainty": 3.432805900649427e-07,
+        "fit_max_abs_deviation": 2.3125686621217056e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.960059184194905,
+        "n_points": 5
+      },
+      "a_max_retained": 0.34978067824134723,
+      "all_drifting_edge": 0.9,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 3.907307085956763e-07,
+            "support_size": 157,
+            "K": 0.6519049429685294
+          },
+          "1e-08": {
+            "discarded_probability": 1.636350728784631e-12,
+            "support_size": 219,
+            "K": 0.651904926065252
+          },
+          "1e-12": {
+            "discarded_probability": 1.7451546510582628e-19,
+            "support_size": 281,
+            "K": 0.6519049260650465
+          }
+        },
+        "relative_shift": 3.152335158725456e-13,
+        "coarse_relative_shift": 2.5929368334008535e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 470,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 4.383072698933469e-15,
+          "32": 4.383072698933469e-15,
+          "48": 4.383072698933469e-15
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 1.2055096486164134e-13,
+          "32": 1.2055096486164134e-13,
+          "48": 1.2055096486164134e-13
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.4,
+      "delta": 0.2,
+      "K_H_p1": 0.569049492850578,
+      "K_H_scaling": 1.422623732126445,
+      "K_H_homogeneous": 1.4219127757385757,
+      "paper_Omega": 0.7858376357809553,
+      "discarded_probability": 1.7451546510582628e-19,
+      "support_size": 281,
+      "mean_neighbor_degree": 400.20000000000005,
+      "distribution_mean": 400.2000000000003,
+      "K_H_degree": 1.4228797188283837,
+      "Omega_H": 0.7849046562613315,
+      "relative_deviation": 0.00017993985068425858,
+      "heterogeneity_deviation": 0.0006800298206096322,
+      "pinned_q_mass": 2.0664198142375414e-25,
+      "continuation_uncertainty": 1.8415196503251963e-06,
+      "residual": 1.6867017603424396e-13,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 1.4782385582358186,
+            "Omega": 0.7658285381290847,
+            "residual": 2.797157557069881e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 1.4389918489815476,
+            "Omega": 0.7794986196006286,
+            "residual": 3.189627710442956e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 1.4282048685514137,
+            "Omega": 0.7831312969942326,
+            "residual": 3.2604403467321955e-15
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 1.4244717995493386,
+            "Omega": 0.7843762893989543,
+            "residual": 8.673617379884035e-17
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 1.4234091847222685,
+            "Omega": 0.7847295393853906,
+            "residual": 1.6867017603424396e-13
+          }
+        ],
+        "upper": 1.639344262294471
+      },
+      "extrapolation_K": {
+        "value": 1.4228797188283837,
+        "linear_value": 1.4228778773087334,
+        "uncertainty": 1.8415196503251963e-06,
+        "fit_max_abs_deviation": 1.396333305203612e-06,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 1.4234091847222685,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.7849046562613315,
+        "linear_value": 0.7849061643786087,
+        "uncertainty": 1.5081172771713725e-06,
+        "fit_max_abs_deviation": 1.2989149807962619e-06,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.7847295393853906,
+        "n_points": 5
+      },
+      "a_max_retained": 0.7683550481673272,
+      "all_drifting_edge": 0.8,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 3.907307085956763e-07,
+            "support_size": 157,
+            "K": 1.4282048961717035
+          },
+          "1e-08": {
+            "discarded_probability": 1.636350728784631e-12,
+            "support_size": 219,
+            "K": 1.4282048685517832
+          },
+          "1e-12": {
+            "discarded_probability": 1.7451546510582628e-19,
+            "support_size": 281,
+            "K": 1.4282048685514124
+          }
+        },
+        "relative_shift": 2.5963676387751633e-13,
+        "coarse_relative_shift": 1.9339166091300704e-08,
+        "passed": true
+      },
+      "fourier_tail_degree": 470,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 5.512747811097612e-11,
+          "32": 8.242313901958107e-14,
+          "48": 8.242313901958107e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 1.6965621560602516e-07,
+          "32": 5.565252474547528e-14,
+          "48": 5.45423481906944e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.2,
+      "delta": 0.05,
+      "K_H_p1": 0.1278520948201301,
+      "K_H_scaling": 0.6392604741006505,
+      "K_H_homogeneous": 0.6373484288142078,
+      "paper_Omega": 0.9905111621691126,
+      "discarded_probability": 4.559259447381696e-18,
+      "support_size": 230,
+      "mean_neighbor_degree": 200.60000000000002,
+      "distribution_mean": 200.5999999999994,
+      "K_H_degree": 0.6373805249196912,
+      "Omega_H": 0.9904129838989165,
+      "relative_deviation": -0.002940818738408727,
+      "heterogeneity_deviation": 5.035880537604265e-05,
+      "pinned_q_mass": 0.0,
+      "continuation_uncertainty": 3.4840582919803964e-06,
+      "residual": 8.309325449928906e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 0.7289018601696969,
+            "Omega": 0.9877761939952698,
+            "residual": 1.1102230246251565e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 0.6626659091275284,
+            "Omega": 0.9897293161736275,
+            "residual": 4.847302891456678e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 0.6456027024441966,
+            "Omega": 0.9901948165218059,
+            "residual": 2.740863092043355e-16
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 0.6398253457513279,
+            "Omega": 0.9903487631686522,
+            "residual": 6.757549560762943e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 0.6381931424913755,
+            "Omega": 0.990391914085037,
+            "residual": 8.309325449928906e-16
+          }
+        ],
+        "upper": 3.4671532846714808
+      },
+      "extrapolation_K": {
+        "value": 0.6373805249196912,
+        "linear_value": 0.6373770408613992,
+        "uncertainty": 3.4840582919803964e-06,
+        "fit_max_abs_deviation": 4.0933004630261394e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.6381931424913755,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9904129838989165,
+        "linear_value": 0.9904134895432295,
+        "uncertainty": 5.056443129758392e-07,
+        "fit_max_abs_deviation": 4.309291807835791e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.990391914085037,
+        "n_points": 5
+      },
+      "a_max_retained": 0.20077486534970274,
+      "all_drifting_edge": 0.95,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 5.647458994103002e-07,
+            "support_size": 128,
+            "K": 0.6456027987640364
+          },
+          "1e-08": {
+            "discarded_probability": 5.5942274648103944e-12,
+            "support_size": 179,
+            "K": 0.6456027024458266
+          },
+          "1e-12": {
+            "discarded_probability": 4.559259447381696e-18,
+            "support_size": 230,
+            "K": 0.6456027024441978
+          }
+        },
+        "relative_shift": 2.5229265510522736e-12,
+        "coarse_relative_shift": 1.491936731132942e-07,
+        "passed": true
+      },
+      "fourier_tail_degree": 259,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 4.9468004903305844e-14,
+          "32": 4.9468004903305844e-14,
+          "48": 4.9468004903305844e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 9.398545009194017e-14,
+          "32": 9.398545009194017e-14,
+          "48": 9.398545009194017e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.2,
+      "delta": 0.1,
+      "K_H_p1": 0.25920499187210694,
+      "K_H_scaling": 1.2960249593605346,
+      "K_H_homogeneous": 1.2921485138190771,
+      "paper_Omega": 0.9602588831756503,
+      "discarded_probability": 4.559259447381696e-18,
+      "support_size": 230,
+      "mean_neighbor_degree": 200.60000000000002,
+      "distribution_mean": 200.5999999999994,
+      "K_H_degree": 1.2924313848698075,
+      "Omega_H": 0.9598502347934733,
+      "relative_deviation": -0.0027727664230326686,
+      "heterogeneity_deviation": 0.0002189152776984376,
+      "pinned_q_mass": 2.837910599649659e-252,
+      "continuation_uncertainty": 1.5846183305523454e-06,
+      "residual": 6.854616643716183e-16,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 1,
+            "K": 1.3801686069346195,
+            "Omega": 0.954701875929332,
+            "residual": 2.2210558292432945e-16
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 1.3176859552992548,
+            "Omega": 0.958415147401287,
+            "residual": 2.490340407952437e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 1.3007480722991136,
+            "Omega": 0.9593820125513386,
+            "residual": 4.472267847022635e-15
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 1.2949157046120507,
+            "Omega": 0.9597109492000443,
+            "residual": 9.49185459881201e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 1.293258435038335,
+            "Omega": 0.9598040412827726,
+            "residual": 6.854616643716183e-16
+          }
+        ],
+        "upper": 3.2846715328462164
+      },
+      "extrapolation_K": {
+        "value": 1.2924313848698075,
+        "linear_value": 1.292429800251477,
+        "uncertainty": 1.5846183305523454e-06,
+        "fit_max_abs_deviation": 6.649085992904702e-08,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 1.293258435038335,
+        "n_points": 5
+      },
+      "extrapolation_Omega": {
+        "value": 0.9598502347934733,
+        "linear_value": 0.9598505873241369,
+        "uncertainty": 3.5253066354989926e-07,
+        "fit_max_abs_deviation": 2.401591642220424e-07,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.9598040412827726,
+        "n_points": 5
+      },
+      "a_max_retained": 0.4071158862339893,
+      "all_drifting_edge": 0.9,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 5.647458994103002e-07,
+            "support_size": 128,
+            "K": 1.3007482627148408
+          },
+          "1e-08": {
+            "discarded_probability": 5.5942274648103944e-12,
+            "support_size": 179,
+            "K": 1.3007480723023186
+          },
+          "1e-12": {
+            "discarded_probability": 4.559259447381696e-18,
+            "support_size": 230,
+            "K": 1.3007480722991118
+          }
+        },
+        "relative_shift": 2.465326109351246e-12,
+        "coarse_relative_shift": 1.4638939931366815e-07,
+        "passed": true
+      },
+      "fourier_tail_degree": 259,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 4.99928158359011e-14,
+          "32": 4.99928158359011e-14,
+          "48": 4.99928158359011e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 3.9749570183752623e-14,
+          "32": 3.9749570183752623e-14,
+          "48": 3.9749570183752623e-14
+        },
+        "passed": true
+      }
+    },
+    {
+      "p": 0.2,
+      "delta": 0.2,
+      "K_H_p1": 0.569049492850578,
+      "K_H_scaling": 2.84524746425289,
+      "K_H_homogeneous": 2.836737252495404,
+      "paper_Omega": 0.7858376357809553,
+      "discarded_probability": 4.559259447381696e-18,
+      "support_size": 230,
+      "mean_neighbor_degree": 200.60000000000002,
+      "distribution_mean": 200.5999999999994,
+      "K_H_degree": 2.8418820703227006,
+      "Omega_H": 0.7833503875990825,
+      "relative_deviation": -0.0011828123818653892,
+      "heterogeneity_deviation": 0.0018136391809889427,
+      "pinned_q_mass": 4.208114439172831e-10,
+      "continuation_uncertainty": 1.5394603121166028e-06,
+      "residual": 1.1020809649082588e-13,
+      "validity_status": "valid_all_drifting",
+      "convergence_status": "converged",
+      "continuation": {
+        "rows": [
+          {
+            "eps": 0.01,
+            "n_roots": 0,
+            "K": null,
+            "Omega": null,
+            "residual": null
+          },
+          {
+            "eps": 0.003,
+            "n_roots": 1,
+            "K": 2.874461843519567,
+            "Omega": 0.7778465014879498,
+            "residual": 1.1983411512519015e-16
+          },
+          {
+            "eps": 0.001,
+            "n_roots": 1,
+            "K": 2.8526462026973065,
+            "Omega": 0.7815451816243977,
+            "residual": 3.85020835595462e-14
+          },
+          {
+            "eps": 0.0003,
+            "n_roots": 1,
+            "K": 2.845101324666581,
+            "Omega": 0.7828118832240282,
+            "residual": 2.45228796256662e-16
+          },
+          {
+            "eps": 0.0001,
+            "n_roots": 1,
+            "K": 2.8429541287971194,
+            "Omega": 0.7831712104015957,
+            "residual": 1.1020809649082588e-13
+          }
+        ],
+        "upper": 2.9197080291967934
+      },
+      "extrapolation_K": {
+        "value": 2.8418820703227006,
+        "linear_value": 2.8418805308623885,
+        "uncertainty": 1.5394603121166028e-06,
+        "fit_max_abs_deviation": 6.485890402530003e-08,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 2.8429541287971194,
+        "n_points": 4
+      },
+      "extrapolation_Omega": {
+        "value": 0.7833503875990825,
+        "linear_value": 0.7833508739903794,
+        "uncertainty": 4.863912969055306e-07,
+        "fit_max_abs_deviation": 2.8484290925945288e-08,
+        "smallest_eps": 0.0001,
+        "value_at_smallest_eps": 0.7831712104015957,
+        "n_points": 4
+      },
+      "a_max_retained": 0.8951928521516507,
+      "all_drifting_edge": 0.8,
+      "truncation_check": {
+        "levels": {
+          "1e-04": {
+            "discarded_probability": 5.647458994103002e-07,
+            "support_size": 128,
+            "K": 2.852646538558319
+          },
+          "1e-08": {
+            "discarded_probability": 5.5942274648103944e-12,
+            "support_size": 179,
+            "K": 2.852646202674371
+          },
+          "1e-12": {
+            "discarded_probability": 4.559259447381696e-18,
+            "support_size": 230,
+            "K": 2.852646202697297
+          }
+        },
+        "relative_shift": 8.03678543691534e-12,
+        "coarse_relative_shift": 1.1773665494980132e-07,
+        "passed": true
+      },
+      "fourier_tail_degree": 259,
+      "fourier_mean": {
+        "relative_errors": {
+          "16": 5.819503252113827e-11,
+          "32": 2.6879896820220074e-14,
+          "48": 2.6879896820220074e-14
+        },
+        "passed": true
+      },
+      "fourier_tail": {
+        "relative_errors": {
+          "16": 4.343756632792185e-05,
+          "32": 8.043418562454727e-10,
+          "48": 4.4833327902673854e-14
+        },
+        "passed": true
+      }
+    }
+  ],
+  "elapsed_sec": 18.071214249939658,
+  "interpretation": "K_H_scaling = K_H(Eq. 6)/p. K_H_homogeneous = K_H(Eq. 6)*N/E_q[k] uses the mean neighbor degree and no degree spread. (K_H_homogeneous-K_H_scaling)/K_H_scaling = (2p-1)/(1+(N-2)p), which equals 1/(N-1) only at p=1. heterogeneity_deviation = (K_H_degree-K_H_homogeneous)/K_H_homogeneous is the correction from the spread of q(k)."
+}

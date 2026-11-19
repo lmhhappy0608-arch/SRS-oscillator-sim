@@ -1,8 +1,9 @@
 {
   "N": 1000,
-  "K": {"min": 0.0, "max": 3.0, "step": 0.05},
-  "p": [1.0, 0.8, 0.4, 0.2],
-  "Delta": {"values": [0.05, 0.2, 0.8]},
+  "_comment": "Only the new p=0.2 cells. K=3 is already stored, so this grid starts at 3.05 and ends at 8 with the existing step 0.05. Delta stays 0 to 1 with step 0.025. Completed run_ids in stage1_runs are skipped.",
+  "K": {"min": 3.05, "max": 8.0, "step": 0.05},
+  "p": [0.2],
+  "Delta": {"min": 0.0, "max": 1.0, "step": 0.025},
   "n_trials": 1,
   "randomness_mode": "paired",
   "master_seed": 0,

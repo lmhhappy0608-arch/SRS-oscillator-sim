@@ -212,14 +212,16 @@ def verify_pilot_index(config_path: Path, output_dir: Path | None = None) -> lis
 
         config = validate_config(replace(config, output_dir=Path(output_dir)))
     specs = build_run_specs(config)
-    expected = (
+    rectangular = (
         len(config.resolved_k())
         * len(config.resolved_p())
         * len(config.resolved_delta())
         * config.n_trials
     )
-    if len(specs) != expected:
-        raise InventoryError(f"planned {len(specs)} runs, expected {expected}")
+    if not config.extensions and len(specs) != rectangular:
+        raise InventoryError(f"planned {len(specs)} runs, expected {rectangular}")
+    if config.extensions and len(specs) < rectangular:
+        raise InventoryError(f"planned {len(specs)} runs, base rectangle is {rectangular}")
     ids = [spec.run_id for spec in specs]
     if len(set(ids)) != len(ids):
         raise InventoryError("planned pilot run_id values are not unique")

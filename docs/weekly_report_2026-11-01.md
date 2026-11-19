@@ -34,7 +34,7 @@ J=\sum \mathrm{RSS}+\hat\sigma^2\ln(N)\,(\alpha M+\beta L).
 
 ### 3. Decision rules, then Classifier v1
 
-Rules were set from the 732 saved profiles where a gap existed, and by explicit choice where the histograms had no gap. The live specification is `stage2_classifier/classifier_v1/algorithm_specification.md`. \(\alpha=2\), \(\beta=1\) stay provisional.
+Rules were set from the 732 saved profiles where a gap existed, and by explicit choice where the histograms had no gap. The live specification is `stage2_classifier/classifier_v2/algorithm_specification.md`. \(\alpha=2\), \(\beta=1\) stay provisional.
 
 W3 assigns the state. W1 and W2 do not override it. A row is flagged for review when the three window states differ, or when the counts of validated nonzero plateaus differ.
 

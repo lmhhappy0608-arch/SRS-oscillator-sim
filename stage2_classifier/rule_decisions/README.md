@@ -1,8 +1,7 @@
 # Adopted decision rules
 
-These choices are the working Rule 1–7 definitions. They do not replace
-`classifier_v1/` (`v1.0.0-pilot`, archive status `incomplete`). No five-state
-labels have been written from this file.
+These choices are the working Rule 1–7 definitions. The live classifier is
+`classifier_v2/`. No five-state labels have been written from this file.
 
 Method C remains separated penalties with provisional `alpha = 2`, `beta = 1`,
 minimum segment length 4.

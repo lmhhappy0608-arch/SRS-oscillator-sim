@@ -23,6 +23,34 @@ DEFAULT_WINDOWS = (
 RANDOMNESS_MODES = ("paired", "network", "initial_condition", "independent")
 
 
+@dataclass(frozen=True)
+class ParameterRegion:
+    """One rectangular (K, p, Delta) block added to the base scan."""
+
+    k_min: float = 0.0
+    k_max: float = 3.0
+    k_step: float = 0.05
+    k_values: tuple[float, ...] | None = None
+    p_values: tuple[float, ...] = ()
+    delta_min: float = 0.0
+    delta_max: float = 1.0
+    delta_step: float = 0.025
+    delta_values: tuple[float, ...] | None = None
+
+    def resolved_k(self) -> tuple[float, ...]:
+        if self.k_values is not None:
+            return canonicalize_values(self.k_values)
+        return inclusive_range(self.k_min, self.k_max, self.k_step)
+
+    def resolved_p(self) -> tuple[float, ...]:
+        return canonicalize_values(self.p_values)
+
+    def resolved_delta(self) -> tuple[float, ...]:
+        if self.delta_values is not None:
+            return canonicalize_values(self.delta_values)
+        return inclusive_range(self.delta_min, self.delta_max, self.delta_step)
+
+
 @dataclass
 class ScanConfig:
     N: int = 1000
@@ -67,6 +95,7 @@ class ScanConfig:
     stale_seconds: float = 3600.0
     allow_incomplete_restart: bool = False
     frequency_mode: str = "deterministic_linspace"
+    extensions: tuple[ParameterRegion, ...] = ()
 
     def resolved_k(self) -> tuple[float, ...]:
         if self.k_values is not None:
@@ -89,6 +118,28 @@ def _windows_from_json(raw: list) -> tuple[tuple[float, float], ...]:
             raise ValueError(f"observation window must be [start, end], got {item}")
         windows.append((float(item[0]), float(item[1])))
     return tuple(windows)
+
+
+def _region_from_json(raw: dict) -> ParameterRegion:
+    if not isinstance(raw, dict):
+        raise ValueError("extension must be a JSON object")
+    if "p" not in raw:
+        raise ValueError("extension requires p")
+    k_block = raw.get("K", {})
+    delta_block = raw.get("Delta", {})
+    if not isinstance(k_block, dict) or not isinstance(delta_block, dict):
+        raise ValueError("extension K and Delta must be JSON objects")
+    return ParameterRegion(
+        k_min=float(k_block.get("min", 0.0)),
+        k_max=float(k_block.get("max", 3.0)),
+        k_step=float(k_block.get("step", 0.05)),
+        k_values=_optional_float_tuple(k_block.get("values")),
+        p_values=tuple(float(value) for value in raw["p"]),
+        delta_min=float(delta_block.get("min", 0.0)),
+        delta_max=float(delta_block.get("max", 1.0)),
+        delta_step=float(delta_block.get("step", 0.025)),
+        delta_values=_optional_float_tuple(delta_block.get("values")),
+    )
 
 
 def _optional_float_tuple(raw) -> tuple[float, ...] | None:
@@ -138,6 +189,7 @@ def load_config(path: Path) -> ScanConfig:
         stale_seconds=float(payload.get("stale_seconds", 3600.0)),
         allow_incomplete_restart=bool(payload.get("allow_incomplete_restart", False)),
         frequency_mode=str(frequency_mode),
+        extensions=tuple(_region_from_json(item) for item in payload.get("extensions", ())),
     )
     if not config.output_dir.is_absolute():
         config = replace(config, output_dir=PROJECT_ROOT / config.output_dir)
@@ -208,6 +260,15 @@ def validate_config(config: ScanConfig) -> ScanConfig:
         atol = config.atol
     if not k_values or not p_values or not delta_values:
         raise ValueError("parameter grid is empty")
+    for index, region in enumerate(config.extensions):
+        if not region.resolved_k() or not region.resolved_p() or not region.resolved_delta():
+            raise ValueError(f"extension {index} is empty")
+        for value in region.resolved_p():
+            if not 0.0 <= value <= 1.0:
+                raise ValueError(f"extension p must lie in [0, 1], got {value}")
+        for value in region.resolved_delta():
+            if value < 0.0:
+                raise ValueError(f"extension Delta must be non-negative, got {value}")
     return replace(
         config,
         observation_windows=tuple(normalized),

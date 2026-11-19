@@ -62,11 +62,42 @@ def _make_ode_buffers(n=N):
     }
 
 
-def simulate_winfree(K, delta, p, rng=None, buffers=None, n=N):
+def build_winfree_realization(K, delta, p, rng=None, n=N):
+    """Create one reproducible initial condition and ER network realization."""
     rng = np.random.default_rng() if rng is None else rng
     omega = natural_frequencies(delta, n)
     theta0 = rng.uniform(0.0, 2.0 * np.pi, n)
     A = make_er_adjacency(n, p, rng=rng)
+    return omega, theta0, A
+
+
+def integrate_winfree_system(
+    K,
+    omega,
+    adjacency,
+    initial_theta,
+    sample_times,
+    start_time=0.0,
+    buffers=None,
+):
+    """Integrate a fully specified Winfree system at requested sample times."""
+    omega = np.asarray(omega, dtype=float)
+    adjacency = np.asarray(adjacency, dtype=float)
+    initial_theta = np.asarray(initial_theta, dtype=float)
+    n = omega.size
+    if initial_theta.shape != (n,):
+        raise ValueError(f"initial_theta must have shape ({n},)")
+    if adjacency.shape != (n, n):
+        raise ValueError(f"adjacency must have shape ({n}, {n})")
+
+    sample_times = np.asarray(sample_times, dtype=float)
+    if sample_times.ndim != 1 or sample_times.size == 0:
+        raise ValueError("sample_times must be a non-empty one-dimensional array")
+    if np.any(np.diff(sample_times) <= 0.0):
+        raise ValueError("sample_times must be strictly increasing")
+    if sample_times[0] < start_time:
+        raise ValueError("sample_times cannot precede start_time")
+    end_time = float(sample_times[-1])
 
     if buffers is None:
         buffers = _make_ode_buffers(n)
@@ -80,7 +111,7 @@ def simulate_winfree(K, delta, p, rng=None, buffers=None, n=N):
     def winfree(_t, theta):
         np.cos(theta, out=one_plus_cos)
         np.add(one_plus_cos, 1.0, out=one_plus_cos)
-        np.matmul(A, one_plus_cos, out=interaction)
+        np.matmul(adjacency, one_plus_cos, out=interaction)
         np.sin(theta, out=sin_theta)
         np.multiply(sin_theta, interaction, out=dtheta)
         np.multiply(dtheta, scale, out=dtheta)
@@ -89,22 +120,64 @@ def simulate_winfree(K, delta, p, rng=None, buffers=None, n=N):
 
     sol = solve_ivp(
         winfree,
-        [0.0, T],
-        theta0,
-        t_eval=t_eval,
+        [float(start_time), end_time],
+        initial_theta,
+        t_eval=sample_times,
         method="RK45",
         rtol=1e-6,
         atol=1e-8,
     )
 
-    theta_t0 = sol.y[:, 0]
-    theta_t = sol.y[:, 1]
+    if not sol.success:
+        raise RuntimeError(f"Winfree integration failed: {sol.message}")
+    return sol.y
+
+
+def _solve_winfree(K, delta, p, sample_times, rng=None, buffers=None, n=N):
+    """Integrate the existing Winfree model and return unwrapped phase samples."""
+    omega, theta0, adjacency = build_winfree_realization(
+        K, delta, p, rng=rng, n=n
+    )
+    theta_samples = integrate_winfree_system(
+        K,
+        omega,
+        adjacency,
+        theta0,
+        sample_times,
+        start_time=0.0,
+        buffers=buffers,
+    )
+    return omega, theta_samples
+
+
+def simulate_winfree(K, delta, p, rng=None, buffers=None, n=N):
+    """Run the standard simulation and retain the historical return format."""
+    omega, theta_samples = _solve_winfree(
+        K, delta, p, t_eval, rng=rng, buffers=buffers, n=n
+    )
+
+    theta_t0 = theta_samples[:, 0]
+    theta_t = theta_samples[:, 1]
     rotation_number = (theta_t - theta_t0) / (T - T0)
 
     z = np.mean(np.exp(1j * theta_t))
     R = np.abs(z)
 
     return omega, rotation_number, R
+
+
+def simulate_winfree_trajectory(
+    K, delta, p, sample_times, rng=None, buffers=None, n=N
+):
+    """Return omega and continuous (not modulo 2π) phases at requested times.
+
+    This optional entry point is intended for time-window diagnostics.  It uses
+    exactly the same initial-condition, ER-network, RHS, and RK45 settings as
+    ``simulate_winfree``; the normal raw-grid workflow remains unchanged.
+    """
+    return _solve_winfree(
+        K, delta, p, sample_times, rng=rng, buffers=buffers, n=n
+    )
 
 
 def _format_delta_filename(delta):
